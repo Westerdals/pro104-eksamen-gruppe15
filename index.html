@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="leftBar.css">
+    <link rel="stylesheet" type="text/css" href="middleTask.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <script defer src="main.js"></script>
+    <script defer src="draggable.js"></script>
+    <script defer src="hover.js"></script>
+    <script defer src="subTask.js"></script>
+</head>
+<body>
+<div id="mainContainer">
+
+    <div id="leftContainer">
+
+        <div id="leftBarHeader">
+            <h1 id="leftBarLogo"></h1>
+        </div>
+
+        <div id="leftList">
+            <ul class="taskList" data-lists>
+            <!--
+            <li>Sample task</li>
+            <li>Sample task</li>
+            <li>Sample task</li>
+            -->
+            </ul>
+        </div>
+        <div id="formContainer">
+            <form action="" data-new-list-form>
+                <input type="text" class="new list" id="leftInput" placeholder="new list name" data-new-list-input>
+                <button class="btn create" id="leftbutton">Add</button>
+            </form>
+        </div>
+        
+    </div>
+    <div id="middleContainer" middle-container>
+
+        <div id="middleHeader">
+            <h1 id="currentTask" middle-list-title>Test</h1>
+        </div>
+
+        <div class="subTaskContainer">
+
+            <div class="subTaskList">
+                <div class="subListHeader">
+                    <!-- <p class="subTask">Header</p>> -->
+                    <form action="" data-new-sub-header-form>
+                        <input type="text" placeholder="Task Name.." data-new-sub-header>
+                    </form>
+                </div> 
+                <ul class="subUl" sub-data-lists>
+                    <!--
+                    <li class="subLi">oppgave 1</li>
+                    <li class="subLi">oppgave 2</li>
+                    <li class="subLi">oppgave 3</li>
+                    -->
+                </ul>
+                <div id="formContainer">
+                    <form action="" data-new-sub-form>
+                        <input type="text" id="leftInput" placeholder="new task name" data-new-sub-input>
+                        <button class="btn create" id="leftbutton">Add</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
