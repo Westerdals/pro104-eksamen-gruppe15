@@ -1,95 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- tittel -->
     <title>Tabs</title>
     <!-- CSS-linker -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="leftBar.css">
-    <link rel="stylesheet" type="text/css" href="middleTask.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="leftBar.css" />
+    <link rel="stylesheet" type="text/css" href="middleTask.css" />
     <!-- importerte fonter -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <!-- JS-linker -->
     <script defer src="main.js"></script>
     <script defer src="draggable.js"></script>
     <script defer src="hover.js"></script>
     <script defer src="subTask.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- konteiner som holder på alt -->
-<div id="mainContainer">
-
-    <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
-    <div id="leftContainer">
-        
+    <div id="mainContainer">
+      <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
+      <div id="leftContainer">
         <!-- header til venstre konteiner -->
         <div id="leftBarHeader">
-            <h1 id="leftBarLogo"></h1>
+          <h1 id="leftBarLogo"></h1>
         </div>
 
         <!-- konteiner til ul -->
         <div id="leftList">
-            <!-- Ul til listene (li) som blir generert -->
-            <ul class="taskList" data-lists>
-                <!-- Her blir hoved-listene plassert -->
+          <!-- Ul til listene (li) som blir generert -->
+          <ul class="taskList" data-lists>
+            <!-- Her blir hoved-listene plassert -->
             <!--
             <li>Sample task</li>
             <li>Sample task</li>
             <li>Sample task</li>
             -->
-            </ul>
+          </ul>
         </div>
         <!-- kontainer til input feltet som legger til lister i (data-lists, class="taskList") -->
         <div id="formContainer">
-            <!-- data-new-list-form er for onsubmit event -->
-            <form action="" data-new-list-form>
-                 <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
-                <input type="text" class="new list" id="leftInput" placeholder="new list name" data-new-list-input>
-                <!-- knapp som kan brukes for å submite -->
-                <button class="btn create" id="leftbutton">Add</button>
-            </form>
+          <!-- data-new-list-form er for onsubmit event -->
+          <form action="" data-new-list-form>
+            <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
+            <input
+              type="text"
+              class="new list"
+              id="leftInput"
+              placeholder="new list name"
+              data-new-list-input
+            />
+            <!-- knapp som kan brukes for å submite -->
+            <button class="btn create" id="leftbutton">Add</button>
+          </form>
         </div>
-        
-    </div>
-    <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
-    <div id="middleContainer" middle-container>
-
+      </div>
+      <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
+      <div id="middleContainer" middle-container>
         <!-- header til middleContainer -->
         <div id="middleHeader">
-            <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
-            <h1 id="currentTask" middle-list-title>Test</h1>
+          <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
+          <h1 id="currentTask" middle-list-title>Test</h1>
+        </div>
+
+        <!-- Popup menu for color change -->
+        <div id="popupMain">
+          <p id="menuTxt">Select status on assignment</p>
+          <div id="statusTodo" class="status" onclick="changeColor()">
+            To do
+          </div>
+          <div id="statusDoing" class="status" onclick="changeColor2()">
+            Doing
+          </div>
+          <div id="statusFeedback" class="status" onclick="changeColor3()">
+            Waiting for feedback
+          </div>
+          <div id="statusDone" class="status" onclick="changeColor4()">
+            Done
+          </div>
+
+          <!-- Back button to close popup -->
+          <p id="backBtn" title="close" onclick="closeMenu()">x</p>
         </div>
 
         <!-- konteiner som blir brukt til å holde på alle sub-list elementene til hoved listene -->
         <div class="subTaskContainer">
-
-            <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
-            <div class="subTaskList">
-                <div class="subListHeader">
-                    <!-- <p class="subTask">Header</p>> -->
-                    <form action="" data-new-sub-header-form>
-                        <input type="text" placeholder="Task Name.." data-new-sub-header>
-                    </form>
-                </div> 
-                <ul class="subUl" sub-data-lists>
-                    <!--
+          <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
+          <div class="subTaskList">
+            <div class="subListHeader">
+              <!-- <p class="subTask">Header</p>> -->
+              <form action="" data-new-sub-header-form>
+                <input
+                  type="text"
+                  placeholder="Task Name.."
+                  data-new-sub-header
+                />
+              </form>
+              <!-- Button to open popup menu -->
+              <button id="menuBtn" onclick="openMenu()">...</button>
+            </div>
+            <ul id="subList" class="subUl" sub-data-lists>
+              <!--
                     <li class="subLi">oppgave 1</li>
                     <li class="subLi">oppgave 2</li>
                     <li class="subLi">oppgave 3</li>
                     -->
-                </ul>
-                <div id="formContainer">
-                    <form action="" data-new-sub-form>
-                        <input type="text" id="leftInput" placeholder="new task name" data-new-sub-input>
-                        <button class="btn create" id="leftbutton">Add</button>
-                    </form>
-                </div>
+            </ul>
+            <div id="formContainer">
+              <form action="" data-new-sub-form>
+                <input
+                  type="text"
+                  id="leftInput"
+                  placeholder="new task name"
+                  data-new-sub-input
+                />
+                <button class="btn create" id="leftbutton">Add</button>
+              </form>
             </div>
-
+          </div>
         </div>
-
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
