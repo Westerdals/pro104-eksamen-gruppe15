@@ -25,7 +25,7 @@
 }
 
 #leftBarLogo {
-  background-image: url(TabsLogo-01.png);
+  background-image: url(/images/TabsLogo-01.png);
   width: 150px;
   height: 100px;
   background-size: cover;
