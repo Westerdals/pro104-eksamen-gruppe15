@@ -5,21 +5,21 @@
     <!-- tittel -->
     <title>Tabs</title>
     <!-- CSS-linker -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="leftBar.css" />
-    <link rel="stylesheet" type="text/css" href="middleTask.css" />
-    <link rel="stylesheet" type="text/css" href="popupMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/leftBar.css" />
+    <link rel="stylesheet" type="text/css" href="css/middleTask.css" />
+    <link rel="stylesheet" type="text/css" href="css/popupMenu.css" />
     <!-- importerte fonter -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
       rel="stylesheet"
     />
     <!-- JS-linker -->
-    <script defer src="main.js"></script>
-    <script defer src="draggable.js"></script>
-    <script defer src="hover.js"></script>
-    <script defer src="subTask.js"></script>
-    <script defer src="popupMenu.js"></script>
+    <script defer src="javascript/main.js"></script>
+    <script defer src="javascript/draggable.js"></script>
+    <script defer src="javascript/hover.js"></script>
+    <script defer src="javascript/subTask.js"></script>
+    <script defer src="javascript/popupMenu.js"></script>
   </head>
   <body>
     <!-- konteiner som holder på alt -->
@@ -45,13 +45,19 @@
         </div>
         <!-- kontainer til input feltet som legger til lister i (data-lists, class="taskList") -->
         <div id="formContainer">
-            <!-- data-new-list-form er for onsubmit event -->
-            <form action="" data-new-list-form>
-                 <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
-                <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input>
-                <!-- knapp som kan brukes for å submite -->
-                <button class="btn create" id="leftbutton">Add</button>
-            </form>
+          <!-- data-new-list-form er for onsubmit event -->
+          <form action="" data-new-list-form>
+            <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
+            <input
+              type="text"
+              class="new list"
+              id="leftInput"
+              placeholder="New project"
+              data-new-list-input
+            />
+            <!-- knapp som kan brukes for å submite -->
+            <button class="btn create" id="leftbutton">Add</button>
+          </form>
           <!-- data-new-list-form er for onsubmit event -->
           <form action="" data-new-list-form>
             <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
