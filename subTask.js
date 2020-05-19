@@ -8,6 +8,7 @@ const subUl = document.querySelector('[sub-data-lists]')
 
 // TODO: underveis
 // form og input til sub-task header, (navn man setter selv på sub-task)
+const subHeaderText = document.querySelector('[data-sub-list-header]');
 const childHeaderForm = document.querySelector('[data-new-sub-header-form]')
 const childHeaderInput = document.querySelector('[data-new-sub-header]')
 
@@ -30,9 +31,9 @@ newChildForm.addEventListener('submit', e => {
     const selectedList = lists.find(list => list.id === selectedListId)
 
     // console.log så man ser hva som skjer
-    console.log(selectedList.tasks)
+    console.log(selectedList.tasksSub.subTasks)
 
-    selectedList.tasks.push(subListName)
+    selectedList.tasksSub.subTasks.push(subListName)
 
     newChildInput.value = null
 
@@ -47,13 +48,15 @@ function subTaskRender() {
 
     clearElement(subUl)
     const selectedList = lists.find(list => list.id === selectedListId)
-    selectedList.tasks.forEach(tasks => {
-        for (i = 0; i < selectedList.tasks.length; i++)
+    selectedList.tasksSub.subTasks.forEach(tasks => {
+        for (i = 0; i < selectedList.tasksSub.subTasks.length; i++)
         listElement = document.createElement('li')
         listElement.classList.add("subLi")
         listElement.innerText = tasks
         subUl.appendChild(listElement)
     })
+
+    renderChildheader()
 }
 
 // Submit event for header(overskrift) til sub-task meny
@@ -64,44 +67,36 @@ childHeaderForm.addEventListener('submit', e => {
 
     const selectedList = lists.find(list => list.id === selectedListId)
 
-    console.log(selectedList.header)
+    console.log(subListHeader)
+    console.log(selectedList.tasksSub.header)
 
-    selectedList.header.push(subListHeader)
+    if (selectedList.tasksSub.header.length > 0){
+        selectedList.tasksSub.header.pop()
+        selectedList.tasksSub.header.push(subListHeader)
+    } else {
+        selectedList.tasksSub.header.push(subListHeader)
+    }
 
-    newListInput.value = null
-    console.log("headerCommit");
+    console.log(selectedList.tasksSub.header.length)
+    renderChildheader()
+
+    // childHeaderInput.value = null
 
     // Funskjoner for å lagre og rendre
-    subTaskHtmlRender()
+    // subTaskHtmlRender()
     save()
 })
 
-// Render til hele sub-task elementet (html) og input av de lagrede verdiene fra: header [], tasks [].
-//TODO: underveis, subTaskList.appendChild(subTaskCreate) må endres på
-//TODO: må lage en ny konteiner i html som er helt tom, eller en ny clearElement funksjon som fjerner alt. 
-function subTaskHtmlRender(){
+// Funksjon som sjekker om childHeaderInput og tasksSub.header er tomme, for å så legge inn verdier
+function renderChildheader(){
     const selectedList = lists.find(list => list.id === selectedListId)
-    subTaskName = selectedList.header[0]
-    console.log(subTaskName)
-    subTaskList.innerHTML = ""
 
-    subTaskCreate = document.createElement("div")
-    subTaskCreate.inner = 
-    `<div class="subListHeader">
-        <p class="subTask">${subTaskName}</p>
-    </div> 
-        <ul class="subUl" sub-data-lists>
+    if (selectedList.tasksSub.header.length > 0 || childHeaderInput.value < 0){
+        childHeaderInput.value = selectedList.tasksSub.header
+    } else {
+        childHeaderInput.value = "";
+    }
 
-        </ul>
-    <div id="formContainer">
-        <form action="" data-new-sub-form>
-            <input type="text" id="leftInput" placeholder="new task name" data-new-sub-input>
-            <button class="btn create" id="leftbutton">Add</button>
-        </form>
-    </div>
-    `;
-    
-    subTaskList.appendChild(subTaskCreate)
 }
 
 // Gjør at subTask meny kommer opp når man refresher siden
