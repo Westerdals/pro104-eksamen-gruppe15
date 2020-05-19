@@ -1,0 +1,60 @@
+#popupMain {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  border: 2px solid #424249;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -150px;
+  z-index: 1;
+  display: none;
+}
+
+#backBtn {
+  position: absolute;
+  top: -2px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  border: 1px solid #424249;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+#menuBtn {
+  width: 30px;
+  padding: 1px;
+  margin-left: 1px;
+  cursor: pointer;
+}
+
+#menuTxt {
+  text-align: center;
+}
+.status {
+  border: 2px solid #424249;
+  width: 200px;
+  height: 25px;
+  margin-left: 50px;
+  margin-top: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#statusTodo {
+  background-color: #ffffff;
+}
+#statusDoing {
+  background-color: #f4b707;
+}
+#statusFeedback {
+  background-color: #4184c6;
+}
+#statusDone {
+  background-color: #5ec19d;
+}
