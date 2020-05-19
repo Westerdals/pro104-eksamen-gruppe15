@@ -66,10 +66,9 @@
 
             <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
             <div class="subTaskList">
-                <div class="subListHeader">
-                    <!-- <p class="subTask">Header</p>> -->
+                <div class="subListHeader" data-sub-list-header>
                     <form action="" data-new-sub-header-form>
-                        <input type="text" placeholder="Task Name.." data-new-sub-header>
+                        <input class="subListHeaderText" type="text" placeholder="Task Name.." data-new-sub-header>
                     </form>
                 </div> 
                 <ul class="subUl" sub-data-lists>
@@ -81,7 +80,7 @@
                 </ul>
                 <div id="formContainer">
                     <form action="" data-new-sub-form>
-                        <input type="text" id="leftInput" placeholder="new task name" data-new-sub-input>
+                        <input type="text" id="leftInput" placeholder="new task.." data-new-sub-input>
                         <button class="btn create" id="leftbutton">Add</button>
                     </form>
                 </div>

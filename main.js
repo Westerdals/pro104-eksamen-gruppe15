@@ -29,6 +29,7 @@ listsContainer.addEventListener('click', e => {
         // Funskjoner for å lagre og rendre
         currentTaskname()
         saveAndRender()
+        renderChildheader()
     }
 })
 
@@ -54,7 +55,8 @@ function currentTaskname(){
 
 function createList(name) {
     // id blir generert med date så de alltid får en unik id
-    return { id: Date.now().toString(), name: name, header: [], members: [], tasks: [] }
+    let tasksSub = { id: Date.now().toString() + 1, header: [], subTasks: [], subMembers: [] }
+    return { id: Date.now().toString(), name: name, members: [], tasksSub: tasksSub }
 }
 
 function saveAndRender() {
