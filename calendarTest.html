@@ -18,13 +18,39 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <div id="calendarContainer">
-      <div id="calendarHeader">
-        <span id="calendarMontYear"></span>
+   <!-- On load the function will render-->
+  <body onLoad="renderDate()">
+    <div class="calendarContainer">
+      <div class="month">
+           <!-- Onclick event for previous month -->
+        <div class="prev" onclick="moveDate('prev')">
+            <!-- ASCII '<' symbol -->
+            <span>&#10094</span>
+        </div>
+        <div>
+             <!-- The month name will appear here (ex: May) -->
+            <h2 id="month"></h2>
+             <!-- The first date of the month, day date, and year will appear -->
+            <p id="dateStart"></p>
+        </div>
+        <!-- Onclick event for next month-->
+        <div class="next" onclick="moveDate('next')">
+            <!-- ASCII '>' symbol -->
+            <span>&#10095</span>
+        </div>
       </div>
-      <div id="calendarDates"></div>
-      <!-- Table, creating in javascript 6 rows, 7 columns-->
+      <div class="weekends">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+      </div>
+      <div class="days">
+          <!-- The divs gets made in the js file -->
+      </div>
     </div>
 
     <script src="javascript/calendar.js"></script>

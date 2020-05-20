@@ -1,78 +1,59 @@
-var d = new this.Date();
+var d = new Date(); // Creates new date
+
 function renderDate() {
-  d.setDate(1);
-  var today = new Date();
-  var endDate = new Date(
-    d.getMonth() + 1,
-    0, // 0-11, 0 = January and so on
-    d.getFullYear()
-  ).getDate();
+  d.setDate(1); //
+  var day = d.getDay(); // Get's today's day (mon, tue, wed)
+  var endDate = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate(); //End  date for the months
+  var prevDates = new Date(d.getFullYear(), d.getMonth(), 0).getDate();
+  var today = new Date(); // Creates new date
+
+  //Store months in string in an array
+  var months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  // Gets the html from the html document
+  document.getElementById("dateStart").innerHTML = d.toDateString();
+  document.getElementById("month").innerHTML = months[d.getMonth()];
+
+  var cells = "";
+
+  // Makes last months days show before the first date of this month
+  for (x = day; x > 0; x--) {
+    cells += "<div class='prevDate'>" + (prevDates - x + 1) + "</div>";
+  }
+
+  for (i = 1; i <= endDate; i++) {
+    if (
+      i === today.getDate() &&
+      d.getMonth() === today.getMonth() &&
+      d.getFullYear() === today.getFullYear()
+    ) {
+      cells += "<div class='today'>" + i + "</div>";
+    } else {
+      cells += "<div>" + i + "</div>";
+    }
+  }
+
+  document.getElementsByClassName("days")[0].innerHTML = cells;
 }
 
-var prevDate = new Date(d.getFullYear(), d.getMonth(), 0).getDate();
-
-var monthName = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "November",
-  "December",
-];
-
-function getCalendar(dayNumber, days) {
-  var table = document.createElement("table");
-  var tr = document.createElement("tr");
-
-  // Row for the days
-  for (var i = 0; i <= 6; i++) {
-    var td = document.createElement("td");
-    td.innerHTML = "SMTWTFS"[i];
-    tr.appendChild(td);
+function moveDate(para) {
+  if (para === "prev") {
+    d.setMonth(d.getMonth() - 1);
+  } else if (para === "next") {
+    d.setMonth(d.getMonth() + 1);
   }
-  table.appendChild(tr);
-
-  //Create 2nd row
-  tr = document.createElement("tr");
-  var i;
-  for (i = 0; i <= 6; i++) {
-    if (i === dayNumber) {
-      break;
-    }
-    var td = document.createElement("td");
-    td.innerHTML = "";
-    tr.appendChild(td);
-  }
-
-  var count = 1;
-  for (; i <= 6; i++) {
-    var td = document.createElement("td");
-    td.innerHTML = count;
-    count++;
-    tr.appendChild(td);
-  }
-
-  table.appendChild(tr);
-
-  // Rest of the rows
-
-  for (var r = 3; r <= 6; r++) {
-    var tr = document.createElement("tr");
-    for (var i = 0; i <= 6; i++) {
-      if (count > days) {
-        table.appendChild(tr);
-        return table;
-      }
-      var td = document.createElement("td");
-      td.innerHTML = count;
-      count++;
-      tr.appendChild(td);
-    }
-    table.appendChild(tr);
-  }
+  renderDate();
 }
