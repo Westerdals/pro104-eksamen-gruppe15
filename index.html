@@ -59,7 +59,7 @@
         <!-- header til middleContainer -->
         <div id="middleHeader">
             <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
-            <h1 id="currentTask" middle-list-title>Sample</h1>
+            <h1 id="currentTask" middle-list-title></h1>
         </div>
 
         <!-- konteiner som blir brukt til å holde på alle sub-list elementene til hoved listene -->
@@ -68,22 +68,7 @@
             <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
         
             <div id="AddContainerEmpty">
-            <!-- 
-                <div class="subTaskList">
-                    <div class="subListHeader" data-sub-list-header>
-                        <form action="" data-new-sub-header-form>
-                            <input class="subListHeaderText" type="text" placeholder="Task Name.." data-new-sub-header>
-                        </form>
-                    </div> 
-                    <ul class="subUl" sub-data-lists></ul>
-                    <div id="formContainer">
-                        <form action="" data-new-sub-form>
-                            <input type="text" class="leftInput" placeholder="new task.." data-new-sub-input>
-                            <button class="btn create" id="leftbutton">Add</button>
-                        </form>
-                    </div>
-                </div>
-            -->            
+                <!-- Her går de genererte sub-task boksene -->          
             </div>
 
             <div id="plussSubTaskList">
@@ -93,31 +78,21 @@
         </div>
 
     </div>
+
+     <!-- konteiner som holder på baren til høyre, Profil-baren -->
    <div id="rightContainer">
-               <div id="rightBarHeader">
-       <div id="profilePicture" ></div></div>
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-       <p id="username"> username </p>
-       
-       <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
-       <div id="footRightBar">
-        <div id="faceBook"></div>
-        <div id="canvas"></div>
-        <div id="instagram"></div>
-        <div id="youtube"></div>
-   
-       </div>
-       
-       
-       
-               
-            </div> 
+        <div id="rightBarHeader">
+            <div id="profilePicture" ></div>
+        </div>
+        <p id="username"> username </p>
+            <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
+        <div id="footRightBar">
+            <div id="facebook" class="linkIcon"></div>
+            <div id="canvas" class="linkIcon"></div>
+            <div id="instagram" class="linkIcon"></div>
+            <div id="youtube" class="linkIcon"></div>
+        </div>
+    </div> 
 </div>
 </body>
 </html>
