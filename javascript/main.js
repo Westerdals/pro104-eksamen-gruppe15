@@ -30,8 +30,7 @@ listsContainer.addEventListener('click', e => {
         currentTaskname();
         saveAndRender();
         //renderChildheader();
-        plussTaskListRender();
-        subTaskRender();
+        renderSubMenu();
     }
 })
 
@@ -53,12 +52,14 @@ function currentTaskname(){
             currentTask.innerText = selectedListId;
         }
     })
+    renderSubMenu();
 }
 
 function createList(name) {
     // id blir generert med date så de alltid får en unik id
     let subTasksList = [[]];
-    let tasksSub = { id: Date.now().toString() + 1, header: [], subTasksList, subMembers: [] };
+    let subTasksHeader = [[]];
+    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subMembers: [] };
     return { id: Date.now().toString(), name: name, members: [], tasksSub: tasksSub };
 }
 

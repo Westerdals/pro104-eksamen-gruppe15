@@ -19,10 +19,14 @@ const AddContainerEmpty = document.getElementById("AddContainerEmpty");
 // Denne koden gjør at vi kan finne oppgaven brukeren er på
 // const selectedList = lists.find(list => list.id === selectedListId)
 
-//RENDER
-// renderChildheader(); //TODO: REDO
-plussTaskListRender();
-subTaskRender();
+renderSubMenu();
+
+function renderSubMenu(){
+    //RENDER
+    plussTaskListRender();
+    renderChildheader();
+    subTaskRender();
+}
 
 function plussTaskListRender(){
     const selectedList = lists.find(list => list.id === selectedListId);
@@ -35,8 +39,8 @@ function plussTaskListRender(){
         AddContainerEmpty.innerHTML += 
     ` <div class="subTaskList">
     <div class="subListHeader" data-sub-list-header id=${"form" + i}>
-        <form action="" data-new-sub-header-form>
-            <input class="subListHeaderText" type="text" placeholder="Task Name.." data-new-sub-header>
+        <form action="" data-new-sub-header-form onsubmit="childHeaderFormNew(event)">
+            <input class="subListHeaderText" type="text" placeholder="Task Name.." data-new-sub-header id="${"head" + i}">
         </form>
     </div> 
     <ul class="subUl" sub-data-lists id="${"ul" + i}">
@@ -53,46 +57,6 @@ function plussTaskListRender(){
     save();
 }
 
-// submit event til sub-tasks, så man kan legge til oppgaver til listen
-/*
-newChildForm.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const selectedList = lists.find(list => list.id === selectedListId);
-
-    listLength = selectedList.tasksSub.subTasksList.length;
-    for (i = 0; i < listLength; i++){
-        currentUl = document.getElementById("ul" + i);
-        if (this.id === currentUl) {
-            console.log(subListName);
-            const subListName = currentUl.value;
-            selectedList.tasksSub.subTasksList[i].push(subListName);
-            save();
-            newChildInput.value = null;
-        }
-    }
-    
-    //const subListName = newChildInput.value 
-
-    //if(subListName == null || subListName === "") return
-
-    //const selectedList = lists.find(list => list.id === selectedListId)
-
-    // console.log så man ser hva som skjer
-    //console.log(selectedList.tasksSub.subTasksList[1])
-
-    //selectedList.tasksSub.subTasksList[0].push(subListName)
-
-    //newChildInput.value = null
-
-    // Save er en global funskjon som lagrer data inn i local storage
-    plussTaskListRender();
-    save();
-    // subTaskRenderer gjør at listen blir oppdatert med en gang etter man har lagt til en ny oppgave
-    subTaskRender();
-});
-*/
-
 function newChildFormOnsubmit(event){
     event.preventDefault();
     const selectedList = lists.find(list => list.id === selectedListId);
@@ -106,8 +70,7 @@ function newChildFormOnsubmit(event){
             currentUl.value = null;
         }
     }
-    plussTaskListRender();
-    subTaskRender();
+    renderSubMenu();
 }
 
 // rendrer listen, går gjennom hver string i arrayet tasks og gjør dem om til en (li) list element
@@ -120,7 +83,6 @@ function subTaskRender() {
 
     listLength = selectedList.tasksSub.subTasksList.length;
     for (i = 0; i < listLength; i++){
-        console.log(selectedList.tasksSub.subTasksList[i]);
         selectedList.tasksSub.subTasksList[i].forEach(list => {
                 currentUl = document.getElementById("ul" + i);
                 listElement = document.createElement('li');
@@ -133,46 +95,50 @@ function subTaskRender() {
     
 }
 
-/*
-//TODO: REDO
 // Submit event for header(overskrift) til sub-task meny
-childHeaderForm.addEventListener('submit', e => {
-    e.preventDefault()
+function childHeaderFormNew(event) {
+    event.preventDefault();
+    const selectedList = lists.find(list => list.id === selectedListId);
 
-    const subListHeader = childHeaderInput.value
+    let listLength = selectedList.tasksSub.subTasksHeader.length;
 
-    const selectedList = lists.find(list => list.id === selectedListId)
+    console.log(listLength);
+    for(i = 0; i < listLength; i++){
+        let currentHeaderInput = document.getElementById("head" + i);
+        let subListHeader = currentHeaderInput.value;
+        let isTaskEmpty = false;
 
-    if (selectedList.tasksSub.header.length > 0){
-        selectedList.tasksSub.header.pop()
-        selectedList.tasksSub.header.push(subListHeader)
-    } else {
-        selectedList.tasksSub.header.push(subListHeader)
+        if(subListHeader !== ""){
+            if (selectedList.tasksSub.subTasksHeader[i].length > 0){
+                selectedList.tasksSub.subTasksHeader[i].pop();
+                selectedList.tasksSub.subTasksHeader[i].push(subListHeader);
+                console.log("subListHeader-NOT-EMPTY");
+                save();
+            } else {
+                console.log("subListHeader-EMPTY");
+                selectedList.tasksSub.subTasksHeader[i].push(subListHeader);
+                selectedList.tasksSub.subTasksList[i].pop();
+                save();
+            }
+        }
+        
     }
+    renderChildheader();
+}
 
-    // renderChildheader() //TODO: REDO
-
-    // childHeaderInput.value = null
-
-    // Funskjoner for å lagre og rendre
-    // subTaskHtmlRender()
-    save()
-})
-*/
-
-// Funksjon som sjekker om childHeaderInput og tasksSub.header er tomme, for å så legge inn verdier
-/*
 function renderChildheader(){
     const selectedList = lists.find(list => list.id === selectedListId)
 
-    if (selectedList.tasksSub.header.length > 0 || childHeaderInput.value < 0){
-        childHeaderInput.value = selectedList.tasksSub.header
-    } else {
-        childHeaderInput.value = "";
-    }
-
+    listLength = selectedList.tasksSub.subTasksHeader.length;
+    for(i = 0; i < listLength; i++){
+        currentHeaderInput = document.getElementById("head" + i);
+        if (selectedList.tasksSub.subTasksHeader[i].length > 0 || currentHeaderInput.value < 0){
+            currentHeaderInput.value = selectedList.tasksSub.subTasksHeader[i];
+        } else {
+            currentHeaderInput.value = null;
+        }
+    }   
 }
-*/
 
 function plussTaskList(event){
     event.preventDefault();
@@ -181,12 +147,11 @@ function plussTaskList(event){
     listLength = selectedList.tasksSub.subTasksList.length;
 
     const newArray = [];
+    const newArrayH = [""];
 
     selectedList.tasksSub.subTasksList.push(newArray);
+    selectedList.tasksSub.subTasksHeader.push(newArrayH);
     save();
 
-    plussTaskListRender();
-    subTaskRender();
+    renderSubMenu();
 }
-
-// Gjør at subTask meny kommer opp når man refresher siden 
