@@ -6,6 +6,7 @@
   background-color: #f2f2f2;
   overflow-x: scroll;
   transition: 0.3s;
+  display: inline-block;
 }
 
 #middleHeader{
@@ -23,6 +24,7 @@
 #currentTask{
   color: #444444;
   font-weight: normal;
+  margin-right: 150px;
 }
 
 .subTaskContainer{
@@ -30,23 +32,24 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  display: flex;
-  padding-left: 80px;
+  padding-left:20px;
   padding-top: 10px;
 }
 
 .subTaskList{
-  width: 300px;
+  float: left;
+  width: 21.5%;
   height: fit-content;
   box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
   border-radius: 5px;
-  margin-left: 38px;
+  margin: 1%;
+  margin-bottom: 2%;
 }
 
 .subListHeader{
   width: 100%;
   height: 50px;
-  background-color: gray;
+  background-color: #bcbcbc;
   text-align: center;
   display: flex;
   align-items: center;
@@ -63,6 +66,14 @@
   list-style: none;
   padding: 15;
   margin-left: -35px;
+  font-size: 18px;
+  margin-bottom: 4px;
+  padding-bottom: 5px;
+}
+
+.subLi:hover {
+  font-size: 18px;
+  margin-bottom: 4px;
 }
 
 .subListHeaderText{
@@ -70,7 +81,7 @@
   margin-top: 1px;
   border-radius: 5px;
   text-align: center;
-  width: 300px;
+  width: inherit;
   height: 42px;
   border: none;
   background: none;
@@ -79,7 +90,7 @@
 
 .subListHeaderText:focus{
   border: none;
-  border-bottom: 3px solid green;
+  border-bottom: 3px solid #2bb524;
 }
 
 .subListHeaderText::placeholder{
@@ -87,35 +98,43 @@
 }
 
 #plussSubTaskList{
+  position: absolute;
+  left: 0;
   width: 300px;
   height: 50px;
-  background-color: pink;
-  margin-left: 38px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
 }
 
 #buttonSubTaskList{
-  width: 300px;
+  margin-top: 5px;
+  width: 100px;
   height: 50px;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bolder;
   border: none;
-  background-color: gray;
+  background-color: #bcbcbc;
   border-radius: 5px;
-  color: white;
+  color: #f2f2f2;
+  margin-left: -120px;
+  transition: 0.1s;
+}
+
+#buttonSubTaskList:hover{
+  background-color: #2bb524;
+  color: #f2f2f2;
 }
 
 #AddContainerEmpty{
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-template-columns: auto auto auto;
+  width: 95%;
+  padding-right: 5%;
+  display: inline-block;
+  float: left;
   grid-column-gap: 25px;
   padding: 0px;
+  padding-right: 0px;
 }
 
 .subTaskInput{
@@ -130,9 +149,18 @@
 }
 
 .subTaskInput:focus {
-  border: 3px solid green;
+  border: 3px solid #2bb524;
 }
 
-.subTaskFormStyle:hover .subTaskInput{
-  margin-top: 12.5px;
+.subTaskFormStyle{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: #bcbcbc;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.createTaskForm{
+  width: inherit;
 }

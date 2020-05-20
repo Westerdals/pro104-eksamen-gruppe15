@@ -59,3 +59,42 @@ function middleBarLeave() {
   middleContainer.style.marginLeft = "70px";
   middleContainer.style.transition = "0.5s";
 }
+
+// Right Container Hover
+const rightContainer = document.getElementById("rightContainer");
+const profilePicture = document.getElementById("profilePicture");
+const username = document.getElementById("username");
+const footerRightBar = document.getElementById("footerRightBar");
+
+rightContainer.addEventListener('mouseover', (e) => {
+  e.preventDefault();
+  rightContainerHover();
+})
+
+rightContainer.addEventListener('mouseleave', (e) => {
+  e.preventDefault();
+  rightContainerLeave();
+})
+
+function rightContainerHover(){
+  rightContainer.style.width = "300px";
+  rightContainer.style.transition = "0.3s";
+  profilePicture.style.width = "70px";
+  profilePicture.style.height = "70px";
+  profilePicture.style.transition = "0.3s";
+  username.style.display = "block";
+  username.style.transition = "0.3s";
+  footerRightBar.style.display = "grid";
+  footerRightBar.style.transition = "0.3s";
+}
+
+function rightContainerLeave(){
+  rightContainer.style.width = "70px";
+  profilePicture.style.width = "50px";
+  profilePicture.style.height = "50px";
+  profilePicture.style.transition = "0.3s";
+  username.style.display = "none";
+  username.style.transition = "0.3s";
+  footerRightBar.style.display = "none";
+  footerRightBar.style.transition = "0.3s";
+}

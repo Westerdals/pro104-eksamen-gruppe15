@@ -45,8 +45,8 @@ function plussTaskListRender(){
     </div> 
     <ul class="subUl" sub-data-lists id="${"ul" + i}">
     </ul>
-    <div id="formContainer" class="subTaskFormStyle">
-        <form action="" data-new-sub-form onsubmit="newChildFormOnsubmit(event)">
+    <div class="subTaskFormStyle">
+        <form action="" data-new-sub-form onsubmit="newChildFormOnsubmit(event)" id="createTaskForm">
             <input type="text" class="subTaskInput" placeholder="new task.." data-new-sub-input id="${"task" + i}">
             <button class="btn create" id="leftbutton">Add</button>
         </form>
