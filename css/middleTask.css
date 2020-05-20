@@ -1,14 +1,14 @@
-#middleContainer {
+#middleContainer{
   position: absolute;
-  margin-left: 310px;
+  margin-left: 350px;
   width: inherit;
   height: 100%;
   background-color: #f2f2f2;
-  overflow-x: hidden;
+  overflow-x: scroll;
   transition: 0.3s;
 }
 
-#middleHeader {
+#middleHeader{
   position: absolute;
   width: 100%;
   height: 100px;
@@ -20,12 +20,12 @@
   justify-content: center;
 }
 
-#currentTask {
+#currentTask{
   color: #444444;
   font-weight: normal;
 }
 
-.subTaskContainer {
+.subTaskContainer{
   margin-top: 150px;
   width: 100%;
   height: 100%;
@@ -35,15 +35,15 @@
   padding-top: 10px;
 }
 
-.subTaskList {
+.subTaskList{
   width: 300px;
   height: fit-content;
-  box-shadow: inset 0px -30px 41px -23px rgba(0, 0, 0, 0.23);
+  box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
   border-radius: 5px;
   margin-left: 38px;
 }
 
-.subListHeader {
+.subListHeader{
   width: 100%;
   height: 50px;
   background-color: gray;
@@ -54,7 +54,7 @@
   border-radius: 5px;
 }
 
-.subTask {
+.subTask{
   font-size: 18px;
   color: #f2f2f2;
 }
@@ -65,7 +65,7 @@
   margin-left: -35px;
 }
 
-.subListHeaderText {
+.subListHeaderText{
   color: white;
   margin-top: 1px;
   border-radius: 5px;
@@ -77,11 +77,62 @@
   font-size: 1.4em;
 }
 
-.subListHeaderText:focus {
+.subListHeaderText:focus{
   border: none;
   border-bottom: 3px solid green;
 }
 
-.subListHeaderText::placeholder {
+.subListHeaderText::placeholder{
   color: white;
+}
+
+#plussSubTaskList{
+  width: 300px;
+  height: 50px;
+  background-color: pink;
+  margin-left: 38px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+#buttonSubTaskList{
+  width: 300px;
+  height: 50px;
+  font-size: 2em;
+  font-weight: bolder;
+  border: none;
+  background-color: gray;
+  border-radius: 5px;
+  color: white;
+}
+
+#AddContainerEmpty{
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 25px;
+  padding: 0px;
+}
+
+.subTaskInput{
+  position: absolute;
+  width: 200px;
+  padding: 9px 20px;
+  margin-left: -150px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.subTaskInput:focus {
+  border: 3px solid green;
+}
+
+.subTaskFormStyle:hover .subTaskInput{
+  margin-top: 12.5px;
 }

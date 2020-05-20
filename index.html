@@ -1,158 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      href="/images/Tabs-small-logo.png"
-      sizes="16x16"
-      type="image/png"
-    />
+<head>
+    <meta charset="UTF-8">
     <!-- tittel -->
     <title>Tabs</title>
     <!-- CSS-linker -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/leftBar.css" />
-    <link rel="stylesheet" type="text/css" href="css/middleTask.css" />
-    <link rel="stylesheet" type="text/css" href="css/popupMenu.css" />
-    <link rel="stylesheet" type="text/css" href="css/rightBar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/leftBar.css">
+    <link rel="stylesheet" type="text/css" href="/css/middleTask.css">
     <!-- importerte fonter -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap" rel="stylesheet">
     <!-- JS-linker -->
-    <script defer src="javascript/main.js"></script>
-    <script defer src="javascript/draggable.js"></script>
-    <script defer src="javascript/hover.js"></script>
-    <script defer src="javascript/subTask.js"></script>
-    <script defer src="javascript/popupMenu.js"></script>
-  </head>
-  <body>
+    <script defer src="/javascript/main.js"></script>
+    <script defer src="draggable.js"></script>
+    <script defer src="/javascript/hover.js"></script>
+    <script defer src="/javascript/subTask.js"></script>
+</head>
+<body>
     <!-- konteiner som holder på alt -->
-    <div id="mainContainer">
-      <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
-      <div id="leftContainer">
+<div id="mainContainer">
+
+    <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
+    <div id="leftContainer">
+        
         <!-- header til venstre konteiner -->
         <div id="leftBarHeader">
-          <h1 id="leftBarLogo"></h1>
+            <h1 id="leftBarLogo"></h1>
         </div>
 
         <!-- konteiner til ul -->
         <div id="leftList">
-          <!-- Ul til listene (li) som blir generert -->
-          <ul class="taskList" data-lists>
-            <!-- Her blir hoved-listene plassert -->
+            <!-- Ul til listene (li) som blir generert -->
+            <ul class="taskList" data-lists>
+                <!-- Her blir hoved-listene plassert -->
             <!--
             <li>Sample task</li>
             <li>Sample task</li>
             <li>Sample task</li>
             -->
-          </ul>
+            </ul>
         </div>
         <!-- kontainer til input feltet som legger til lister i (data-lists, class="taskList") -->
         <div id="formContainer">
-          <!-- data-new-list-form er for onsubmit event -->
-          <form action="" data-new-list-form>
-            <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
-            <input
-              type="text"
-              class="new list"
-              id="leftInput"
-              placeholder="New project"
-              data-new-list-input
-            />
-            <!-- knapp som kan brukes for å submite -->
-            <button class="btn create" id="leftbutton">Add</button>
-          </form>
-          <!-- data-new-list-form er for onsubmit event -->
-          <form action="" data-new-list-form>
-            <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
-            <input
-              type="text"
-              class="new list"
-              id="leftInput"
-              placeholder="new list name"
-              data-new-list-input
-            />
-            <!-- knapp som kan brukes for å submite -->
-            <button class="btn create" id="leftbutton">Add</button>
-          </form>
+            <!-- data-new-list-form er for onsubmit event -->
+            <form action="" data-new-list-form>
+                 <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
+                <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input>
+                <!-- knapp som kan brukes for å submite -->
+                <button class="btn create" id="leftbutton">Add</button>
+            </form>
         </div>
-      </div>
-      <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
-      <div id="middleContainer" middle-container>
+        
+    </div>
+    <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
+    <div id="middleContainer" middle-container>
+
         <!-- header til middleContainer -->
         <div id="middleHeader">
-          <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
-          <h1 id="currentTask" middle-list-title>Test</h1>
-        </div>
-
-        <!-- Popup menu for color change -->
-        <div id="popupMain">
-          <p id="menuTxt">Select status on assignment</p>
-          <div id="statusTodo" class="status" onclick="changeColor()">
-            To do
-          </div>
-          <div id="statusDoing" class="status" onclick="changeColor2()">
-            Doing
-          </div>
-          <div id="statusFeedback" class="status" onclick="changeColor3()">
-            Waiting for feedback
-          </div>
-          <div id="statusDone" class="status" onclick="changeColor4()">
-            Done
-          </div>
-
-          <!-- Back button to close popup -->
-          <p id="backBtn" title="close" onclick="closeMenu()">
-            <img id="close" src="icons/x-mark.png" />
-          </p>
+            <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
+            <h1 id="currentTask" middle-list-title>Sample</h1>
         </div>
 
         <!-- konteiner som blir brukt til å holde på alle sub-list elementene til hoved listene -->
-        <div class="subTaskContainer">
-          <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
-          <div class="subTaskList">
-            <div class="subListHeader">
-              <!-- <p class="subTask">Header</p>> -->
-              <form action="" data-new-sub-header-form>
-                <input
-                  type="text"
-                  placeholder="Task Name.."
-                  data-new-sub-header
-                />
-              </form>
-              <!-- Button to open popup menu -->
-              <button id="menuBtn" onclick="openMenu()">...</button>
+        <div class="subTaskContainer" id="subTaskContainer">
+
+            <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
+        
+            <div id="AddContainerEmpty">
+            <!-- 
+                <div class="subTaskList">
+                    <div class="subListHeader" data-sub-list-header>
+                        <form action="" data-new-sub-header-form>
+                            <input class="subListHeaderText" type="text" placeholder="Task Name.." data-new-sub-header>
+                        </form>
+                    </div> 
+                    <ul class="subUl" sub-data-lists></ul>
+                    <div id="formContainer">
+                        <form action="" data-new-sub-form>
+                            <input type="text" class="leftInput" placeholder="new task.." data-new-sub-input>
+                            <button class="btn create" id="leftbutton">Add</button>
+                        </form>
+                    </div>
+                </div>
+            -->            
             </div>
-            <ul id="subList" class="subUl" sub-data-lists>
-              <!--
-                    <li class="subLi">oppgave 1</li>
-                    <li class="subLi">oppgave 2</li>
-                    <li class="subLi">oppgave 3</li>
-                    -->
-            </ul>
-            <div id="formContainer">
-              <form action="" data-new-sub-form>
-                <input
-                  type="text"
-                  id="leftInput"
-                  placeholder="new task name"
-                  data-new-sub-input
-                />
-                <button class="btn create" id="leftbutton">Add</button>
-              </form>
+
+            <div id="plussSubTaskList">
+                <button onclick="plussTaskList(event)" id="buttonSubTaskList">+</button>
             </div>
-          </div>
+
         </div>
-      </div>
-<!--        Konteiner som ligger på høyre hånd som skal inneholde bruker icon og lenker til andre sider -->
-        <div id="rightContainer">
-            <div id="rightBarHeader">
-                
-            </div>
-        </div>
+
     </div>
-  </body>
+</div>
+</body>
 </html>
