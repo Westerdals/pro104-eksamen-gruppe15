@@ -60,6 +60,9 @@
         <div id="middleHeader">
             <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
             <h1 id="currentTask" middle-list-title></h1>
+            <div id="plussSubTaskList">
+                <button onclick="plussTaskList(event)" id="buttonSubTaskList">Add Task</button>
+            </div>
         </div>
 
         <!-- konteiner som blir brukt til å holde på alle sub-list elementene til hoved listene -->
@@ -69,10 +72,6 @@
         
             <div id="AddContainerEmpty">
                 <!-- Her går de genererte sub-task boksene -->          
-            </div>
-
-            <div id="plussSubTaskList">
-                <button onclick="plussTaskList(event)" id="buttonSubTaskList">+</button>
             </div>
            
         </div>
@@ -86,7 +85,7 @@
         </div>
         <p id="username"> username </p>
             <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
-        <div id="footRightBar">
+        <div id="footerRightBar">
             <div id="facebook" class="linkIcon"></div>
             <div id="canvas" class="linkIcon"></div>
             <div id="instagram" class="linkIcon"></div>
