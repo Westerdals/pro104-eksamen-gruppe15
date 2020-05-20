@@ -50,7 +50,7 @@ function leftContainerLeave() {
 
 function middleBarHover() {
   middleContainer.style.width = "inherit";
-  middleContainer.style.marginLeft = "350px";
+  middleContainer.style.marginLeft = "310px";
   middleContainer.style.transition = "0.3s";
 }
 
