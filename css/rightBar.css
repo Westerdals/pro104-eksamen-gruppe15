@@ -1,7 +1,7 @@
 #rightContainer {
-    width: 120px;
+    width: 300px;
     height: inherit;
-    background-color: #f2f2f2;
+    background-color: skyblue;
     overflow-y: scroll;
     transition: 0.3s;
     box-shadow: 5px 0px 20px 0px #444444;
@@ -19,4 +19,65 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+p {
+text-align: center;
+font-size: 26px;
+
+}
+#profilePicture{
+background-image:url(/images/UserLogo-01.png);
+width: 75px;
+height: 75px;
+background-size: cover;
+  background-position: center;
+
+}
+#footRightBar{
+display: grid;
+  grid-template-columns: auto auto auto;
+
+  padding: 10px;
+top: 830px;
+margin-left: 10px;
+margin-bottom: 10px;
+padding-bottom: 10px;
+grid-column-gap: 17px;
+position: absolute;
+    
+    
+}
+
+#faceBook{
+
+background-image: url(/images/facebook.png);
+width: 75px;
+height: 75px;
+background-size: cover;
+  background-position: center;
+
+
+}
+#canvas{
+background-image: url(/images/canvas.png);
+width: 75px;
+height: 75px;
+background-size: cover;
+  background-position: center;
+}
+
+#instagram{
+background-image: url(/images/instagram.png);
+width: 75px;
+height: 75px;
+background-size: cover;
+  background-position: center;
+}
+
+#youtube{
+background-image: url(/images/YouTube.png);
+    width: 75px;
+height: 75px;
+background-size: cover;
+  background-position: center;
 }
