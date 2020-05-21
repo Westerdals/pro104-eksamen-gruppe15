@@ -17,16 +17,6 @@
     margin-left: 90%;
 }
 
-.subTaskList{
-    float: left;
-    width: 21.5%;
-    height: fit-content;
-    box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
-    border-radius: 5px;
-    margin: 1%;
-    margin-bottom: 2%;
-}
-
 .subListHeader{
     width: 100%;
     height: 50px;
@@ -104,4 +94,111 @@
 .subTaskInput:focus {
     border: 3px solid #2bb524;
 }
-  
+
+@media (max-width: 6000px){
+    .subTaskList{
+        float: left;
+        width: 9%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 4000px){
+    .subTaskList{
+        float: left;
+        width: 12%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 3000px){
+    .subTaskList{
+        float: left;
+        width: 14%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 2300px){
+    .subTaskList{
+        float: left;
+        width: 17%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 1870px){
+    .subTaskList{
+        float: left;
+        width: 22%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 1480px){
+    .subTaskList{
+        float: left;
+        width: 28%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 1120px){
+    .subTaskList{
+        float: left;
+        width: 40%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 790px){
+    .subTaskList{
+        float: left;
+        width: 65%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 680px){
+    .subTaskList{
+        float: left;
+        width: 65%;
+        height: fit-content;
+        box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        margin: 1%;
+        margin-bottom: 2%;
+    }
+}

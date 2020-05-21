@@ -1,3 +1,4 @@
+const popUpContainer = document.getElementById("popUpContainer");
 
 function editSubTask(event) {
     event.preventDefault();
@@ -10,7 +11,15 @@ function renderEditBox(){
     console.log("renderEditBox")
     popUpBox.innerHTML = 
     `
-    <div id="popUpContainer"></div>
+    <div id="popUpBox">
+        <div id="popUpInput1">
+            <h3>Change something</h3>
+            <form>
+                <input type="text" placeholder="input"> 
+                <button>edit</button>
+            </form>
+        </div>
+    </div>
     `
-    
+    popUpContainer.appendChild(popUpBox);
 }
