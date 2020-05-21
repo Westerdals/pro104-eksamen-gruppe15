@@ -130,7 +130,6 @@
 #AddContainerEmpty{
   width: 95%;
   padding-right: 5%;
-  display: inline-block;
   float: left;
   grid-column-gap: 25px;
   padding: 0px;
