@@ -36,65 +36,9 @@
   padding-top: 10px;
 }
 
-.subTaskList{
-  float: left;
-  width: 21.5%;
-  height: fit-content;
-  box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
-  border-radius: 5px;
-  margin: 1%;
-  margin-bottom: 2%;
-}
-
-.subListHeader{
-  width: 100%;
-  height: 50px;
-  background-color: #bcbcbc;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-}
-
 .subTask{
   font-size: 18px;
   color: #f2f2f2;
-}
-
-.subLi {
-  list-style: none;
-  padding: 15;
-  margin-left: -35px;
-  font-size: 18px;
-  margin-bottom: 4px;
-  padding-bottom: 5px;
-}
-
-.subLi:hover {
-  font-size: 18px;
-  margin-bottom: 4px;
-}
-
-.subListHeaderText{
-  color: white;
-  margin-top: 1px;
-  border-radius: 5px;
-  text-align: center;
-  width: inherit;
-  height: 42px;
-  border: none;
-  background: none;
-  font-size: 1.4em;
-}
-
-.subListHeaderText:focus{
-  border: none;
-  border-bottom: 3px solid #2bb524;
-}
-
-.subListHeaderText::placeholder{
-  color: white;
 }
 
 #plussSubTaskList{
@@ -125,41 +69,4 @@
 #buttonSubTaskList:hover{
   background-color: #2bb524;
   color: #f2f2f2;
-}
-
-#AddContainerEmpty{
-  width: 95%;
-  padding-right: 5%;
-  float: left;
-  grid-column-gap: 25px;
-  padding: 0px;
-  padding-right: 0px;
-}
-
-.subTaskInput{
-  position: absolute;
-  width: 200px;
-  padding: 9px 20px;
-  margin-left: -150px;
-  box-sizing: border-box;
-  border: 3px solid #ccc;
-  outline: none;
-  transition: 0.3s;
-}
-
-.subTaskInput:focus {
-  border: 3px solid #2bb524;
-}
-
-.subTaskFormStyle{
-  position: relative;
-  width: 100%;
-  height: 40px;
-  background-color: #bcbcbc;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.createTaskForm{
-  width: inherit;
 }
