@@ -1,11 +1,11 @@
-.calendarContainer {
+#calendarContainer {
   display: inline-block;
   width: 100%;
   height: 390px;;
   background-color: #E0DAD5;
   box-shadow: 0px 0px 15px 3px rgba(17, 16, 16, 0.2);
   align-content: center;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 

@@ -3,11 +3,12 @@ const leftContainer = document.getElementById("leftContainer");
 const leftBarLogo = document.getElementById("leftBarLogo");
 const leftList = document.getElementById("leftList");
 const formContainer = document.getElementById("formContainer");
+const calendarContainer = document.getElementById("calendarContainer");
 
 // MiddleBar
 const middleContainer = document.getElementById("middleContainer");
 
-/* leftContainer.addEventListener("mouseover", (e) => {
+leftContainer.addEventListener("mouseover", (e) => {
   e.preventDefault();
   leftContainerHover();
   middleBarHover();
@@ -33,6 +34,7 @@ function leftContainerHover() {
   leftList.style.display = "";
   formContainer.style.display = "";
   leftContainer.style.boxShadow = "5px 0px 20px 0px #444444";
+  calendarContainer.style.display = "block";
 }
 
 function leftContainerLeave() {
@@ -46,8 +48,9 @@ function leftContainerLeave() {
   leftBarLogo.style.height = "50px";
   leftList.style.display = "none";
   formContainer.style.display = "none";
+  calendarContainer.style.display = "none";
 }
-*/
+
 
 function middleBarHover() {
   middleContainer.style.width = "inherit";
