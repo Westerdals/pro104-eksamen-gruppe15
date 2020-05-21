@@ -1,14 +1,14 @@
 #popUpContainer {
-  position: sticky;
-  height: 300px;
+  position: absolute;
+  height: 700px;
   width: 450px;
   padding-right: 100px;
   border: 2px solid #424249;
   border-radius: 5px;
   background-color: #c0c0c0;
   transform: translate(500px, 150px);
-  z-index: 5;
-  display: block;
+  display: none;
+  float: right;
 }
 
 #popUpInput1 {
@@ -57,16 +57,20 @@
 }
 
 #statusTodo {
-  background-color: #ffffff;
+  background-color: #424249;
+  color: #f2f2f2;
 }
 #statusDoing {
   background-color: #f4b707;
+  color: #f2f2f2;
 }
 #statusFeedback {
   background-color: #4184c6;
+  color: #f2f2f2;
 }
 #statusDone {
-  background-color: #5ec19d;
+  background-color: #69D126;
+  color: #f2f2f2;
 }
 
 #changeTaskName {

@@ -6,18 +6,19 @@ function editSubTask(event, deleteId) {
     console.log("delete");
     let taskCount = selectedList.tasksSub.subTasksList.length;
     console.log(deleteId);
-    console.log()
+    console.log();
     for(i = 0; i < taskCount; i++){
         if (deleteId === "delete" + i){
             console.log("splice");
             selectedList.tasksSub.subTasksList.splice(i, 1);
             selectedList.tasksSub.subTasksHeader.splice(i, 1);
+            selectedList.tasksSub.subTasksStatus.splice(i, 1);
         }
     }
     save();
     renderSubMenu();
+    console.log("deletus fetus");
 }
-
 
 /*
 function renderEditBox(){

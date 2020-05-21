@@ -26,6 +26,7 @@ function renderSubMenu() {
   plussTaskListRender();
   renderChildheader();
   subTaskRender();
+  changeColorheader();
 }
 
 function plussTaskListRender() {
@@ -37,12 +38,12 @@ function plussTaskListRender() {
   clearElement(AddContainerEmpty);
   for (i = 0; i < listLength; i++) {
     AddContainerEmpty.innerHTML += ` <div class="subTaskList">
-    <div class="subListHeader" data-sub-list-header id=${"form" + i}>
+    <div class="subListHeader" data-sub-list-header id="${"form" + i}">
         <form action="" data-new-sub-header-form onsubmit="childHeaderFormNew(event)" class="headerForm">
             <input class="subListHeaderText" type="text" placeholder="Task Name.." data-new-sub-header id="${"head" + i}">
         </form>
         <div class="deleteButton" onclick="editSubTask(event, this.id)" id="${"delete" + i}"></div>
-        <div class="editButton" onclick="openMenu()"></div>
+        <div class="editButton" onclick="openMenu(event, this.id)" id="${i}"></div>
     </div> 
     <ul class="subUl" sub-data-lists id="${"ul" + i}">
     </ul>
@@ -150,9 +151,11 @@ function plussTaskList(event) {
 
   const newArray = [];
   const newArrayH = [""];
+  const newArrayC = [["#424249"]];
 
   selectedList.tasksSub.subTasksList.push(newArray);
   selectedList.tasksSub.subTasksHeader.push(newArrayH);
+  selectedList.tasksSub.subTasksStatus.push(newArrayC);
   save();
 
   renderSubMenu();

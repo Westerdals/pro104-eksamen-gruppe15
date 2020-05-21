@@ -59,8 +59,9 @@ function createList(name) {
     // id blir generert med date så de alltid får en unik id
     let subTasksList = [[]];
     let subTasksHeader = [[]];
-    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subMembers: [] };
-    return { id: Date.now().toString(), name: name, members: [], tasksSub: tasksSub };
+    let subTasksStatus = [["#f4b707"]]
+    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subMembers: [] };
+    return { id: Date.now().toString(), name: name, members: [], tasksSub: tasksSub};
 }
 
 function saveAndRender() {

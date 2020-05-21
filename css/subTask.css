@@ -8,29 +8,30 @@
   }
 
 .editButton{
+    float: right;
     width: 25px;
     height: 25px;
-    margin-top: -25px;
+    margin-right: 35px;
+    margin-top: -33.5px;
     background-image: url(/icons/pen.png);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    margin-left: 80%;
 }
 
 .deleteButton{
     width: 25px;
     height: 25px;
+    margin-right: 5px;
     margin-top: 12px;
+    float: right;
     background-image: url(/icons/x-mark.png);
     background-size: cover;
     background-position: center;
-    margin-left: 90%;
 }
 
 .subListHeader{
     width: 100%;
     height: 50px;
-    background-color: #424249;
     display: inline-block;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -48,7 +49,7 @@
     border-radius: 5px;
     text-align: center;
     float: left;
-    width: inherit;
+    width: 88%;
     height: 42px;
     border: none;
     background: none;
