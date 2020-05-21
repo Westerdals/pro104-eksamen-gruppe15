@@ -27,9 +27,9 @@ function leftContainerHover() {
   leftBarLogo.style.transitionDuration = "0.0s";
   leftBarLogo.style.transform = "rotateY(0deg)";
 
-  leftBarLogo.style.backgroundImage = "url(/images/TabsLogo-01.png)";
-  leftBarLogo.style.width = "150px";
-  leftBarLogo.style.height = "100px";
+  leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-02.png)";
+  leftBarLogo.style.width = "160px";
+  leftBarLogo.style.height = "160px";
   leftList.style.display = "";
   formContainer.style.display = "";
   leftContainer.style.boxShadow = "5px 0px 20px 0px #444444";
@@ -41,9 +41,9 @@ function leftContainerLeave() {
   leftBarLogo.style.transitionDuration = "0.5s";
   leftBarLogo.style.transform = "rotateY(360deg)";
 
-  leftBarLogo.style.backgroundImage = "url(/images/Tabs-small-logo.png)";
-  leftBarLogo.style.width = "45px";
-  leftBarLogo.style.height = "45px";
+  leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-01.png)";
+  leftBarLogo.style.width = "50px";
+  leftBarLogo.style.height = "50px";
   leftList.style.display = "none";
   formContainer.style.display = "none";
 }
