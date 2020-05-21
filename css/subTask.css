@@ -10,8 +10,18 @@
 .editButton{
     width: 25px;
     height: 25px;
-    margin-top: 12px;
+    margin-top: -25px;
     background-image: url(/icons/pen.png);
+    background-size: cover;
+    background-position: center;
+    margin-left: 80%;
+}
+
+.deleteButton{
+    width: 25px;
+    height: 25px;
+    margin-top: 12px;
+    background-image: url(/icons/x-mark.png);
     background-size: cover;
     background-position: center;
     margin-left: 90%;
