@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="/images/Tabs-small-logo.png"
+      sizes="16x16"
+      type="image/png"
+    />
     <!-- tittel -->
     <title>Tabs</title>
     <!-- CSS-linker -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/leftBar.css">
-    <link rel="stylesheet" type="text/css" href="/css/middleTask.css">
-    <link rel="stylesheet" type="text/css" href="/css/rightBar.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/leftBar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/middleTask.css" />
+    <link rel="stylesheet" type="text/css" href="/css/rightBar.css" />
     <!-- importerte fonter -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <!-- JS-linker -->
     <script defer src="/javascript/main.js"></script>
     <script defer src="draggable.js"></script>
     <script defer src="/javascript/hover.js"></script>
     <script defer src="/javascript/subTask.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- konteiner som holder på alt -->
-<div id="mainContainer">
-
-    <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
-    <div id="leftContainer">
-        
+    <div id="mainContainer">
+      <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
+      <div id="leftContainer">
         <!-- header til venstre konteiner -->
         <div id="leftBarHeader">
-            <h1 id="leftBarLogo"></h1>
+          <h1 id="leftBarLogo"></h1>
         </div>
 
         <!-- konteiner til ul -->
         <div id="leftList">
-            <!-- Ul til listene (li) som blir generert -->
-            <ul class="taskList" data-lists>
-                <!-- Her blir hoved-listene plassert -->
+          <!-- Ul til listene (li) som blir generert -->
+          <ul class="taskList" data-lists>
+            <!-- Her blir hoved-listene plassert -->
             <!--
             <li>Sample task</li>
             <li>Sample task</li>
             <li>Sample task</li>
             -->
-            </ul>
+          </ul>
         </div>
         <!-- kontainer til input feltet som legger til lister i (data-lists, class="taskList") -->
         <div id="formContainer">
-            <!-- data-new-list-form er for onsubmit event -->
-            <form action="" data-new-list-form>
-                 <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
-                <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input>
-                <!-- knapp som kan brukes for å submite -->
-                <button class="btn create" id="leftbutton">Add</button>
-            </form>
+          <!-- data-new-list-form er for onsubmit event -->
+          <form action="" data-new-list-form>
+            <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
+            <input
+              type="text"
+              class="new list"
+              id="leftInput"
+              placeholder="New project"
+              data-new-list-input
+            />
+            <!-- knapp som kan brukes for å submite -->
+            <button class="btn create" id="leftbutton">Add</button>
+          </form>
         </div>
-        
-    </div>
-    <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
-    <div id="middleContainer" middle-container>
-
+      </div>
+      <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
+      <div id="middleContainer" middle-container>
         <!-- header til middleContainer -->
         <div id="middleHeader">
-            <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
-            <h1 id="currentTask" middle-list-title></h1>
-            <div id="plussSubTaskList">
-                <button onclick="plussTaskList(event)" id="buttonSubTaskList">Add Task</button>
-            </div>
+          <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
+          <h1 id="currentTask" middle-list-title></h1>
+          <div id="plussSubTaskList">
+            <button onclick="plussTaskList(event)" id="buttonSubTaskList">
+              Add Task
+            </button>
+          </div>
         </div>
 
         <!-- konteiner som blir brukt til å holde på alle sub-list elementene til hoved listene -->
         <div class="subTaskContainer" id="subTaskContainer">
+          <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
 
-            <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
-        
-            <div id="AddContainerEmpty">
-                <!-- Her går de genererte sub-task boksene -->          
-            </div>
-           
+          <div id="AddContainerEmpty">
+            <!-- Her går de genererte sub-task boksene -->
+          </div>
         </div>
+      </div>
 
-    </div>
-
-     <!-- konteiner som holder på baren til høyre, Profil-baren -->
-   <div id="rightContainer">
+      <!-- konteiner som holder på baren til høyre, Profil-baren -->
+      <div id="rightContainer">
         <div id="rightBarHeader">
-            <div id="profilePicture" ></div>
+          <div id="profilePicture"></div>
         </div>
-        <p id="username"> username </p>
-            <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
+        <p id="username">username</p>
+        <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
         <div id="footerRightBar">
-            <div id="facebook" class="linkIcon"></div>
-            <div id="canvas" class="linkIcon"></div>
-            <div id="instagram" class="linkIcon"></div>
-            <div id="youtube" class="linkIcon"></div>
+          <div id="facebook" class="linkIcon"></div>
+          <div id="canvas" class="linkIcon"></div>
+          <div id="instagram" class="linkIcon"></div>
+          <div id="youtube" class="linkIcon"></div>
         </div>
-    </div> 
-</div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
