@@ -35,7 +35,7 @@
 
 #leftList{
   position: relative;
-  margin-top: 130px;
+  margin-top: 10px;
   width: 100%;
   transition-delay: 0.2s;
 }
@@ -44,6 +44,8 @@
   padding: 20px;
   list-style: none;
   margin: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
 }
 
 li{
@@ -119,4 +121,19 @@ li:hover{
 
 #formContainer:hover #leftInput{
   margin-top: 12.5px;
+}
+
+#projectsBox{
+  width: inherit;
+  margin-top: 125px;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+#projectsText{
+  color: black;
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
 }

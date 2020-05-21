@@ -4,6 +4,7 @@ const leftBarLogo = document.getElementById("leftBarLogo");
 const leftList = document.getElementById("leftList");
 const formContainer = document.getElementById("formContainer");
 const calendarContainer = document.getElementById("calendarContainer");
+const projectsBox = document.getElementById("projectsBox");
 
 // MiddleBar
 const middleContainer = document.getElementById("middleContainer");
@@ -35,6 +36,7 @@ function leftContainerHover() {
   formContainer.style.display = "";
   leftContainer.style.boxShadow = "5px 0px 20px 0px #444444";
   calendarContainer.style.display = "block";
+  projectsBox.style.display = "block"
 }
 
 function leftContainerLeave() {
@@ -49,6 +51,7 @@ function leftContainerLeave() {
   leftList.style.display = "none";
   formContainer.style.display = "none";
   calendarContainer.style.display = "none";
+  projectsBox.style.display = "none";
 }
 
 
