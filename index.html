@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <link
       rel="icon"
       href="/images/Tabs-small-logo.png"
@@ -15,8 +15,10 @@
     <link rel="stylesheet" type="text/css" href="/css/leftBar.css" />
     <link rel="stylesheet" type="text/css" href="/css/middleTask.css" />
     <link rel="stylesheet" type="text/css" href="/css/rightBar.css" />
-    <link rel="stylesheet" type="text/css" href="/css/subTask.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/popupMenu.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/subTask.css" />
+    <link rel="stylesheet" type="text/css" href="/css/popupMenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/calendar.css" />
+
     <!-- importerte fonter -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
@@ -28,8 +30,9 @@
     <script defer src="/javascript/hover.js"></script>
     <script defer src="/javascript/subTask.js"></script>
     <script defer src="/javascript/editSubTask.js"></script>
+    <script defer src="javascript/calendar.js"></script>
   </head>
-  <body>
+  <body onLoad="renderDate()">
     <!-- konteiner som holder på alt -->
     <div id="mainContainer">
       <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
@@ -67,6 +70,41 @@
             <button class="btn create" id="leftbutton">Add</button>
           </form>
         </div>
+        <br>
+        <div class="calendarContainer">
+          <div class="month">
+               <!-- Onclick event for previous month -->
+            <div class="prev" onclick="moveDate('prev')">
+                <!-- ASCII '<' symbol -->
+                <span>&#10094</span>
+            </div>
+            <div>
+                 <!-- The month name will appear here (ex: May) -->
+                <h2 id="month"></h2>
+                 <!-- The first date of the month, day date, and year will appear -->
+                <p id="dateStart"></p>
+            </div>
+            <!-- Onclick event for next month-->
+            <div class="next" onclick="moveDate('next')">
+                <!-- ASCII '>' symbol -->
+                <span>&#10095</span>
+            </div>
+          </div>
+          <div class="weekends">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+          </div>
+          <div class="days">
+              <!-- The divs gets made in the js file -->
+          </div>
+        </div>
+    
+
       </div>
       <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
       <div id="middleContainer" middle-container>
@@ -92,6 +130,28 @@
       </div>
 
       <div id="popUpContainer">
+        <p id="menuTxt">Select status on assignment</p>
+          <div id="statusTodo" class="status" onclick="changeColor()">
+            To do
+          </div>
+          <div id="statusDoing" class="status" onclick="changeColor2()">
+            Doing
+          </div>
+          <div id="statusFeedback" class="status" onclick="changeColor3()">
+            Waiting for feedback
+          </div>
+          <div id="statusDone" class="status" onclick="changeColor4()">
+            Done
+          </div>
+
+          <!-- Back button to close popup -->
+          <p id="backBtn" title="close" onclick="closeMenu()">x</p>
+        </div>
+
+Legg til knapp til meny i subListHeader?:
+
+<!-- Button to open menu -->
+              <button id="menuBtn" onclick="openMenu()">...</button>
 
       </div>
 

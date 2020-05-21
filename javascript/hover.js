@@ -7,7 +7,7 @@ const formContainer = document.getElementById("formContainer");
 // MiddleBar
 const middleContainer = document.getElementById("middleContainer");
 
-leftContainer.addEventListener("mouseover", (e) => {
+/* leftContainer.addEventListener("mouseover", (e) => {
   e.preventDefault();
   leftContainerHover();
   middleBarHover();
@@ -47,6 +47,7 @@ function leftContainerLeave() {
   leftList.style.display = "none";
   formContainer.style.display = "none";
 }
+*/
 
 function middleBarHover() {
   middleContainer.style.width = "inherit";
@@ -66,17 +67,17 @@ const profilePicture = document.getElementById("profilePicture");
 const username = document.getElementById("username");
 const footerRightBar = document.getElementById("footerRightBar");
 
-rightContainer.addEventListener('mouseover', (e) => {
+rightContainer.addEventListener("mouseover", (e) => {
   e.preventDefault();
   rightContainerHover();
-})
+});
 
-rightContainer.addEventListener('mouseleave', (e) => {
+rightContainer.addEventListener("mouseleave", (e) => {
   e.preventDefault();
   rightContainerLeave();
-})
+});
 
-function rightContainerHover(){
+function rightContainerHover() {
   rightContainer.style.width = "300px";
   rightContainer.style.transition = "0.3s";
   profilePicture.style.width = "70px";
@@ -88,7 +89,7 @@ function rightContainerHover(){
   footerRightBar.style.transition = "0.3s";
 }
 
-function rightContainerLeave(){
+function rightContainerLeave() {
   rightContainer.style.width = "70px";
   profilePicture.style.width = "50px";
   profilePicture.style.height = "50px";
