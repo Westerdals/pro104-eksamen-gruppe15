@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/css/rightBar.css" />
     <link rel="stylesheet" type="text/css" href="/css/subTask.css" />
     <link rel="stylesheet" type="text/css" href="/css/popupMenu.css" />
-    <link rel="stylesheet" type="text/css" href="css/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/calendar.css" />
 
     <!-- importerte fonter -->
     <link
@@ -26,11 +26,13 @@
     />
     <!-- JS-linker -->
     <script defer src="/javascript/main.js"></script>
-    <script defer src="draggable.js"></script>
+    <script defer src="/javascript/draggable.js"></script>
     <script defer src="/javascript/hover.js"></script>
     <script defer src="/javascript/subTask.js"></script>
     <script defer src="/javascript/editSubTask.js"></script>
-    <script defer src="javascript/calendar.js"></script>
+    <script defer src="/javascript/calendar.js"></script>
+    <script defer src="/javascript/popupMenu.js"></script>
+
   </head>
   <body onLoad="renderDate()">
     <!-- konteiner som holder på alt -->
@@ -103,7 +105,6 @@
               <!-- The divs gets made in the js file -->
           </div>
         </div>
-    
 
       </div>
       <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
@@ -130,29 +131,34 @@
       </div>
 
       <div id="popUpContainer">
-        <p id="menuTxt">Select status on assignment</p>
-          <div id="statusTodo" class="status" onclick="changeColor()">
-            To do
-          </div>
-          <div id="statusDoing" class="status" onclick="changeColor2()">
-            Doing
-          </div>
-          <div id="statusFeedback" class="status" onclick="changeColor3()">
-            Waiting for feedback
-          </div>
-          <div id="statusDone" class="status" onclick="changeColor4()">
-            Done
-          </div>
-
-          <!-- Back button to close popup -->
-          <p id="backBtn" title="close" onclick="closeMenu()">x</p>
+        <div id="changeTaskName">
+          <!-- Changing the name - here -->
+          <p>Change task name </p><br>
+          <!-- Input here js (Max?) -->
+          <input id="taskNameInput" type="text" placeholder="Task Name..">
         </div>
-
-Legg til knapp til meny i subListHeader?:
-
-<!-- Button to open menu -->
-              <button id="menuBtn" onclick="openMenu()">...</button>
-
+    
+        <div id="selectStatus">
+          <div> 
+            <p id="selectTxt">Select status on assignment</p>
+            <div id="statusTodo" class="status" onclick="changeColor()">
+              To do
+            </div>
+            <div id="statusDoing" class="status" onclick="changeColor2()">
+              Doing
+            </div>
+            <div id="statusFeedback" class="status" onclick="changeColor3()">
+              Waiting for feedback
+            </div>
+            <div id="statusDone" class="status" onclick="changeColor4()">
+              Done
+            </div></div>
+        
+        </div>
+  
+          <!-- Back button to close popup -->
+          <p id="backBtn" title="close" onclick="closeMenu()"></p>
+        </div>
       </div>
 
       <!-- konteiner som holder på baren til høyre, Profil-baren -->

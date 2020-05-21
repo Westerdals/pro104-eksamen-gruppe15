@@ -1,4 +1,4 @@
-var popup = document.getElementById("popupMain");
+var popup = document.getElementById("popUpContainer");
 
 function openMenu() {
   popup.style.display = "block";
@@ -12,7 +12,7 @@ var toDo = document.getElementById("statusTodo");
 var doing = document.getElementById("statusDoing");
 var feedback = document.getElementById("statusFeedback");
 var done = document.getElementById("statusDone");
-var suList = document.getElementById("subList");
+var subList = document.querySelector("[sub-data-lists]");
 
 function changeColor() {
   subList.style.backgroundColor = "#ffffff";
@@ -29,3 +29,5 @@ function changeColor3() {
 function changeColor4() {
   subList.style.backgroundColor = "#5ec19d";
 }
+
+//lists.find((list) => list.id === selectedListId);
