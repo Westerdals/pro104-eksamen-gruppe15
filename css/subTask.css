@@ -20,9 +20,10 @@
 .subListHeader{
     width: 100%;
     height: 50px;
-    background-color: #bcbcbc;
+    background-color: #424249;
     display: inline-block;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .headerForm{
