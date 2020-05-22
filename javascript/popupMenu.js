@@ -118,7 +118,6 @@ function renderSingleTask(){
   let listLength = selectedList.tasksSub.subTasksList.length;
   console.log(popup[0].id);
   for(i = 0; i < listLength; i++){
-    console.log(i);
     let currentId = parseInt(popup[0].id);
     if(currentId === i){
       t=0;
@@ -127,19 +126,16 @@ function renderSingleTask(){
         divElement.innerHTML = 
         `
         <div>
-        <div class="singleEdit" id="${t}"></div>
-        <div class="singleDelete" id="${t}" onclick="deleteSingleTask(event, this.id)"></div>
+        <div class="singleDelete" id="${t}" onclick="deleteSingleTask(event, this.id)" title="delete"></div>
         <p class="singleTaskCount">${"task" + (t + 1)}</p>
-        <form id=${"singleForm" + t} class="singleForm">
-          <textarea rows="10" cols="38" placeholder="${list}" form="${"singleForm" + t}" style="resize: none;">
-          ${list}
-          </textarea>
+        <form action="" id=${"singleForm" + t} class="singleForm" onsubmit="editSingleTask(event, this.id)">
+          <input type="text" placeholder="${list}" id="${"singleInput" + t}" value="${list}"></input>
+          <button class="singleEdit"></button>
         </form>
         </div>
         `
         singleEditContainer.appendChild(divElement);
         t++;
-        console.log(t);
       })
     }
   }
@@ -147,8 +143,8 @@ function renderSingleTask(){
 }
 
 function deleteSingleTask(event, deleteId) {
-  const selectedList = lists.find((list) => list.id === selectedListId);
   event.preventDefault();
+  const selectedList = lists.find((list) => list.id === selectedListId);
   console.log("deleteSingle");
   let listLength = selectedList.tasksSub.subTasksList.length; 
   for(i = 0; i < listLength; i++){
@@ -160,6 +156,30 @@ function deleteSingleTask(event, deleteId) {
         if(parseInt(deleteId) === t){
           console.log("stage4");
           selectedList.tasksSub.subTasksList[i].splice(t, 1);
+          save();
+        }
+        t++;
+      })
+    }
+  }
+  console.log("stage5");
+  subTaskRender();
+  renderSingleTask();
+}
+
+function editSingleTask(event, editId){
+  event.preventDefault();
+  const selectedList = lists.find((list) => list.id === selectedListId);
+  console.log("stage1");
+  let listLength = selectedList.tasksSub.subTasksList.length;
+  for(i = 0; i < listLength; i++){
+    let currentId = parseInt(popup[0].id);
+    if(currentId === i){
+      t=0;
+      selectedList.tasksSub.subTasksList[i].forEach((list) => {
+        if(editId === "singleForm" + t){
+          newValue = document.getElementById("singleInput" + t).value;
+          selectedList.tasksSub.subTasksList[i].splice(t, 1, newValue);
           save();
         }
         t++;

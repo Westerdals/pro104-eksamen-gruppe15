@@ -40,79 +40,73 @@
   </head>
   <body onLoad="renderDate()">
     <!-- konteiner som holder på alt -->
-    <div id="mainContainer">
-      <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
-      <div id="leftContainer">
-        <!-- header til venstre konteiner -->
-        <div id="leftBarHeader">
-          <h1 id="leftBarLogo"></h1>
-        </div>
-        <div id="projectsBox">
-            <h3 id="projectsText">Projects</h3>
-        </div>
-        <!-- konteiner til ul -->
-        <div id="leftList">
-          <!-- Ul til listene (li) som blir generert -->
-          <ul class="taskList" data-lists>
-            <!-- Her blir hoved-listene plassert -->
-            <!--
-            <li>Sample task</li>
-            <li>Sample task</li>
-            <li>Sample task</li>
-            -->
-          </ul>
+<div id="mainContainer">
+        <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
+    <div id="leftContainer">
+            <!-- header til venstre konteiner -->
+            <div id="leftBarHeader">
+                <h1 id="leftBarLogo"></h1>
+            </div>
+            <div id="projectsBox">
+                <h3 id="projectsText">Projects</h3>
+            </div>
+            <!-- konteiner til ul -->
+            <div id="leftList">
+                <!-- Ul til listene (li) som blir generert -->
+            <ul class="taskList" data-lists>
+                <!-- Her blir hoved-listene plassert -->
+                <!--
+                <li>Sample task</li>
+                <li>Sample task</li>
+                <li>Sample task</li>
+                -->
+            </ul>
         </div>
         <!-- kontainer til input feltet som legger til lister i (data-lists, class="taskList") -->
         <div id="formContainer">
           <!-- data-new-list-form er for onsubmit event -->
-          <form action="" data-new-list-form>
-            <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
-            <input
-              type="text"
-              class="new list"
-              id="leftInput"
-              placeholder="New project"
-              data-new-list-input
-            />
-            <!-- knapp som kan brukes for å submite -->
-            <button class="btn create" id="leftbutton">Add</button>
-          </form>
+            <form action="" data-new-list-form>
+                <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
+                <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input/>
+                <!-- knapp som kan brukes for å submite -->
+                <button class="btn create" id="leftbutton">Add</button>
+            </form>
         </div>
         <br>
-        <div id="calendarContainer">
-          <div class="month">
-               <!-- Onclick event for previous month -->
-            <div class="prev" onclick="moveDate('prev')">
-                <!-- ASCII '<' symbol -->
-                <span>&#10094</span>
+            <div id="calendarContainer">
+                <div class="month">
+                        <!-- Onclick event for previous month -->
+                    <div class="prev" onclick="moveDate('prev')">
+                        <!-- ASCII '<' symbol -->
+                        <span>&#10094</span>
+                    </div>
+                    <div>
+                        <!-- The month name will appear here (ex: May) -->
+                        <h2 id="month"></h2>
+                        <!-- The first date of the month, day date, and year will appear -->
+                        <p id="dateStart"></p>
+                    </div>
+                        <!-- Onclick event for next month-->
+                    <div class="next" onclick="moveDate('next')">
+                        <!-- ASCII '>' symbol -->
+                    <span>&#10095</span>
+                    </div>
+                </div>
+                <div class="weekends">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days">
+                    <!-- The divs gets made in the js file -->
+                    </div>
             </div>
-            <div>
-                 <!-- The month name will appear here (ex: May) -->
-                <h2 id="month"></h2>
-                 <!-- The first date of the month, day date, and year will appear -->
-                <p id="dateStart"></p>
-            </div>
-            <!-- Onclick event for next month-->
-            <div class="next" onclick="moveDate('next')">
-                <!-- ASCII '>' symbol -->
-                <span>&#10095</span>
-            </div>
-          </div>
-          <div class="weekends">
-              <div>Sun</div>
-              <div>Mon</div>
-              <div>Tue</div>
-              <div>Wed</div>
-              <div>Thu</div>
-              <div>Fri</div>
-              <div>Sat</div>
-          </div>
-          <div class="days">
-              <!-- The divs gets made in the js file -->
-          </div>
-        </div>
 
-      </div>
+    </div>
       <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
       <div id="middleContainer" middle-container>
         <!-- header til middleContainer -->
@@ -135,18 +129,18 @@
           </div>
         </div>
       </div>
-<!-- Popup menu, for changing things for tasks/subtasks -->
-    <div class="popUpContainer">
+            <!-- Popup menu, for changing things for tasks/subtasks -->
+        <div class="popUpContainer">
         <!-- Generated in JS -->
-    </div>
+        </div>
       <!-- konteiner som holder på baren til høyre, Profil-baren -->
       <div id="rightContainer">
         <div id="rightBarHeader">
           <div id="profilePicture"></div>
-        </div>
+        </div> 
         <p id="username">username</p>
         <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
-
+        
         <!-- Notification (Reminder) -->
         <div class="notifyContainer">
         <a href="#" class="notify reminder">
@@ -196,7 +190,7 @@
                 <a id="forgotPass" href="#">Forgot Password?</a>
                 <input type="submit" class="btnUser" value="Login" />
               </form>
-      
+              
               <!-- Register side -->
               <form id="register" class="inputGroup">
                 <div class="inputDiv user">
