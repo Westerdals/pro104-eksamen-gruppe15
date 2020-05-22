@@ -131,3 +131,14 @@
 .createTaskForm{
   width: inherit;
 }
+
+.subLi{
+  text-align: left;
+  background: #eaeaea;
+  padding: 12.5px;
+  box-shadow: inset 0px -5px 10px 5px #e2e2e2;
+}
+
+ul > .subLi{
+  padding-bottom: 12.5px;
+}
