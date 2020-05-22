@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* The container */
+.formBox {
+  width: 280px;
+  height: 330px;
+  position: relative;
+  top: 12%;
+  padding: 5px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  display: none;
+}
+
+/* Container for the toggle btn on top */
+.btnBox {
+  width: 160px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #1b1a1a1f;
+  background-color: #bcbcbc;
+  border-radius: 30px;
+}
+
+/* login/register btn on top */
+.toggleBtn {
+  padding: 5px 17px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  color: #fff;
+}
+
+/* btn background color, starts on login (gets moved in js for register)*/
+#btnUser {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgb(255, 124, 85),
+    #ff5d2c,
+    rgb(255, 124, 85)
+  );
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+/* profile/user image */
+.avatar {
+  width: 45px;
+  position: absolute;
+  right: 43%;
+  box-shadow: 0 0 20px 9px #1b1a1a1f;
+  border-radius: 50%;
+}
+
+/* Login/regsiter container/form */
+.inputGroup {
+  top: 180px;
+  position: absolute;
+  width: 230px;
+  transition: 0.5s;
+}
+
+/* btn login/register bottom btn */
+.btnUser {
+  display: block;
+  width: 75%;
+  height: 30px;
+  border-radius: 25px;
+  margin: 20px 15px;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 124, 85),
+    #ff5d2c,
+    rgb(255, 124, 85)
+  );
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  background-size: 200%;
+  transition: 0.5s;
+  box-shadow: 0 0 20px 9px #1b1a1a1f;
+}
+
+/* little hover effect on the btn */
+.btn:hover {
+  background-position: right;
+}
+
+/* Login/register position (gets moved in js for register/login switch) */
+#login {
+  left: 30px;
+  display: block;
+}
+
+#register {
+  left: 30px;
+  display: none;
+}
+
+/* User input border-bottom: the line under input */
+.inputDiv {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 0.5px solid #d9d9d9;
+}
+
+/* Before/after you click on input field */
+.inputDiv::after,
+.inputDiv::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #ff5e2c;
+  transition: 0.3s;
+}
+
+.inputDiv::after {
+  right: 50%;
+}
+.inputDiv::before {
+  left: 50%;
+}
+
+/* Color on icons changes when clicking on input field */
+.inputDiv.focus .i i {
+  color: #ff5e2c;
+}
+
+/* Text moves up when input field is clicked */
+.inputDiv.focus div h5 {
+  top: -17px;
+  font-size: 15px;
+}
+
+.inputDiv.focus::after,
+.inputDiv.focus::before {
+  width: 50%;
+}
+
+/* Username */
+.inputDiv.user {
+  margin-top: 0;
+}
+
+/* Password */
+.inputDiv.pass {
+  margin-bottom: 7px;
+}
+
+/* The icons before user/password input */
+.i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i i {
+  color: #d9d9d9;
+  transition: 0.3s;
+}
+
+/* Input div style */
+.inputDiv > div {
+  position: relative;
+  height: 15px;
+}
+
+/* Username and Password text */
+.inputDiv > div h5 {
+  position: absolute;
+  left: 45px;
+  top: -10%;
+  transform: translate(-50%);
+  color: #999;
+  font-size: 13px;
+  transition: 0.3s;
+  display: block;
+}
+
+/* The input box style */
+.input {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  top: -35%;
+  left: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+  color: #555;
+}
+
+/* link for forgot password/agree term&condition + hover effect */
+a {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: #999;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ff5e2c;
+}

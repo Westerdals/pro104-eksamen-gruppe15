@@ -36,7 +36,7 @@ function leftContainerHover() {
   formContainer.style.display = "";
   leftContainer.style.boxShadow = "5px 0px 20px 0px #444444";
   calendarContainer.style.display = "block";
-  projectsBox.style.display = "block"
+  projectsBox.style.display = "block";
 }
 
 function leftContainerLeave() {
@@ -53,7 +53,6 @@ function leftContainerLeave() {
   calendarContainer.style.display = "none";
   projectsBox.style.display = "none";
 }
-
 
 function middleBarHover() {
   middleContainer.style.width = "inherit";
@@ -72,6 +71,9 @@ const rightContainer = document.getElementById("rightContainer");
 const profilePicture = document.getElementById("profilePicture");
 const username = document.getElementById("username");
 const footerRightBar = document.getElementById("footerRightBar");
+const notifyRemin = document.getElementById("remin");
+const notifyDeadl = document.getElementById("deadl");
+const loginForm = document.getElementById("formBox");
 
 rightContainer.addEventListener("mouseover", (e) => {
   e.preventDefault();
@@ -92,7 +94,10 @@ function rightContainerHover() {
   username.style.display = "block";
   username.style.transition = "0.3s";
   footerRightBar.style.display = "grid";
-  footerRightBar.style.transition = "0.3s";
+  footerRightBar.style.transition = "1.2s";
+  notifyRemin.style.left = "68%";
+  notifyDeadl.style.left = "68%";
+  loginForm.style.display = "block";
 }
 
 function rightContainerLeave() {
@@ -104,4 +109,7 @@ function rightContainerLeave() {
   username.style.transition = "0.3s";
   footerRightBar.style.display = "none";
   footerRightBar.style.transition = "0.3s";
+  notifyRemin.style.left = "40%";
+  notifyDeadl.style.left = "40%";
+  loginForm.style.display = "none";
 }
