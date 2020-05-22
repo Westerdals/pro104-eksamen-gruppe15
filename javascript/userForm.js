@@ -19,16 +19,16 @@ inputs.forEach((input) => {
 
 var log = document.getElementById("login");
 var reg = document.getElementById("register");
-var togBtn = document.getElementById("btn");
+var togBtn = document.getElementById("btnUser");
 
 function register() {
-  log.style.left = "-400px";
-  reg.style.left = "50px";
-  togBtn.style.left = "110px";
+  log.style.display = "none";
+  reg.style.display = "block";
+  togBtn.style.left = "80px";
 }
 
 function login() {
-  log.style.left = "50px";
-  reg.style.left = "450px";
+  log.style.display = "block";
+  reg.style.display = "none";
   togBtn.style.left = "0";
 }

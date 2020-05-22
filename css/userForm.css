@@ -5,18 +5,19 @@
 
 /* The container */
 .formBox {
-  width: 380px;
-  height: 420px;
+  width: 280px;
+  height: 330px;
   position: relative;
-  margin: 6% auto;
+  top: 12%;
   padding: 5px;
   background-color: #f2f2f2;
   overflow: hidden;
+  display: none;
 }
 
 /* Container for the toggle btn on top */
 .btnBox {
-  width: 220px;
+  width: 160px;
   margin: 35px auto;
   position: relative;
   box-shadow: 0 0 20px 9px #1b1a1a1f;
@@ -26,7 +27,7 @@
 
 /* login/register btn on top */
 .toggleBtn {
-  padding: 10px 30px;
+  padding: 5px 17px;
   cursor: pointer;
   background: transparent;
   border: 0;
@@ -36,11 +37,11 @@
 }
 
 /* btn background color, starts on login (gets moved in js for register)*/
-#btn {
+#btnUser {
   top: 0;
   left: 0;
   position: absolute;
-  width: 110px;
+  width: 80px;
   height: 100%;
   background: linear-gradient(
     to right,
@@ -54,9 +55,9 @@
 
 /* profile/user image */
 .avatar {
-  width: 60px;
+  width: 45px;
   position: absolute;
-  right: 45%;
+  right: 43%;
   box-shadow: 0 0 20px 9px #1b1a1a1f;
   border-radius: 50%;
 }
@@ -65,18 +66,18 @@
 .inputGroup {
   top: 180px;
   position: absolute;
-  width: 280px;
+  width: 230px;
   transition: 0.5s;
 }
 
-/* btn login/register bottom */
-.btn {
+/* btn login/register bottom btn */
+.btnUser {
   display: block;
-  width: 85%;
-  height: 40px;
+  width: 75%;
+  height: 30px;
   border-radius: 25px;
   margin: 20px 15px;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   outline: none;
   border: none;
   background-image: linear-gradient(
@@ -101,11 +102,13 @@
 
 /* Login/register position (gets moved in js for register/login switch) */
 #login {
-  left: 50px;
+  left: 30px;
+  display: block;
 }
 
 #register {
-  left: 450px;
+  left: 30px;
+  display: none;
 }
 
 /* User input border-bottom: the line under input */
@@ -115,7 +118,7 @@
   grid-template-columns: 7% 93%;
   margin: 25px 0;
   padding: 5px 0;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 0.5px solid #d9d9d9;
 }
 
 /* Before/after you click on input field */
@@ -144,7 +147,7 @@
 
 /* Text moves up when input field is clicked */
 .inputDiv.focus div h5 {
-  top: -5px;
+  top: -17px;
   font-size: 15px;
 }
 
@@ -160,7 +163,7 @@
 
 /* Password */
 .inputDiv.pass {
-  margin-bottom: 4px;
+  margin-bottom: 7px;
 }
 
 /* The icons before user/password input */
@@ -178,17 +181,17 @@
 /* Input div style */
 .inputDiv > div {
   position: relative;
-  height: 45px;
+  height: 15px;
 }
 
 /* Username and Password text */
 .inputDiv > div h5 {
   position: absolute;
-  left: 50px;
-  top: 30%;
+  left: 45px;
+  top: -10%;
   transform: translate(-50%);
   color: #999;
-  font-size: 18px;
+  font-size: 13px;
   transition: 0.3s;
   display: block;
 }
@@ -196,9 +199,9 @@
 /* The input box style */
 .input {
   position: absolute;
-  width: 100%;
+  width: 60%;
   height: 100%;
-  top: 0;
+  top: -35%;
   left: 0;
   border: none;
   outline: none;
@@ -215,7 +218,7 @@ a {
   text-align: right;
   text-decoration: none;
   color: #999;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: 0.3s;
 }
 

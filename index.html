@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="/css/subTask.css" />
     <link rel="stylesheet" type="text/css" href="/css/popupMenu.css" />
     <link rel="stylesheet" type="text/css" href="/css/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/notify.css" />
+    <link rel="stylesheet" type="text/css" href="/css/userForm.css" />
 
     <!-- importerte fonter -->
     <link
@@ -32,7 +34,9 @@
     <script defer src="/javascript/editSubTask.js"></script>
     <script defer src="/javascript/calendar.js"></script>
     <script defer src="/javascript/popupMenu.js"></script>
-
+    <script defer src="/javascript/userForm.js"></script>
+     <!-- Link to the icons next to username/password -->
+    <script defer src="https://kit.fontawesome.com/a81368914c.js"></script>
   </head>
   <body onLoad="renderDate()">
     <!-- konteiner som holder på alt -->
@@ -142,11 +146,89 @@
         </div>
         <p id="username">username</p>
         <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
+
+        <!-- Notification (Reminder) -->
+        <div class="notifyContainer">
+        <a href="#" class="notify reminder">
+          <span>Reminder</span>
+          <span id="remin" class="notifyNum">2</span>
+        </a>
+        <!-- Notification (Deadline) -->
+        <a href="#" class="notify deadline">
+          <span>Deadlines</span>
+          <span id="deadl" class="notifyNum">2</span>
+        </a>
+      </div>
+            <!-- log in/ register button on top -->
+            <div class="formBox" id="formBox">
+              <div class="btnBox">
+                <div id="btnUser"></div>
+                <button type="button" class="toggleBtn" onclick="login()">
+                  Login
+                </button>
+                <button type="button" class="toggleBtn" onclick="register()">
+                  Register
+                </button>
+              </div>
+              <!-- user img - avatar -->
+              <img class="avatar" src="images/profile-pic.svg" />
+      
+              <!-- Log in side -->
+              <form id="login" class="inputGroup">
+                <div class="inputDiv user">
+                  <div class="i">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div>
+                    <h5>Username</h5>
+                    <input class="input" type="text" />
+                  </div>
+                </div>
+                <div class="inputDiv pass">
+                  <div class="i">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <div>
+                    <h5>Password</h5>
+                    <input class="input" type="password" />
+                  </div>
+                </div>
+                <a id="forgotPass" href="#">Forgot Password?</a>
+                <input type="submit" class="btnUser" value="Login" />
+              </form>
+      
+              <!-- Register side -->
+              <form id="register" class="inputGroup">
+                <div class="inputDiv user">
+                  <div class="i">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div>
+                    <h5>Username</h5>
+                    <input class="input" type="text" />
+                  </div>
+                </div>
+                <div class="inputDiv pass">
+                  <div class="i">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <div>
+                    <h5>Password</h5>
+                    <input class="input" type="password" />
+                  </div>
+                </div>
+                <a id="forgotPass" href="#">I agree to the terms & conditions</a>
+                <input type="submit" class="btnUser" value="Register" />
+              </form>
+            </div>
+          </div>
+
+        <!-- Footer with links  -->
         <div id="footerRightBar">
-          <div id="facebook" class="linkIcon"></div>
-          <div id="canvas" class="linkIcon"></div>
-          <div id="instagram" class="linkIcon"></div>
-          <div id="youtube" class="linkIcon"></div>
+          <div id="facebook" class="linkIcon" title="Facebook"></div>
+          <div id="canvas" class="linkIcon" title="Canvas"></div>
+          <div id="instagram" class="linkIcon" title="Instagram"></div>
+          <div id="youtube" class="linkIcon" title="Youtube"></div>
         </div>
       </div>
     </div>
