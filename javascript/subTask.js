@@ -40,16 +40,22 @@ function plussTaskListRender() {
     AddContainerEmpty.innerHTML += ` <div class="subTaskList">
     <div class="subListHeader" data-sub-list-header id="${"form" + i}">
         <form action="" data-new-sub-header-form onsubmit="childHeaderFormNew(event)" class="headerForm">
-            <input class="subListHeaderText" type="text" placeholder="To-do list.." data-new-sub-header id="${"head" + i}" onClick="this.setSelectionRange(0, this.value.length)">
+            <input class="subListHeaderText" type="text" placeholder="To-do list.." data-new-sub-header id="${
+              "head" + i
+            }">
         </form>
-        <div class="deleteButton" onclick="editSubTask(event, this.id)" id="${"delete" + i}"></div>
-        <div class="editButton" onclick="openMenu(event, this.id)" id="${i}"></div>
+        <div class="deleteButton" title="Delete" onclick="editSubTask(event, this.id)" id="${
+          "delete" + i
+        }"></div>
+        <div class="editButton" title="Edit" onclick="openMenu(event, this.id)" id="${i}"></div>
     </div> 
     <ul class="subUl" sub-data-lists id="${"ul" + i}">
     </ul>
     <div class="subTaskFormStyle">
         <form action="" data-new-sub-form onsubmit="newChildFormOnsubmit(event)" id="createTaskForm">
-            <input type="text" class="subTaskInput" placeholder="new task.." data-new-sub-input id="${"task" + i}">
+            <input type="text" class="subTaskInput" placeholder="new task.." data-new-sub-input id="${
+              "task" + i
+            }">
             <button class="btn create" id="leftbutton">Add</button>
         </form>
     </div>

@@ -1,10 +1,9 @@
-
 /* The container */
 .formBox {
   width: 280px;
-  height: 330px;
-  position: relative;
-  top: 12%;
+  height: 320px;
+  position: absolute;
+  top: 145px;
   padding: 5px;
   background-color: #f2f2f2;
   overflow: hidden;
@@ -13,23 +12,25 @@
 
 /* Container for the toggle btn on top */
 .btnBox {
-  width: 160px;
+  width: 180px;
   margin: 35px auto;
   position: relative;
   box-shadow: 0 0 20px 9px #1b1a1a1f;
   background-color: #bcbcbc;
   border-radius: 30px;
+  text-align: center;
 }
 
 /* login/register btn on top */
 .toggleBtn {
-  padding: 5px 17px;
+  padding: 9px 17px;
   cursor: pointer;
   background: transparent;
   border: 0;
   outline: none;
   position: relative;
   color: #fff;
+  font-size: 14x;
 }
 
 /* btn background color, starts on login (gets moved in js for register)*/
@@ -37,7 +38,7 @@
   top: 0;
   left: 0;
   position: absolute;
-  width: 80px;
+  width: 92px;
   height: 100%;
   background: linear-gradient(
     to right,
@@ -72,7 +73,7 @@
   width: 75%;
   height: 30px;
   border-radius: 25px;
-  margin: 20px 15px;
+  margin: 10px 35px;
   font-size: 0.9rem;
   outline: none;
   border: none;
@@ -92,6 +93,7 @@
 }
 
 /* little hover effect on the btn */
+/* doesn't work rigth now */
 .btn:hover {
   background-position: right;
 }
@@ -208,7 +210,7 @@
   color: #555;
 }
 
-/* link for forgot password/agree term&condition + hover effect */
+/* text under login (forgot pas..) + hover effect */
 a {
   display: block;
   text-align: right;

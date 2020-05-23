@@ -9,50 +9,50 @@ const projectsBox = document.getElementById("projectsBox");
 // MiddleBar
 const middleContainer = document.getElementById("middleContainer");
 
-leftContainer.addEventListener("mouseover", (e) => {
-  e.preventDefault();
-  leftContainerHover();
-  middleBarHover();
-});
+// leftContainer.addEventListener("mouseover", (e) => {
+//   e.preventDefault();
+//   leftContainerHover();
+//   middleBarHover();
+// });
 
-leftContainer.addEventListener("mouseleave", (e) => {
-  e.preventDefault();
-  leftContainerLeave();
-  middleBarLeave();
-});
+// leftContainer.addEventListener("mouseleave", (e) => {
+//   e.preventDefault();
+//   leftContainerLeave();
+//   middleBarLeave();
+// });
 
-function leftContainerHover() {
-  leftContainer.style.width = "300px";
+// function leftContainerHover() {
+//   leftContainer.style.width = "300px";
 
-  leftContainer.style.transition = "0.3s";
+//   leftContainer.style.transition = "0.3s";
 
-  leftBarLogo.style.transitionDuration = "0.0s";
-  leftBarLogo.style.transform = "rotateY(0deg)";
+//   leftBarLogo.style.transitionDuration = "0.0s";
+//   leftBarLogo.style.transform = "rotateY(0deg)";
 
-  leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-02.png)";
-  leftBarLogo.style.width = "160px";
-  leftBarLogo.style.height = "160px";
-  leftList.style.display = "";
-  formContainer.style.display = "";
-  leftContainer.style.boxShadow = "5px 0px 20px 0px #444444";
-  calendarContainer.style.display = "block";
-  projectsBox.style.display = "block";
-}
+//   leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-02.png)";
+//   leftBarLogo.style.width = "160px";
+//   leftBarLogo.style.height = "160px";
+//   leftList.style.display = "";
+//   formContainer.style.display = "";
+//   leftContainer.style.boxShadow = "5px 0px 20px 0px #444444";
+//   calendarContainer.style.display = "block";
+//   projectsBox.style.display = "block";
+// }
 
-function leftContainerLeave() {
-  leftContainer.style.width = "70px";
-  leftContainer.style.transition = "0.5s";
-  leftBarLogo.style.transitionDuration = "0.5s";
-  leftBarLogo.style.transform = "rotateY(360deg)";
+// function leftContainerLeave() {
+//   leftContainer.style.width = "70px";
+//   leftContainer.style.transition = "0.5s";
+//   leftBarLogo.style.transitionDuration = "0.5s";
+//   leftBarLogo.style.transform = "rotateY(360deg)";
 
-  leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-01.png)";
-  leftBarLogo.style.width = "50px";
-  leftBarLogo.style.height = "50px";
-  leftList.style.display = "none";
-  formContainer.style.display = "none";
-  calendarContainer.style.display = "none";
-  projectsBox.style.display = "none";
-}
+//   leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-01.png)";
+//   leftBarLogo.style.width = "50px";
+//   leftBarLogo.style.height = "50px";
+//   leftList.style.display = "none";
+//   formContainer.style.display = "none";
+//   calendarContainer.style.display = "none";
+//   projectsBox.style.display = "none";
+// }
 
 function middleBarHover() {
   middleContainer.style.width = "inherit";
@@ -73,6 +73,7 @@ const username = document.getElementById("username");
 const footerRightBar = document.getElementById("footerRightBar");
 const notifyRemin = document.getElementById("remin");
 const notifyDeadl = document.getElementById("deadl");
+const notContainer = document.getElementById("nContainer");
 const loginForm = document.getElementById("formBox");
 
 rightContainer.addEventListener("mouseover", (e) => {
@@ -94,10 +95,11 @@ function rightContainerHover() {
   username.style.display = "block";
   username.style.transition = "0.3s";
   footerRightBar.style.display = "grid";
-  footerRightBar.style.transition = "1.2s";
-  notifyRemin.style.left = "68%";
-  notifyDeadl.style.left = "68%";
+  footerRightBar.style.transition = "0.3s";
+  notifyRemin.style.left = "89%";
+  notifyDeadl.style.left = "89%";
   loginForm.style.display = "block";
+  notContainer.style.display = "block";
 }
 
 function rightContainerLeave() {
@@ -109,7 +111,6 @@ function rightContainerLeave() {
   username.style.transition = "0.3s";
   footerRightBar.style.display = "none";
   footerRightBar.style.transition = "0.3s";
-  notifyRemin.style.left = "40%";
-  notifyDeadl.style.left = "40%";
   loginForm.style.display = "none";
+  notContainer.style.display = "none";
 }
