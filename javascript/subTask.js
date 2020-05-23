@@ -40,7 +40,7 @@ function plussTaskListRender() {
     AddContainerEmpty.innerHTML += ` <div class="subTaskList">
     <div class="subListHeader" data-sub-list-header id="${"form" + i}">
         <form action="" data-new-sub-header-form onsubmit="childHeaderFormNew(event)" class="headerForm">
-            <input class="subListHeaderText" type="text" placeholder="To-do list.." data-new-sub-header id="${"head" + i}">
+            <input class="subListHeaderText" type="text" placeholder="To-do list.." data-new-sub-header id="${"head" + i}" onClick="this.setSelectionRange(0, this.value.length)">
         </form>
         <div class="deleteButton" onclick="editSubTask(event, this.id)" id="${"delete" + i}"></div>
         <div class="editButton" onclick="openMenu(event, this.id)" id="${i}"></div>

@@ -11,10 +11,8 @@ function openMenu(event, editId) {
   let popupContent = document.createElement('div');
   popupContent.innerHTML = 
   `<div id="changeTaskName">
-      <!-- Changing the name - here -->
-    <input id="taskNameInput" type="text" placeholder="Task Name..">
-    </div>
-      <div id="editTaskListContainer">
+  </div>
+    <div id="editTaskListContainer">
       </div>
     <div id="selectStatus">
       <div> 
@@ -33,12 +31,15 @@ function openMenu(event, editId) {
       </div>
       </div>
     </div>
+    <div class="memberInputContainer"> 
+    </div>
     <p id="backBtn" title="close" onclick="closeMenu()"></p>
     <p class="currrentTaskCount">To-do-list ${parseInt(editId) + 1}</p>
   `
   popup[0].appendChild(popupContent);
   popup[0].id = editId;
   renderSingleTask();
+  renderSingleHeader();
 }
 
 function closeMenu() {
@@ -125,14 +126,16 @@ function renderSingleTask(){
         divElement = document.createElement('div');
         divElement.innerHTML = 
         `
-        <div>
+        <div class="singleTaskBorderStyle">
         <div class="singleDelete" id="${t}" onclick="deleteSingleTask(event, this.id)" title="delete"></div>
-        <p class="singleTaskCount">${"task" + (t + 1)}</p>
-        <form action="" id=${"singleForm" + t} class="singleForm" onsubmit="editSingleTask(event, this.id)">
-          <input type="text" placeholder="${list}" id="${"singleInput" + t}" value="${list}"></input>
-          <button class="singleEdit"></button>
-        </form>
+        <p class="singleTaskCount">${"Task " + (t + 1)}</p>
+          <form action="" id=${"singleForm" + t} class="singleForm" onsubmit="editSingleTask(event, this.id)">
+            <input type="text" placeholder="${list}" id="${"singleInput" + t}" 
+            value="${list}" class="singleInputStyle" style="width: 364px; "></input>
+            <button class="singleEdit" title="edit"></button>
+          </form>
         </div>
+        <br>
         `
         singleEditContainer.appendChild(divElement);
         t++;
@@ -189,4 +192,27 @@ function editSingleTask(event, editId){
   console.log("stage5");
   subTaskRender();
   renderSingleTask();
+}
+
+function renderSingleHeader(){
+  const selectedList = lists.find((list) => list.id === selectedListId);
+  let listLength = selectedList.tasksSub.subTasksList.length;
+  taskHeader = document.getElementById("changeTaskName");
+  clearElement(taskHeader);
+  for(i = 0; i < listLength; i++){
+    let currentId = parseInt(popup[0].id);
+      if(currentId === i){
+        divElement = document.createElement('div');
+        divElement.innerHTML = 
+        `
+          <p class="currentTaskStyle">To-do-list ${currentId + 1}</p>
+          <div class="headerDeleteSingle"></div>
+          <form>
+            <input id="taskNameInput" type="text" placeholder="${selectedList.tasksSub.subTasksHeader[i]}" value="${selectedList.tasksSub.subTasksHeader[i]}" onClick="this.setSelectionRange(0, this.value.length)"></input>
+            <button type="onclick" class="singleFormButton"></button>
+          </form>
+        `
+        taskHeader.appendChild(divElement);
+      }
+  }
 }
