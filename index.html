@@ -45,11 +45,23 @@
     <div id="leftContainer">
             <!-- header til venstre konteiner -->
             <div id="leftBarHeader">
+                <img src="icons/x-icon-darkgray-02.png" id="deleteSidemenu">
                 <h1 id="leftBarLogo"></h1>
             </div>
             <div id="projectsBox">
-                <h3 id="projectsText">Projects</h3>
+                <h3 id="projectsText"></h3>
             </div>
+        
+         <div id="formContainer">
+          <!-- data-new-list-form er for onsubmit event -->
+            <form action="" data-new-list-form>
+                <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
+                <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input/>
+                <!-- knapp som kan brukes for å submite -->
+                <button class="btn create" id="leftbutton">Add</button>
+            </form>
+        </div>
+        
             <!-- konteiner til ul -->
             <div id="leftList">
                 <!-- Ul til listene (li) som blir generert -->
@@ -63,18 +75,15 @@
             </ul>
         </div>
         <!-- kontainer til input feltet som legger til lister i (data-lists, class="taskList") -->
-        <div id="formContainer">
-          <!-- data-new-list-form er for onsubmit event -->
-            <form action="" data-new-list-form>
-                <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
-                <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input/>
-                <!-- knapp som kan brukes for å submite -->
-                <button class="btn create" id="leftbutton">Add</button>
-            </form>
-        </div>
+        
         <br>
             <div id="calendarContainer">
+               
+                
+                
                 <div class="month">
+                                    <img src="icons/x-icon-darkgray-02.png" type="delete" id="delete">
+
                         <!-- Onclick event for previous month -->
                     <div class="prev" onclick="moveDate('prev')">
                         <!-- ASCII '<' symbol -->
@@ -225,7 +234,7 @@
           <div id="youtube" class="linkIcon" title="Youtube"></div>
         </div>
       </div>
-    </div>
+    
     
   </body>
 </html>

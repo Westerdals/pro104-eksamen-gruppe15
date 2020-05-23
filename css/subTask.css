@@ -58,7 +58,7 @@
 
 .subListHeaderText:focus{
     border: none;
-    border-bottom: 3px solid #2bb524;
+    border-bottom: 3px solid grey;
 }
   
 .subListHeaderText::placeholder{
@@ -104,7 +104,7 @@
 }
   
 .subTaskInput:focus {
-    border: 3px solid #2bb524;
+    border: 3px solid grey;
 }
 
 .subTaskList{

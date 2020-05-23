@@ -24,6 +24,22 @@
   justify-content: center;
 }
 
+#deleteSidemenu{
+width: 25px;
+    height: 25px;
+    margin-right: 120px;
+    margin-top: 0;
+    left: 310px;
+    top: 10px;
+   
+
+    background-image: url(/icons/x-icon-darkgray-02.png);
+position: absolute;
+    
+    
+}
+
+
 #leftBarLogo {
   background-image: url(/images/Orange-tabs-02.png);
   width: 150px;
@@ -44,7 +60,7 @@
   padding: 20px;
   list-style: none;
   margin: 0;
-  border-bottom: 1px solid black;
+ 
   margin-bottom: 25px;
 }
 
@@ -76,12 +92,10 @@ li:hover {
   height: 40px;
   background-color: gray;
   text-align: center;
-  transition: 0.3s;
+  
 }
 
-#formContainer:hover {
-  height: 65px;
-}
+
 
 #leftInput {
   position: absolute;
@@ -95,12 +109,12 @@ li:hover {
 }
 
 #leftInput:focus {
-  border: 3px solid green;
+  border: 3px solid grey;
 }
 
 #leftbutton {
   position: absolute;
-  background-color: #ff5e2c;
+  background-color: #BCBCBC;
   border: none;
   color: white;
   padding: 8px 25px;
@@ -114,20 +128,20 @@ li:hover {
   transition: 0.3s;
 }
 
-#formContainer:hover #leftbutton {
-  margin-top: 15px;
+#leftbutton:hover{
+  background-color: #ff5e2c;
+  
 }
+    
 
-#formContainer:hover #leftInput {
-  margin-top: 12.5px;
-}
+
 
 #projectsBox {
   width: inherit;
   margin-top: 125px;
   position: relative;
   text-align: center;
-  border-bottom: 1px solid black;
+ 
 }
 
 #projectsText {
