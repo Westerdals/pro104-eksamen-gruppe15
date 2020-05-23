@@ -2,6 +2,7 @@ let popup = document.getElementsByClassName("popUpContainer");
 
 
 changeColorheader();
+changeListStatus();
 
 function openMenu(event, editId) {
   event.preventDefault();
@@ -127,6 +128,7 @@ function renderSingleTask(){
         divElement.innerHTML = 
         `
         <div class="singleTaskBorderStyle">
+        <div class="singleStatus" id="${t}" onclick="editSingleStatus(event, this.id)" title="done"></div>
         <div class="singleDelete" id="${t}" onclick="deleteSingleTask(event, this.id)" title="delete"></div>
         <p class="singleTaskCount">${"Task " + (t + 1)}</p>
           <form action="" id=${"singleForm" + t} class="singleForm" onsubmit="editSingleTask(event, this.id)">
@@ -159,6 +161,7 @@ function deleteSingleTask(event, deleteId) {
         if(parseInt(deleteId) === t){
           console.log("stage4");
           selectedList.tasksSub.subTasksList[i].splice(t, 1);
+          selectedList.tasksSub.subTasksLiStatus[i].splice(t, 1);
           save();
         }
         t++;
@@ -168,6 +171,7 @@ function deleteSingleTask(event, deleteId) {
   console.log("stage5");
   subTaskRender();
   renderSingleTask();
+  changeListStatus();
 }
 
 function editSingleTask(event, editId){
@@ -183,6 +187,7 @@ function editSingleTask(event, editId){
         if(editId === "singleForm" + t){
           newValue = document.getElementById("singleInput" + t).value;
           selectedList.tasksSub.subTasksList[i].splice(t, 1, newValue);
+          selectedList.tasksSub.subTasksLiStatus[i].splice(t, 1, "none");
           save();
         }
         t++;
@@ -192,6 +197,7 @@ function editSingleTask(event, editId){
   console.log("stage5");
   subTaskRender();
   renderSingleTask();
+  changeListStatus();
 }
 
 function renderSingleHeader(){
@@ -205,7 +211,7 @@ function renderSingleHeader(){
         divElement = document.createElement('div');
         divElement.innerHTML = 
         `
-          <p class="currentTaskStyle">To-do-list ${currentId + 1}</p>
+          <p class="currentTaskStyle">Header</p>
           <div class="headerDeleteSingle"></div>
           <form>
             <input id="taskNameInput" type="text" placeholder="${selectedList.tasksSub.subTasksHeader[i]}" value="${selectedList.tasksSub.subTasksHeader[i]}" onClick="this.setSelectionRange(0, this.value.length)"></input>
@@ -221,13 +227,37 @@ function changeListStatus(){
   const selectedList = lists.find((list) => list.id === selectedListId);
   taskCount = selectedList.tasksSub.subTasksList.length;
   for(i = 0; i < taskCount; i++){
-    selectedList.tasksSub.subTasksList[i].forEach((list), e => {
-      e.preventDefault();
-
+    t=0;
+    selectedList.tasksSub.subTasksLiStatus[i].forEach((list) => {
+      let currentTask = document.getElementById("ul" + i + "li" + t);
+      let currentStatus = list;
+      currentTask.style.textDecorationLine = currentStatus;
+      t++;
     })
   }
 }
 
+function editSingleStatus(event, editId){
+  event.preventDefault();
+  const selectedList = lists.find((list) => list.id === selectedListId);
+  let listLength = selectedList.tasksSub.subTasksLiStatus.length; 
+  for(i = 0; i < listLength; i++){
+    let currentId = parseInt(popup[0].id);
+    if(currentId === i){
+        t=0;
+        console.log("stage3");
+      selectedList.tasksSub.subTasksLiStatus[i].forEach((list) => {
+        if(parseInt(editId) === t){
+          console.log("stage4");
+          selectedList.tasksSub.subTasksLiStatus[i].splice(t, 1, "line-through");
+          save();
+        }
+        t++;
+      })
+    }
+  }
+  changeListStatus();
+}
     // currentForm = document.getElementById("form" + i);
     // currentColor = selectedList.tasksSub.subTasksStatus[i];
     // currentForm.style.backgroundColor = currentColor;

@@ -137,6 +137,8 @@
   background: #eaeaea;
   padding: 12.5px;
   box-shadow: inset 0px -5px 10px 5px #e2e2e2;
+  text-decoration-style: solid;
+  text-decoration-color: #000000;
 }
 
 ul > .subLi{
@@ -186,4 +188,24 @@ ul > .subLi{
 
 #closeLeftBar:hover{
   background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-06.png);
+}
+
+.subTaskButton{
+  position: absolute;
+  background-color: #aaaaaa;
+  border: none;
+  color: white;
+  padding: 8px 25px;
+  margin-top: 2.8px;
+  margin-left: 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.1s;
+}
+
+.subTaskButton:hover{
+  background-color: #ff5e2c;
 }

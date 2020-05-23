@@ -27,6 +27,7 @@ function renderSubMenu() {
   renderChildheader();
   subTaskRender();
   changeColorheader();
+  changeListStatus();
 }
 
 function plussTaskListRender() {
@@ -56,7 +57,7 @@ function plussTaskListRender() {
             <input type="text" class="subTaskInput" placeholder="new task.." data-new-sub-input id="${
               "task" + i
             }">
-            <button class="btn create" id="leftbutton">Add</button>
+            <button class="subTaskButton" id="middleButton">Add</button>
         </form>
     </div>
     </div>
@@ -74,6 +75,7 @@ function newChildFormOnsubmit(event) {
     if ("task" + i == currentUl.id && currentUl.value !== "") {
       const subListName = currentUl.value;
       selectedList.tasksSub.subTasksList[i].push(subListName);
+      selectedList.tasksSub.subTasksLiStatus[i].push("none");
       save();
       currentUl.value = null;
     }
@@ -161,10 +163,12 @@ function plussTaskList(event) {
   const newArray = [];
   const newArrayH = [""];
   const newArrayC = [["#424249"]];
+  const newArrayL = [];
 
   selectedList.tasksSub.subTasksList.push(newArray);
   selectedList.tasksSub.subTasksHeader.push(newArrayH);
   selectedList.tasksSub.subTasksStatus.push(newArrayC);
+  selectedList.tasksSub.subTasksLiStatus.push(newArrayL);
   save();
 
   renderSubMenu();

@@ -60,7 +60,8 @@ function createList(name) {
     let subTasksList = [[]];
     let subTasksHeader = [[]];
     let subTasksStatus = [["#f4b707"]]
-    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subMembers: [] };
+    let subTasksLiStatus = [[]];
+    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subTasksLiStatus, subMembers: [] };
     return { id: Date.now().toString(), name: name, members: [], tasksSub: tasksSub};
 }
 

@@ -39,6 +39,8 @@
 #selectTxt {
   text-align: center;
   font-size: 15px;
+  margin-top: 16px;
+  margin-bottom: 13.5px;
   margin-left: -2px;
 }
 
@@ -128,6 +130,7 @@
   position: absolute;
   text-align: center;
   margin-right: 20px;
+  margin-bottom: 16.5px;
   font-size: 18px;
   right: 0;
   bottom: 0;
@@ -168,7 +171,7 @@
   margin-top: 3.5px;
   border:0;
   background:transparent;
-  background-image: url(/icons/check-icon-gray-01.png);
+  background-image: url(/icons/pen-icon-gray-02.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -177,7 +180,7 @@
 }
 
 .singleFormButton:hover{
-  background-image: url(/icons/check-icon-darkgray-01.png);
+  background-image: url(/icons/pen-icon-darkgray-01.png);
 }
 
 .headerDeleteSingle{
@@ -200,7 +203,7 @@
 .currentTaskStyle{
   position: absolute;
   color: #444444;
-  margin-left: 146px;
+  margin-left: 27px;
   margin-top: 8px;
   font-weight: normal;
   font-size: 18px;
@@ -230,10 +233,6 @@
   font-size: 18px;
 }
 
-.singleForm{
-
-}
-
 .singleEdit{
   position: absolute;
   width: 28px;
@@ -242,7 +241,7 @@
   margin-left: -70px;
   border:0;
   background:transparent;
-  background-image: url(/icons/check-mark.png);
+  background-image: url(/icons/pen.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -251,7 +250,7 @@
 }
 
 .singleEdit:hover {
-  background-image: url(/icons/check-icon-gray-01.png);
+  background-image: url(/icons/pen-icon-gray-02.png);
 }
 
 .singleDelete{
@@ -269,6 +268,26 @@
 
 .singleDelete:hover {
   background-image: url(/icons/x-icon-gray-02.png);
+}
+
+.singleStatus{
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  margin-top: 5px;
+  margin-left: 265px;
+  border:0;
+  background:transparent;
+  background-image: url(/icons/check-mark.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+}
+
+.singleStatus:hover{
+  background-image: url(/icons/check-icon-gray-01.png);
 }
 
 .singleInputStyle{

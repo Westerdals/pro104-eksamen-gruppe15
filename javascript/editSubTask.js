@@ -17,6 +17,7 @@ function editSubTask(event, deleteId) {
             selectedList.tasksSub.subTasksList.splice(i, 1);
             selectedList.tasksSub.subTasksHeader.splice(i, 1);
             selectedList.tasksSub.subTasksStatus.splice(i, 1);
+            selectedList.tasksSub.subTasksLiStatus.splice(i, 1);
         }
     }
     save();

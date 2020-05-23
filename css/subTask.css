@@ -18,6 +18,10 @@
     background-position: center;
 }
 
+.editButton:hover{
+    background-image: url(/icons/pen-icon-gray-02.png);
+}
+
 .deleteButton{
     width: 25px;
     height: 25px;
@@ -27,6 +31,10 @@
     background-image: url(/icons/x-mark.png);
     background-size: cover;
     background-position: center;
+}
+
+.deleteButton:hover{
+    background-image: url(/icons/x-icon-gray-02.png);
 }
 
 .subListHeader{
