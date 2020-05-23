@@ -46,13 +46,12 @@
     <div id="leftContainer">
             <!-- header til venstre konteiner -->
             <div id="leftBarHeader">
-                <img src="icons/x-icon-darkgray-02.png" id="deleteSidemenu">
                 <h1 id="leftBarLogo"></h1>
             </div>
             <div id="projectsBox">
                 <h3 id="projectsText"></h3>
             </div>
-        
+      
          <div id="formContainer">
           <!-- data-new-list-form er for onsubmit event -->
             <form action="" data-new-list-form>
@@ -62,29 +61,25 @@
                 <button class="btn create" id="leftbutton">Add</button>
             </form>
         </div>
-        
+            
+    <div id="leftListLimitContainer">
             <!-- konteiner til ul -->
             <div id="leftList">
                 <!-- Ul til listene (li) som blir generert -->
             <ul class="taskList" data-lists>
-                <!-- Her blir hoved-listene plassert -->
-                <!--
-                <li>Sample task</li>
-                <li>Sample task</li>
-                <li>Sample task</li>
-                -->
+                <!--Hvor prosjekter blir lagt inn-->
             </ul>
         </div>
+    </div>
         <!-- kontainer til input feltet som legger til lister i (data-lists, class="taskList") -->
         
         <br>
             <div id="calendarContainer">
                
                 
-                
+                <button id="openCalenderButton" onclick="openCalender(event)"></button>
+                <button id="closeCalenderButton" onclick="closeCalender(event)"></button>
                 <div class="month">
-                                    <img src="icons/x-icon-darkgray-02.png" type="delete" id="delete">
-
                         <!-- Onclick event for previous month -->
                     <div class="prev" onclick="moveDate('prev')">
                         <!-- ASCII '<' symbol -->
@@ -124,6 +119,8 @@
           <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
           <h1 id="currentTask" middle-list-title></h1>
           <div id="plussSubTaskList">
+            <button id="openLeftBar" onclick="openLeftBarF(event)"></button>
+            <button id="closeLeftBar" onclick="closeLeftBarF(event)"></button>
             <button onclick="plussTaskList(event)" id="buttonSubTaskList">
               Add Task
             </button>

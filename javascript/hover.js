@@ -5,54 +5,63 @@ const leftList = document.getElementById("leftList");
 const formContainer = document.getElementById("formContainer");
 const calendarContainer = document.getElementById("calendarContainer");
 const projectsBox = document.getElementById("projectsBox");
+const leftListLimitContainer = document.getElementById("leftListLimitContainer");
 
 // MiddleBar
 const middleContainer = document.getElementById("middleContainer");
+const openLeftBar = document.getElementById("openLeftBar");
+const closeLeftBar = document.getElementById("closeLeftBar");
 
-// leftContainer.addEventListener("mouseover", (e) => {
-//   e.preventDefault();
-//   leftContainerHover();
-//   middleBarHover();
-// });
+function openLeftBarF(event){
+  event.preventDefault;
+  leftContainerHover();
+  middleBarHover();
+  closeLeftBar.style.display = "block";
+  openLeftBar.style.display = "none";
+  leftListLimitContainer.style.display = "block";
+}
 
-// leftContainer.addEventListener("mouseleave", (e) => {
-//   e.preventDefault();
-//   leftContainerLeave();
-//   middleBarLeave();
-// });
+function closeLeftBarF(event){
+  event.preventDefault();
+  leftContainerLeave();
+  middleBarLeave();
+  closeLeftBar.style.display = "none";
+  openLeftBar.style.display = "block";
+  leftListLimitContainer.style.display = "none";
+}
 
-// function leftContainerHover() {
-//   leftContainer.style.width = "300px";
+function leftContainerHover() {
+  leftContainer.style.width = "300px";
 
-//   leftContainer.style.transition = "0.3s";
+  leftContainer.style.transition = "0.3s";
 
-//   leftBarLogo.style.transitionDuration = "0.0s";
-//   leftBarLogo.style.transform = "rotateY(0deg)";
+  leftBarLogo.style.transitionDuration = "0.0s";
+  leftBarLogo.style.transform = "rotateY(0deg)";
 
-//   leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-02.png)";
-//   leftBarLogo.style.width = "160px";
-//   leftBarLogo.style.height = "160px";
-//   leftList.style.display = "";
-//   formContainer.style.display = "";
-//   leftContainer.style.boxShadow = "5px 0px 20px 0px #444444";
-//   calendarContainer.style.display = "block";
-//   projectsBox.style.display = "block";
-// }
+  leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-02.png)";
+  leftBarLogo.style.width = "160px";
+  leftBarLogo.style.height = "160px";
+  leftList.style.display = "";
+  formContainer.style.display = "";
+  leftContainer.style.boxShadow = "5px 0px 20px 0px #444444";
+  calendarContainer.style.display = "block";
+  projectsBox.style.display = "block";
+}
 
-// function leftContainerLeave() {
-//   leftContainer.style.width = "70px";
-//   leftContainer.style.transition = "0.5s";
-//   leftBarLogo.style.transitionDuration = "0.5s";
-//   leftBarLogo.style.transform = "rotateY(360deg)";
+function leftContainerLeave() {
+  leftContainer.style.width = "70px";
+  leftContainer.style.transition = "0.5s";
+  leftBarLogo.style.transitionDuration = "0.5s";
+  leftBarLogo.style.transform = "rotateY(360deg)";
 
-//   leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-01.png)";
-//   leftBarLogo.style.width = "50px";
-//   leftBarLogo.style.height = "50px";
-//   leftList.style.display = "none";
-//   formContainer.style.display = "none";
-//   calendarContainer.style.display = "none";
-//   projectsBox.style.display = "none";
-// }
+  leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-01.png)";
+  leftBarLogo.style.width = "50px";
+  leftBarLogo.style.height = "50px";
+  leftList.style.display = "none";
+  formContainer.style.display = "none";
+  calendarContainer.style.display = "none";
+  projectsBox.style.display = "none";
+}
 
 function middleBarHover() {
   middleContainer.style.width = "inherit";
@@ -113,4 +122,43 @@ function rightContainerLeave() {
   footerRightBar.style.transition = "0.3s";
   loginForm.style.display = "none";
   notContainer.style.display = "none";
+}
+
+// Open Calender
+
+const calenderContainerAll = document.getElementById("calendarContainer");
+
+const calenderMonth = document.getElementsByClassName("month");
+const calanderWeekends = document.getElementsByClassName("weekends");
+const calenderDays = document.getElementsByClassName("days");
+const closeCalenderButton = document.getElementById("closeCalenderButton");
+const openCalenderButton = document.getElementById("openCalenderButton");
+
+function closeCalender(event){
+  event.preventDefault();
+  console.log("testtesttest");
+  calenderMin();
+  closeCalenderButton.style.display = "none";
+  openCalenderButton.style.display = "block";
+}
+
+function openCalender(event){
+  event.preventDefault();
+  calenderMax()
+  openCalenderButton.style.display = "none";
+  closeCalenderButton.style.display = "block";
+}
+
+function calenderMin() {
+  calenderMonth[0].style.top = "0";
+  calanderWeekends[0].style.display = "none";
+  calenderDays[0].style.display = "none";
+  calenderContainerAll.style.height = "70px";
+}
+
+function calenderMax() {
+  calenderMonth[0].style.top = "0";
+  calanderWeekends[0].style.display = "flex";
+  calenderDays[0].style.display = "flex";
+  calenderContainerAll.style.height = "427px";
 }

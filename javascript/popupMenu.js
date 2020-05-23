@@ -216,3 +216,39 @@ function renderSingleHeader(){
       }
   }
 }
+
+function changeListStatus(){
+  const selectedList = lists.find((list) => list.id === selectedListId);
+  taskCount = selectedList.tasksSub.subTasksList.length;
+  for(i = 0; i < taskCount; i++){
+    selectedList.tasksSub.subTasksList[i].forEach((list), e => {
+      e.preventDefault();
+
+    })
+  }
+}
+
+    // currentForm = document.getElementById("form" + i);
+    // currentColor = selectedList.tasksSub.subTasksStatus[i];
+    // currentForm.style.backgroundColor = currentColor;
+    // console.log(currentColor);
+
+
+
+    // event.preventDefault();
+    // const selectedList = lists.find((list) => list.id === selectedListId);
+    // console.log("Yellow");
+    // currentTaskNumber = document.getElementById(currentTask).id;
+    // //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
+    // selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
+    // selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#f4b707");
+    // console.log(currentTaskNumber);
+    // save();
+    // changeColorheader();
+
+
+
+
+    // text-decoration-line:line-through;
+
+    // style.textDecorationLine = "line-through";

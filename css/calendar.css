@@ -5,9 +5,9 @@
   background-color: #E0DAD5;
   box-shadow: 0px 0px 15px 3px rgba(17, 16, 16, 0.2);
   align-content: center;
-    position: absolute;
-    top: 1070px;
-    
+  bottom: 0;
+  position: absolute;
+  transition: 0.3s;
 }
 
 .month {
@@ -20,24 +20,22 @@
   text-align: center;
   align-items: center;
   padding: 10px -1px;
-   
-   
-
-
 }
 
 #dateStart{
 position: absolute;
-top: 10px;
-left: 150px;
+top: 27px;
+right: 0;
+margin-right: 52px;
 }
 
 #month {
   font-size: 20px;
   font-weight: 100;
-    left: 100px;
-    position: absolute;
-    top: 6px;
+  left: 0;
+  position: absolute;
+  top: 23px;
+  margin-left: 52px;
 }
 
 .weekends {
@@ -106,24 +104,59 @@ left: 150px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.prev{
+  right: 0;
+  margin-left: 6px;
+}
+
 .next{
 top: 18px;
-left: 30px;
+right: 0;
+margin-right: 6px;
 position: absolute;
 }
 
+#openCalenderButton{
+  position: absolute;  
+  margin-left: 130px;
+  margin-top: -42px;
+  width: 35px;
+  height: 35px;
+  border:0;
+  background:transparent;
+  background-image: url(/icons/calender-ikon-opp-ned-05.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  border: none;
+  display: none;
+  opacity: 0.7;
+  transition: 0.1s;
+}
 
+#openCalenderButton:hover {
+  background-image: url(/icons/calender-ikon-opp-ned-06.png);
+  opacity: 1;
+}
 
-#delete{
-width: 25px;
-    height: 25px;
-  width: 25px;
-    height: 25px;
-    margin-right: 5px;
-    margin-top: 1px;
-    float: right;
-    background-image: url(/icons/x-mark.png);
-    position: absolute;
-    left: 310px;
-    top: 10px;
+#closeCalenderButton{
+  position: absolute;  
+  margin-left: 130px;
+  margin-top: -42px;
+  width: 35px;
+  height: 35px;
+  border:0;
+  background:transparent;
+  background-image: url(/icons/calender-ikon-opp-ned-07.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  border: none;
+  opacity: 0.7;
+  transition: 0.1s;
+}
+
+#closeCalenderButton:hover{
+  background-image: url(/icons/calender-ikon-opp-ned-08.png);
+  opacity: 1;
 }

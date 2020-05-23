@@ -1,6 +1,6 @@
 #middleContainer{
   position: absolute;
-  margin-left: 350px;
+  margin-left: 310px;
   width: inherit;
   height: 100%;
   background-color: #f2f2f2;
@@ -75,7 +75,7 @@
 }
 
 #buttonSubTaskList{
-  margin-top: 5px;
+  margin-top: 2px;
   width: 100px;
   height: 50px;
   font-size: 1em;
@@ -84,7 +84,7 @@
   background-color: #bcbcbc;
   border-radius: 5px;
   color: #f2f2f2;
-  margin-left: -120px;
+  margin-left: -50px;
   transition: 0.1s;
 }
 
@@ -141,4 +141,49 @@
 
 ul > .subLi{
   padding-bottom: 12.5px;
+}
+
+#openLeftBar{
+  position: absolute;  
+  width: 35px;
+  height: 35px;
+  margin-top: 9px;
+  margin-left: 20px;
+  left: 0;
+  top: 0;
+  border:0;
+  background:transparent;
+  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-01.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  border: none;
+  transition: 0.3s;
+  display: none;
+}
+
+#openLeftBar:hover{
+  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-02.png);
+}
+
+#closeLeftBar{
+  position: absolute;  
+  width: 35px;
+  height: 35px;
+  margin-top: 9px;
+  margin-left: 20px;
+  left: 0;
+  top: 0;
+  border:0;
+  background:transparent;
+  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-05.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  border: none;
+  transition: 0.3s;
+}
+
+#closeLeftBar:hover{
+  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-06.png);
 }

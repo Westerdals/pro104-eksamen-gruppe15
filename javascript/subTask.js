@@ -91,12 +91,15 @@ function subTaskRender() {
 
   listLength = selectedList.tasksSub.subTasksList.length;
   for (i = 0; i < listLength; i++) {
+    t = 0;
     selectedList.tasksSub.subTasksList[i].forEach((list) => {
       currentUl = document.getElementById("ul" + i);
       listElement = document.createElement("li");
       listElement.classList.add("subLi");
+      listElement.setAttribute("id", "ul" + i + "li" + t);
       listElement.innerText = list;
       currentUl.appendChild(listElement);
+      t++;
     });
     save();
   }
