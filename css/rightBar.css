@@ -21,14 +21,14 @@
   justify-content: center;
 }
 
-/* #username {
+#username {
   margin-top: 120px;
   text-align: center;
   font-size: 26px;
   color: #444444;
   display: none;
   transition: 0.3s;
-} */
+}
 
 #profilePicture {
   background-image: url(/images/UserLogo-01.png);
@@ -43,36 +43,22 @@
   position: absolute;
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 10px;
+  padding: 60px;
   bottom: 0;
-  margin-left: 84.5%;
-  margin-bottom: 10px;
+  top: 610px;
+  right: 0;
+  margin-bottom: 5px;
   padding-bottom: 10px;
-  grid-column-gap: 25px;
-  display: none;
+  grid-column-gap: 20px;
   transition: 1.2s;
+  display: none;
 }
 
 .linkIcon {
   width: 40px;
   height: 40px;
-  margin-top: 25px;
-
+  margin-top: 15px;
   background-size: cover;
   background-position: center;
-}
-
-#facebook {
-  background-image: url(/images/facebookG.png);
-}
-#canvas {
-  background-image: url(/images/canvasG-01.png);
-}
-
-#instagram {
-  background-image: url(/images/instagramG-01.png);
-}
-
-#youtube {
-  background-image: url(/images/youtubeG-01.png);
+  cursor: pointer;
 }
