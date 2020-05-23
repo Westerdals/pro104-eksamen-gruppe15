@@ -102,15 +102,15 @@ function rightContainerHover() {
   notContainer.style.display = "block";
 }
 
-// function rightContainerLeave() {
-//   rightContainer.style.width = "70px";
-//   profilePicture.style.width = "50px";
-//   profilePicture.style.height = "50px";
-//   profilePicture.style.transition = "0.3s";
-//   username.style.display = "none";
-//   username.style.transition = "0.3s";
-//   footerRightBar.style.display = "none";
-//   footerRightBar.style.transition = "0.3s";
-//   loginForm.style.display = "none";
-//   notContainer.style.display = "none";
-// }
+function rightContainerLeave() {
+  rightContainer.style.width = "70px";
+  profilePicture.style.width = "50px";
+  profilePicture.style.height = "50px";
+  profilePicture.style.transition = "0.3s";
+  username.style.display = "none";
+  username.style.transition = "0.3s";
+  footerRightBar.style.display = "none";
+  footerRightBar.style.transition = "0.3s";
+  loginForm.style.display = "none";
+  notContainer.style.display = "none";
+}
