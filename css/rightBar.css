@@ -43,14 +43,14 @@
   position: absolute;
   display: grid;
   grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
   padding: 60px;
   bottom: 0;
   top: 610px;
   right: 0;
   margin-bottom: 5px;
   padding-bottom: 10px;
-  grid-column-gap: 20px;
-  transition: 1.2s;
+  transition: 0.3s;
   display: none;
 }
 

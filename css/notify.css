@@ -6,8 +6,10 @@
 .notifyContainer {
   width: 200px;
   height: 20px;
-  margin-top: 20px;
+  margin-top: 360px; /* 30px; */
   position: absolute;
+  z-index: 3;
+  background: transparent;
 }
 
 .notify {

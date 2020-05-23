@@ -95,24 +95,22 @@ function rightContainerHover() {
   username.style.display = "block";
   username.style.transition = "0.3s";
   footerRightBar.style.display = "grid";
-  footerRightBar.style.transition = "1.2s";
+  footerRightBar.style.transition = "0.3s";
   notifyRemin.style.left = "89%";
   notifyDeadl.style.left = "89%";
   loginForm.style.display = "block";
   notContainer.style.display = "block";
 }
 
-function rightContainerLeave() {
-  rightContainer.style.width = "70px";
-  profilePicture.style.width = "50px";
-  profilePicture.style.height = "50px";
-  profilePicture.style.transition = "0.3s";
-  username.style.display = "none";
-  username.style.transition = "0.3s";
-  footerRightBar.style.display = "none";
-  footerRightBar.style.transition = "0.3s";
-  // notifyRemin.style.left = "-43%";
-  // notifyDeadl.style.left = "-43%";
-  loginForm.style.display = "none";
-  notContainer.style.display = "none";
-}
+// function rightContainerLeave() {
+//   rightContainer.style.width = "70px";
+//   profilePicture.style.width = "50px";
+//   profilePicture.style.height = "50px";
+//   profilePicture.style.transition = "0.3s";
+//   username.style.display = "none";
+//   username.style.transition = "0.3s";
+//   footerRightBar.style.display = "none";
+//   footerRightBar.style.transition = "0.3s";
+//   loginForm.style.display = "none";
+//   notContainer.style.display = "none";
+// }
