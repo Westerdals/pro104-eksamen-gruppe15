@@ -9,17 +9,17 @@ const projectsBox = document.getElementById("projectsBox");
 // MiddleBar
 const middleContainer = document.getElementById("middleContainer");
 
-leftContainer.addEventListener("mouseover", (e) => {
-  e.preventDefault();
-  leftContainerHover();
-  middleBarHover();
-});
+// leftContainer.addEventListener("mouseover", (e) => {
+//   e.preventDefault();
+//   leftContainerHover();
+//   middleBarHover();
+// });
 
-leftContainer.addEventListener("mouseleave", (e) => {
-  e.preventDefault();
-  leftContainerLeave();
-  middleBarLeave();
-});
+// leftContainer.addEventListener("mouseleave", (e) => {
+//   e.preventDefault();
+//   leftContainerLeave();
+//   middleBarLeave();
+// });
 
 // function leftContainerHover() {
 //   leftContainer.style.width = "300px";
