@@ -35,6 +35,7 @@
     <script defer src="/javascript/calendar.js"></script>
     <script defer src="/javascript/popupMenu.js"></script>
     <script defer src="/javascript/userForm.js"></script>
+
      <!-- Link to the icons next to username/password -->
     <script defer src="https://kit.fontawesome.com/a81368914c.js"></script>
   </head>
@@ -151,7 +152,7 @@
         <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
         
         <!-- Notification (Reminder) -->
-        <div class="notifyContainer">
+        <div class="notifyContainer" id="nContainer">
         <a href="#" class="notify reminder">
           <span>Reminder</span>
           <span id="remin" class="notifyNum">2</span>
@@ -177,7 +178,7 @@
               <img class="avatar" src="images/profile-pic.svg" />
       
               <!-- Log in side -->
-              <form id="login" class="inputGroup">
+              <form id="login" class="inputGroup" onsubmit="javascript:loginBar()">
                 <div class="inputDiv user">
                   <div class="i">
                     <i class="fas fa-user"></i>
@@ -228,10 +229,32 @@
 
         <!-- Footer with links  -->
         <div id="footerRightBar">
-          <div id="facebook" class="linkIcon" title="Facebook"></div>
-          <div id="canvas" class="linkIcon" title="Canvas"></div>
-          <div id="instagram" class="linkIcon" title="Instagram"></div>
-          <div id="youtube" class="linkIcon" title="Youtube"></div>
+          <div id="w3schools" class="linkIcon" title="w3schools">
+            <a href="https://www.w3schools.com/" type="w3schools website" target="_blank">
+              <img class ="linkIcon" src="/images/w3schools-01.png"></a>
+          </div>
+          <div id="canvas" class ="linkIcon" title="Canvas">
+            <a href="https://idp.feide.no/simplesaml/module.php/feide/login.php?asLen=181&AuthState=_b9d22d8453f52bebe52d178facb0f20ed6847cb5d2%3Ahttps%3A%2F%2Fidp.feide.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fkristiania.instructure.com%252Fsaml2%26cookieTime%3D1590143575" 
+            type="canvas login" target="_blank">
+            <img class ="linkIcon" src="/images/canvasG-01.png"></a>
+          </div>
+          <div id="github" class="linkIcon" title="Github">
+            <a href="https://github.com/" type="githubwebsite" target="_blank">
+              <img class ="linkIcon" src="/images/githubG-01.png"></a>
+          </div>
+          <div id="youtube" class="linkIcon" title="Youtube">
+            <a href="https://www.youtube.com/" type="youtube website" target="_blank">
+              <img class ="linkIcon" src="/images/youtubeG-01.png"></a>
+          </div>
+          <div id="chatBoot" class="linkIcon" title="chatBoot">
+            <a href="#" target="_blank"><img class ="linkIcon" src="/images/chatIkon_1024.png"></a>
+          </div>
+          <div id="stackOverflow" class="linkIcon" title="stackOverflow">
+            <a href="https://stackoverflow.com/" type="stackoweflow website" target="_blank">
+            <img class ="linkIcon" src="/images/stackoverflowG.png">
+            </a>
+          </div> 
+          </div>
         </div>
       </div>
     

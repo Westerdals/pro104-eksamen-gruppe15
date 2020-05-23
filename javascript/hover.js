@@ -73,6 +73,7 @@ const username = document.getElementById("username");
 const footerRightBar = document.getElementById("footerRightBar");
 const notifyRemin = document.getElementById("remin");
 const notifyDeadl = document.getElementById("deadl");
+const notContainer = document.getElementById("nContainer");
 const loginForm = document.getElementById("formBox");
 
 rightContainer.addEventListener("mouseover", (e) => {
@@ -94,10 +95,11 @@ function rightContainerHover() {
   username.style.display = "block";
   username.style.transition = "0.3s";
   footerRightBar.style.display = "grid";
-  footerRightBar.style.transition = "1.2s";
+  footerRightBar.style.transition = "0.3s";
   notifyRemin.style.left = "89%";
   notifyDeadl.style.left = "89%";
   loginForm.style.display = "block";
+  notContainer.style.display = "block";
 }
 
 function rightContainerLeave() {
@@ -109,7 +111,6 @@ function rightContainerLeave() {
   username.style.transition = "0.3s";
   footerRightBar.style.display = "none";
   footerRightBar.style.transition = "0.3s";
-  notifyRemin.style.left = "-43%";
-  notifyDeadl.style.left = "-43%";
   loginForm.style.display = "none";
+  notContainer.style.display = "none";
 }

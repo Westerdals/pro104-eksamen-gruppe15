@@ -24,7 +24,7 @@ var togBtn = document.getElementById("btnUser");
 function register() {
   log.style.display = "none";
   reg.style.display = "block";
-  togBtn.style.left = "80px";
+  togBtn.style.left = "90px";
 }
 
 function login() {
