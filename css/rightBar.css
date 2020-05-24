@@ -44,12 +44,9 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-column-gap: 20px;
-  padding: 60px;
-  bottom: 0;
-  top: 610px;
+  padding: 70px;
+  top: 670px;
   right: 0;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
   transition: 0.3s;
   display: none;
 }
@@ -57,8 +54,6 @@
 .linkIcon {
   width: 40px;
   height: 40px;
-  margin-top: 15px;
-  background-size: cover;
-  background-position: center;
+  margin-top: 20px;
   cursor: pointer;
 }

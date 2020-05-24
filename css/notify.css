@@ -63,3 +63,8 @@
   margin-top: -17px;
   transition: 0.3s;
 }
+
+.notifyIcons {
+  margin-left: -20px;
+  padding: 5px;
+}
