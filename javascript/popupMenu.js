@@ -1,50 +1,66 @@
 let popup = document.getElementsByClassName("popUpContainer");
 
-
 changeColorheader();
 changeListStatus();
 
 function openMenu(event, editId) {
+
   event.preventDefault();
   popup[0].style.display = "block";
+  document.getElementById("popUpContainer").style.display = "block";
   console.log("open");
   popup[0].innerHTML = "";
   let popupContent = document.createElement('div');
   popupContent.innerHTML = 
-  `<div id="changeTaskName">
-  </div>
-    <div id="editTaskListContainer">
-      </div>
+  ` <div id="changeTaskName"></div>
+    <div id="editTaskListContainer"></div>
+
     <div id="selectStatus">
       <div> 
         <p id="selectTxt">Select status on assignment</p>
-      <div id="${editId}"class="blackStatus" onclick="changeColor(event, this.id)">
-        <p class="statusP">To do</p>
-      </div>
-      <div id="${editId}" class="yellowStatus" onclick="changeColor2(event, this.id)">
-        <p class="statusP">Doing</p>
-      </div>
-      <div id="${editId}" class="blueStatus" onclick="changeColor3(event, this.id)">
-        <p class="statusP">Waiting for feedback</p>
-      </div>
-      <div id="${editId}" class="greenStatus" onclick="changeColor4(event, this.id)">
-        <p class="statusP">Done</p>
-      </div>
+        <div id="${editId}"class="blackStatus" onclick="changeColor(event, this.id)">
+            <p class="statusP">To do</p>
+        </div>
+        <div id="${editId}" class="yellowStatus" onclick="changeColor2(event, this.id)">
+            <p class="statusP">Doing</p>
+        </div>
+        <div id="${editId}" class="blueStatus" onclick="changeColor3(event, this.id)">
+            <p class="statusP">Waiting for feedback</p>
+        </div>
+        <div id="${editId}" class="greenStatus" onclick="changeColor4(event, this.id)">
+            <p class="statusP">Done</p>
+        </div>
       </div>
     </div>
-    <div class="memberInputContainer"> 
-    </div>
+
+    <div class="memberInputContainer"></div>
     <p id="backBtn" title="close" onclick="closeMenu()"></p>
     <p class="currrentTaskCount">To-do-list ${parseInt(editId) + 1}</p>
   `
+    
   popup[0].appendChild(popupContent);
   popup[0].id = editId;
+  styleDragabbleHeader();
   renderSingleTask();
   renderSingleHeader();
 }
 
+//Funksjon for at style draggebleHeader når openMenu() blir kjørt
+function styleDragabbleHeader(){
+  var draggableHeader = document.getElementById("draggableHeader");
+  draggableHeader.style.display = "block";
+  draggableHeader.style.position = "absolute";
+  draggableHeader.style.width = "645px";
+  draggableHeader.style.height = "35px";
+  draggableHeader.style.margin = "0px, 0px, 0px, 0px";
+  draggableHeader.style.backgroundColor = "red";
+}
+
+//Funksjon for at popUp vindu og draggebleHeader ikke skal vises når man lukker vinduet
 function closeMenu() {
   popup[0].style.display = "none";
+  document.getElementById("draggableHeader").style.display = "none";
+  document.getElementById("popUpContainer").style.display = "none";
   console.log("close");
 }
 

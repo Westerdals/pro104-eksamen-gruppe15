@@ -121,7 +121,7 @@
             <button id="openLeftBar" onclick="openLeftBarF(event)"></button>
             <button id="closeLeftBar" onclick="closeLeftBarF(event)"></button>
             <button onclick="plussTaskList(event)" id="buttonSubTaskList">
-              Add Task
+              Add List
             </button>
           </div>
         </div>
@@ -135,9 +135,14 @@
           </div>
         </div>
       </div>
-            <!-- Popup menu, for changing things for tasks/subtasks -->
-        <div class="popUpContainer">
-        <!-- Generated in JS -->
+        <!-- Popup menu, for changing things for tasks/subtasks -->
+        <div id="popUpContainer">
+            <div class="popUpContainer">
+            <!-- Generated in JS -->
+            </div>
+            <div id="draggableHeader">
+            <!-- Styling generated in JS -->
+            </div>
         </div>
       <!-- konteiner som holder på baren til høyre, Profil-baren -->
       <div id="rightContainer">
@@ -257,8 +262,6 @@
           </div>
         </div>
       </div>
-      </div>
-    
-    
+      
   </body>
 </html>
