@@ -5,14 +5,16 @@ const leftList = document.getElementById("leftList");
 const formContainer = document.getElementById("formContainer");
 const calendarContainer = document.getElementById("calendarContainer");
 const projectsBox = document.getElementById("projectsBox");
-const leftListLimitContainer = document.getElementById("leftListLimitContainer");
+const leftListLimitContainer = document.getElementById(
+  "leftListLimitContainer"
+);
 
 // MiddleBar
 const middleContainer = document.getElementById("middleContainer");
 const openLeftBar = document.getElementById("openLeftBar");
 const closeLeftBar = document.getElementById("closeLeftBar");
 
-function openLeftBarF(event){
+function openLeftBarF(event) {
   event.preventDefault;
   leftContainerHover();
   middleBarHover();
@@ -21,7 +23,7 @@ function openLeftBarF(event){
   leftListLimitContainer.style.display = "block";
 }
 
-function closeLeftBarF(event){
+function closeLeftBarF(event) {
   event.preventDefault();
   leftContainerLeave();
   middleBarLeave();
@@ -83,7 +85,7 @@ const footerRightBar = document.getElementById("footerRightBar");
 const notifyRemin = document.getElementById("remin");
 const notifyDeadl = document.getElementById("deadl");
 const notContainer = document.getElementById("nContainer");
-const loginForm = document.getElementById("formBox");
+const logBtn = document.getElementById("logOut");
 
 rightContainer.addEventListener("mouseover", (e) => {
   e.preventDefault();
@@ -107,8 +109,9 @@ function rightContainerHover() {
   footerRightBar.style.transition = "0.3s";
   notifyRemin.style.left = "89%";
   notifyDeadl.style.left = "89%";
-  loginForm.style.display = "block";
   notContainer.style.display = "block";
+  notContainer.style.transition = "0.3s";
+  logBtn.style.display = "block";
 }
 
 function rightContainerLeave() {
@@ -120,8 +123,9 @@ function rightContainerLeave() {
   username.style.transition = "0.3s";
   footerRightBar.style.display = "none";
   footerRightBar.style.transition = "0.3s";
-  loginForm.style.display = "none";
   notContainer.style.display = "none";
+  notContainer.style.transition = "0.3s";
+  logBtn.style.display = "none";
 }
 
 // Open Calender
@@ -134,7 +138,7 @@ const calenderDays = document.getElementsByClassName("days");
 const closeCalenderButton = document.getElementById("closeCalenderButton");
 const openCalenderButton = document.getElementById("openCalenderButton");
 
-function closeCalender(event){
+function closeCalender(event) {
   event.preventDefault();
   console.log("testtesttest");
   calenderMin();
@@ -142,9 +146,9 @@ function closeCalender(event){
   openCalenderButton.style.display = "block";
 }
 
-function openCalender(event){
+function openCalender(event) {
   event.preventDefault();
-  calenderMax()
+  calenderMax();
   openCalenderButton.style.display = "none";
   closeCalenderButton.style.display = "block";
 }
