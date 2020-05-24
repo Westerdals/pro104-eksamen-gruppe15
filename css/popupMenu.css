@@ -82,7 +82,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #424249;
+  background-color: #808080;
 }
 
 .yellowStatus{
@@ -139,7 +139,7 @@
   font-size: 17px; 
 }
 
-.currrentTaskCount{
+.currentTaskCount{
   position: absolute;
   text-align: center;
   margin-right: 20px;
@@ -225,7 +225,7 @@
 #editTaskListContainer{
   position: absolute;
   width: 400px;
-  height: 525px;
+  height: 615px;
   bottom: 0;
   left: 0;
   margin-left: 6px;
@@ -233,7 +233,7 @@
   overflow-y: scroll;
   align-items: center;
   background-color: white;
-  border-radius: 0px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px;
   box-shadow: inset 0px 0px 17px -3px rgba(0,0,0,0.5);
 }
 
@@ -262,9 +262,11 @@
   border:none;
 }
 
+
 .singleEdit:hover {
   background-image: url(/icons/pen-icon-gray-02.png);
 }
+
 
 .singleDelete{
   position: absolute;
@@ -327,7 +329,7 @@
   position: absolute;
   background-color: #f2f2f2;
   width: 283px;
-  height: 350px;
+  height: 250px;
   bottom: 0;
   right: 0;
   margin-right: 6px;
@@ -335,3 +337,84 @@
   box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.5);
   border-radius: 0px 0px 5px 0px;
 }
+
+.deadlineInputContainer{
+  position: absolute;
+  background-color: #f2f2f2;
+  width: 283px;
+  height: 95px;
+  bottom: 255px;
+  right: 0;
+  margin-right: 6px;
+  margin-bottom: 50px;
+  box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.5);
+}
+
+.deadlineInput{
+    position: absolute;
+    left: 35px;
+    top: 43px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1.5px #808080;
+    padding-left: 10px;
+    
+}
+
+#dayInput{
+    width: 35px;
+}
+
+#monthInput{
+    left: 87px;
+    width: 35px;
+}
+
+#yearInput{
+    left: 139px;
+    width: 50px;
+}
+
+#deadlineTxt{
+  text-align: center;
+  font-size: 15px;
+  margin-top: 16px;
+  margin-bottom: 13.5px;
+  margin-left: -2px;
+}
+
+.addButton{
+  position: absolute;
+  right: 35px;
+  bottom: 20px;
+  background-color: #424249;
+  border: none;
+  color: white;
+  padding: 4px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.1s;
+}
+
+.addButton:hover{
+  background-color: #aaaaaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,7 +12,7 @@ function openMenu(event, editId) {
   popup[0].innerHTML = "";
   let popupContent = document.createElement('div');
   popupContent.innerHTML = 
-  ` <div id="changeTaskName"></div>
+    ` 
     <div id="editTaskListContainer"></div>
 
     <div id="selectStatus">
@@ -32,10 +32,16 @@ function openMenu(event, editId) {
         </div>
       </div>
     </div>
-
+    
+    <div class="deadlineInputContainer"><p id="deadlineTxt">Set a deadline for the to do list</p>
+        <input type="number" class="deadlineInput" id="dayInput" placeholder="DD" min="1" max="31">
+        <input type="number" class="deadlineInput" id="monthInput" placeholder="MM" min="1" max="12">
+        <input type="number" class="deadlineInput" id="yearInput" placeholder="YY" min="2020">
+        <button class="addButton">+</button>
+    </div>
     <div class="memberInputContainer"></div>
     <p id="backBtn" title="close" onclick="closeMenu()"></p>
-    <p class="currrentTaskCount">To-do-list ${parseInt(editId) + 1}</p>
+    <p class="currentTaskCount">To do list ${parseInt(editId) + 1}</p>
   `
     
   popup[0].appendChild(popupContent);
@@ -74,7 +80,7 @@ function changeColor(event, currentTask) {
   currentTaskNumber = document.getElementById(currentTask).id;
   //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
-  selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#424249");
+  selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#808080");
   console.log(currentTaskNumber);
   save();
   changeColorheader();
