@@ -18,7 +18,7 @@
 /* The login form container */
 .formBox {
   width: 380px;
-  height: 480px;
+  height: 550px;
   position: relative;
   padding: 5px;
   margin: 7% auto;
@@ -26,7 +26,7 @@
   background-color: #ffffff;
   text-align: center;
   border: 0.5px solid #424249;
-  border-radius: 20px;
+  border-radius: 10px;
   display: block;
 }
 
@@ -35,10 +35,10 @@
   width: 210px;
   margin: 35px auto;
   position: relative;
-  top: 5px;
+  top: 115px;
   box-shadow: 0 0 20px 9px #1b1a1a1f;
   background-color: #bcbcbc;
-  border-radius: 30px;
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -67,18 +67,20 @@
     #ff5d2c,
     rgb(255, 124, 85)
   );
-  border-radius: 30px;
-  transition: 0.5s;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 /* profile/user image */
 .avatar {
-  width: 65px;
+  width: 190px;
+  height: 100px;
   position: absolute;
-  right: 42%;
+  background-image: url(/images/Orange-tabs-02.png);
+  background-position: center;
+  background-size: cover;
+  right: 26%;
   margin-top: 20px;
-  box-shadow: 0 0 20px 9px #1b1a1a1f;
-  border-radius: 50%;
 }
 
 #editImgBtn {
@@ -106,8 +108,8 @@
 .btnUser {
   display: block;
   width: 90%;
-  height: 33px;
-  border-radius: 25px;
+  height: 38px;
+  border-radius: 5px;
   margin: 45px 0px;
   font-size: 1rem;
   outline: none;
@@ -216,6 +218,16 @@
   height: 15px;
 }
 
+#confirmH5{
+  margin-left: 35px;
+  white-space: nowrap;
+}
+
+h5{
+  font-weight: normal;
+  font-family: 'Raleway', sans-serif;
+}
+
 /* Username and Password text */
 .inputDiv > div h5 {
   position: absolute;
@@ -264,6 +276,15 @@ a:hover {
     margin-bottom: 30px;
     height: 300px;
     bottom: 0px;
+}
+
+.smallText{
+  margin-top: 12.5px;
+}
+
+a{
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
 }
 
 

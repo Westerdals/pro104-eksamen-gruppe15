@@ -17,6 +17,8 @@
     <div class="logContainer">
       <!-- Log/Register in container  -->
       <div class="formBox" id="formBox">
+        <!-- logo image -->
+        <div class="avatar"></div>
         <!-- log in/ register button on top -->
         <div class="btnBox">
           <div id="btnUser"></div>
@@ -27,19 +29,16 @@
             Register
           </button>
         </div>
-        <!-- user img - avatar -->
-        <img class="avatar" src="images/UserLogo-01.png" />
-        <button type="button" onclick="#" id="editImgBtn">Edit</button>
-
+        
         <!-- Log in side -->
-        <form id="login" class="inputGroup" action="index.html">
+        <form id="login" class="inputGroup" onsubmit="loginFormSubmit(event)" id="loginForm">
           <div class="inputDiv user">
             <div class="i">
               <i class="fas fa-user"></i>
             </div>
             <div>
               <h5>Username</h5>
-              <input class="input" type="text" required />
+              <input class="input" type="text" required id="usernameLogin"/>
             </div>
           </div>
           <div class="inputDiv pass">
@@ -48,22 +47,22 @@
             </div>
             <div>
               <h5>Password</h5>
-              <input class="input" type="password" required />
+              <input class="input" type="password" required id="passwordLogin"/>
             </div>
           </div>
-          <a id="forgotPass" href="#">Forgot Password?</a>
-          <input type="submit" class="btnUser" value="Login" />
+          <a id="forgotPass" class="smallText" href="#">Forgot Password?</a>
+          <input type="submit" class="btnUser" value="Login"/>
         </form>
-
+        
         <!-- Register side -->
-        <form id="register" class="inputGroup">
+        <form id="register" class="inputGroup" onsubmit="createFormSubmit(event)">
           <div class="inputDiv user">
             <div class="i">
               <i class="fas fa-user"></i>
             </div>
             <div>
               <h5>Username</h5>
-              <input class="input" type="text" required />
+              <input class="input" type="text" required id="usernameCreate"/>
             </div>
           </div>
           <div class="inputDiv pass">
@@ -72,10 +71,21 @@
             </div>
             <div>
               <h5>Password</h5>
-              <input class="input" type="password" required />
+              <input class="input" type="password" required id="passwordCreate"/>
             </div>
           </div>
-          <a id="forgotPass" href="#">I agree to the terms & conditions</a>
+
+          <div class="inputDiv pass">
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div>
+              <h5 id="confirmH5">Confirm Password</h5>
+              <input class="input" type="password" required id="passwordCreate2"/>
+            </div>
+          </div>
+
+          <a class="smallText" href="#">I agree to the terms & conditions</a>
           <input type="submit" class="btnUser" value="Register" />
         </form>
       </div>
