@@ -36,8 +36,8 @@
     <script defer src="/javascript/popupMenu.js"></script>
     <script defer src="/javascript/userForm.js"></script>
 
-     <!-- Link to the icons next to username/password -->
-    <script defer src="https://kit.fontawesome.com/a81368914c.js"></script>
+     <!-- Link to the icons next to username/password. Kaja's user on font awesome -->
+    <script defer src="https://kit.fontawesome.com/0d3080e10d.js"></script>
   </head>
   <body onLoad="renderDate()">
     <!-- konteiner som holder på alt -->
@@ -88,8 +88,7 @@
                     <div>
                         <!-- The month name will appear here (ex: May) -->
                         <h2 id="month"></h2>
-                        <!-- The first date of the month, day date, and year will appear -->
-                        <p id="dateStart"></p>
+        
                     </div>
                         <!-- Onclick event for next month-->
                     <div class="next" onclick="moveDate('next')">
@@ -151,11 +150,15 @@
         <!-- Notification (Reminder) -->
         <div class="notifyContainer" id="nContainer">
         <a href="#" class="notify reminder">
+          <i class="fas fa-bell"></i>
           <span>Reminder</span>
           <span id="remin" class="notifyNum">2</span>
         </a>
         <!-- Notification (Deadline) -->
         <a href="#" class="notify deadline">
+          <div>
+          <i class="fas fa-clock"></i>
+        </div>
           <span>Deadlines</span>
           <span id="deadl" class="notifyNum">2</span>
         </a>
