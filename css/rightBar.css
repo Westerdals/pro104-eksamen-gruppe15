@@ -45,8 +45,8 @@
   grid-template-columns: auto auto auto;
   grid-column-gap: 20px;
   padding: 70px;
-  top: 670px;
-  right: 0;
+  bottom: 0;
+  margin-bottom: -20px;
   transition: 0.3s;
   display: none;
 }
