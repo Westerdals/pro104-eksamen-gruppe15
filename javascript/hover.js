@@ -83,7 +83,6 @@ const profilePicture = document.getElementById("profilePicture");
 const username = document.getElementById("username");
 const footerRightBar = document.getElementById("footerRightBar");
 const notifyRemin = document.getElementById("remin");
-const notifyDeadl = document.getElementById("deadl");
 const notContainer = document.getElementById("nContainer");
 const logBtn = document.getElementById("logOut");
 
@@ -108,7 +107,6 @@ function rightContainerHover() {
   footerRightBar.style.display = "grid";
   footerRightBar.style.transition = "0.3s";
   notifyRemin.style.left = "89%";
-  notifyDeadl.style.left = "89%";
   notContainer.style.display = "block";
   notContainer.style.transition = "0.3s";
   logBtn.style.display = "block";
