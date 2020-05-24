@@ -17,20 +17,23 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-var log = document.getElementById("login");
-var reg = document.getElementById("register");
-var togBtn = document.getElementById("btnUser");
+const log = document.getElementById("login");
+const reg = document.getElementById("register");
+const togBtn = document.getElementById("btnUser");
+const editImg = document.getElementById("editImgBtn");
 
 function register() {
   log.style.display = "none";
   reg.style.display = "block";
-  togBtn.style.left = "90px";
+  togBtn.style.left = "102px";
+  editImg.style.display = "block";
 }
 
 function login() {
   log.style.display = "block";
   reg.style.display = "none";
   togBtn.style.left = "0";
+  editImg.style.display = "none";
 }
 
 // Members array Local-Storage

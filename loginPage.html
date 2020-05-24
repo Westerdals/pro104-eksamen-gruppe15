@@ -11,33 +11,35 @@
     />
     <link rel="stylesheet" type="text/css" href="css/userForm.css" />
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <script defer src="javascript/userForm.js"></script>
+    <script defer src="/javascript/userForm.js"></script>
   </head>
   <body>
-    <div class="container">
-      <!-- log in/ register button on top -->
-      <div class="formBox">
+    <div class="logContainer">
+      <!-- Log/Register in container  -->
+      <div class="formBox" id="formBox">
+        <!-- log in/ register button on top -->
         <div class="btnBox">
-          <div id="btn"></div>
+          <div id="btnUser"></div>
           <button type="button" class="toggleBtn" onclick="login()">
-            Log in
+            Login
           </button>
           <button type="button" class="toggleBtn" onclick="register()">
             Register
           </button>
         </div>
         <!-- user img - avatar -->
-        <img class="avatar" src="images/profile-pic.svg" />
+        <img class="avatar" src="images/UserLogo-01.png" />
+        <button type="button" onclick="#" id="editImgBtn">Edit</button>
 
         <!-- Log in side -->
-        <form id="login" class="inputGroup">
+        <form id="login" class="inputGroup" action="index.html">
           <div class="inputDiv user">
             <div class="i">
               <i class="fas fa-user"></i>
             </div>
             <div>
               <h5>Username</h5>
-              <input class="input" type="text" />
+              <input class="input" type="text" required />
             </div>
           </div>
           <div class="inputDiv pass">
@@ -46,11 +48,11 @@
             </div>
             <div>
               <h5>Password</h5>
-              <input class="input" type="password" />
+              <input class="input" type="password" required />
             </div>
           </div>
           <a id="forgotPass" href="#">Forgot Password?</a>
-          <input type="submit" class="btn" value="Log in" />
+          <input type="submit" class="btnUser" value="Login" />
         </form>
 
         <!-- Register side -->
@@ -61,7 +63,7 @@
             </div>
             <div>
               <h5>Username</h5>
-              <input class="input" type="text" />
+              <input class="input" type="text" required />
             </div>
           </div>
           <div class="inputDiv pass">
@@ -70,13 +72,15 @@
             </div>
             <div>
               <h5>Password</h5>
-              <input class="input" type="password" />
+              <input class="input" type="password" required />
             </div>
           </div>
           <a id="forgotPass" href="#">I agree to the terms & conditions</a>
-          <input type="submit" class="btn" value="Register" />
+          <input type="submit" class="btnUser" value="Register" />
         </form>
       </div>
+        <!-- Bengt -->
+        <img src="images/bugGuy.png" id="bugGuy">
     </div>
   </body>
 </html>
