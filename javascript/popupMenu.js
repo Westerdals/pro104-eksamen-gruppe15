@@ -50,10 +50,13 @@ function styleDragabbleHeader(){
   var draggableHeader = document.getElementById("draggableHeader");
   draggableHeader.style.display = "block";
   draggableHeader.style.position = "absolute";
-  draggableHeader.style.width = "645px";
-  draggableHeader.style.height = "35px";
-  draggableHeader.style.margin = "0px, 0px, 0px, 0px";
-  draggableHeader.style.backgroundColor = "red";
+  draggableHeader.style.width = "700px";
+  draggableHeader.style.height = "45px";
+  draggableHeader.style.top = "-38px";
+  draggableHeader.style.backgroundColor = "#424249";
+  draggableHeader.style.borderRadius = "5px";
+  draggableHeader.style.boxShadow = "0px 0px 17px -3px rgba(0,0,0,0.5)";
+
 }
 
 //Funksjon for at popUp vindu og draggebleHeader ikke skal vises når man lukker vinduet
@@ -227,7 +230,7 @@ function renderSingleHeader(){
         divElement = document.createElement('div');
         divElement.innerHTML = 
         `
-          <p class="currentTaskStyle">Header</p>
+          <p class="currentTaskStyle">List name</p>
           <div class="headerDeleteSingle"></div>
           <form>
             <input id="taskNameInput" type="text" placeholder="${selectedList.tasksSub.subTasksHeader[i]}" value="${selectedList.tasksSub.subTasksHeader[i]}" onClick="this.setSelectionRange(0, this.value.length)"></input>
