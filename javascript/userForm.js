@@ -36,31 +36,5 @@ function login() {
   editImg.style.display = "none";
 }
 
-// Members array Local-Storage
-// pushMember();
+// Local Storage + login check
 
-// const LOCAL_STORAGE_MEMBER_KEY = 'memb.members';
-
-// let members = JSON.parse(localStorage.getItem(LOCAL_STORAGE_MEMBER_KEY)) || [];
-
-// function pushMember(){
-//   const memberName = "Max";
-//   const memb = createMember(memberName);
-//   members.push(memb);
-//   saveMember();
-//   console.log("pushMember");
-// }
-
-// function createMember(name){
-//   return {id: Date.now().toString(), memberName: memberName, password: [], image: []};
-// }
-
-// function saveMember(){
-//   localStorage.setItem(LOCAL_STORAGE_MEMBER_KEY, JSON.stringify(members));
-// }
-
-// const listName = newListInput.value;
-//     if (listName == null || listName === '') return;
-//     const list = createList(listName);
-//     newListInput.value = null;
-//     lists.push(list);
