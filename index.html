@@ -76,9 +76,10 @@
         <br>
             <div id="calendarContainer">
                
-                
-                <button id="openCalenderButton" onclick="openCalender(event)"></button>
-                <button id="closeCalenderButton" onclick="closeCalender(event)"></button>
+                <div id="calendarArrowButtonContainer">
+                  <button id="openCalenderButton" onclick="openCalender(event)"></button>
+                  <button id="closeCalenderButton" onclick="closeCalender(event)"></button>
+                </div>
                 <div class="month">
                         <!-- Onclick event for previous month -->
                     <div class="prev" onclick="moveDate('prev')">
@@ -116,7 +117,9 @@
         <!-- header til middleContainer -->
         <div id="middleHeader">
           <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
-          <h1 id="currentTask" middle-list-title></h1>
+          <form id="currentProjectForm" onsubmit="changeProjectName(event)">
+            <input id="currentTask" type="text" middle-list-title></input>
+        </form>
           <div id="plussSubTaskList">
             <button id="openLeftBar" onclick="openLeftBarF(event)"></button>
             <button id="closeLeftBar" onclick="closeLeftBarF(event)"></button>

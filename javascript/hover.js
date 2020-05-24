@@ -138,6 +138,8 @@ const calenderDays = document.getElementsByClassName("days");
 const closeCalenderButton = document.getElementById("closeCalenderButton");
 const openCalenderButton = document.getElementById("openCalenderButton");
 
+const monthText = document.getElementById("month");
+
 function closeCalender(event) {
   event.preventDefault();
   console.log("testtesttest");
@@ -157,7 +159,8 @@ function calenderMin() {
   calenderMonth[0].style.top = "0";
   calanderWeekends[0].style.display = "none";
   calenderDays[0].style.display = "none";
-  calenderContainerAll.style.height = "70px";
+  calenderContainerAll.style.height = "120px";
+  monthText.style.marginTop = "27px";
 }
 
 function calenderMax() {
@@ -165,4 +168,5 @@ function calenderMax() {
   calanderWeekends[0].style.display = "flex";
   calenderDays[0].style.display = "flex";
   calenderContainerAll.style.height = "427px";
+  monthText.style.marginTop = "-127px";
 }

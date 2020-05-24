@@ -62,7 +62,9 @@ function createList(name) {
     let subTasksStatus = [["#f4b707"]]
     let subTasksLiStatus = [[]];
     let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subTasksLiStatus, subMembers: [] };
-    return { id: Date.now().toString(), name: name, members: [], tasksSub: tasksSub};
+    let user = { name: ["macke"], password: [123], image: ["https://images-na.ssl-images-amazon.com/images/I/610Pm-JuLYL._AC_SL1500_.jpg"] };
+    let members = {name: ["macke"], image: ["https://images-na.ssl-images-amazon.com/images/I/610Pm-JuLYL._AC_SL1500_.jpg"] };
+    return { id: Date.now().toString(), name: name, members: members, user: user, tasksSub: tasksSub};
 }
 
 function saveAndRender() {
@@ -86,7 +88,27 @@ function render() {
     if (selectedListId == null){
         return;
     } else {
-        middleListTitle.innerText = selectedList.name
+        middleListTitle.value = selectedList.name;
+    }
+}
+
+function changeProjectName(event){
+    event.preventDefault();
+    let currentTaskForm = document.getElementById("currentTask");
+    currentTaskValue = currentTaskForm.value;
+    const selectedList = lists.find(list => list.id === selectedListId);
+    if (currentTaskValue.length > 20){
+        // Alert to long project name
+        alert("Project-name needs to be less than 21");
+        currentTaskForm.value = selectedList.name;
+    } else if (currentTaskValue.length <= 0){
+        // Alert to short project name
+        alert("Project-name needs to be greater than 0");
+        currentTaskForm.value = selectedList.name;
+    } else{
+        selectedList.name = currentTaskValue;
+        save();
+        render();
     }
 }
 
@@ -112,6 +134,7 @@ function clearElement(element) {
         element.removeChild(element.firstChild);
     }
 }
+
 
 // rendrer tasks når man refresher siden
 render();
