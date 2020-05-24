@@ -82,7 +82,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #424249;
+  background-color: #808080;
 }
 
 .yellowStatus{
@@ -352,9 +352,8 @@
 
 .deadlineInput{
     position: absolute;
-    left: 70px;
+    left: 35px;
     top: 43px;
-    width: 35px;
     height: 30px;
     border-radius: 5px;
     border: solid 1.5px #808080;
@@ -362,20 +361,18 @@
     
 }
 
+#dayInput{
+    width: 35px;
+}
+
 #monthInput{
-    left: 120px;
+    left: 87px;
+    width: 35px;
 }
 
 #yearInput{
-    left: 170px;
-}
-
-#hourGlass{
-    position: absolute;
-    left: 35px;
-    top: 45px;
-    font-size: 30px;
-    color: #444444;
+    left: 139px;
+    width: 50px;
 }
 
 #deadlineTxt{
@@ -388,18 +385,22 @@
 
 .addButton{
   position: absolute;
-  background-color: #aaaaaa;
+  right: 35px;
+  bottom: 20px;
+  background-color: #424249;
   border: none;
   color: white;
-  padding: 8px 25px;
-  margin-top: 2.8px;
-  margin-left: 60px;
+  padding: 4px 12px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 2px;
   transition: 0.1s;
+}
+
+.addButton:hover{
+  background-color: #aaaaaa;
 }
 
 

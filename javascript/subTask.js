@@ -39,9 +39,9 @@ function plussTaskListRender() {
   clearElement(AddContainerEmpty);
   for (i = 0; i < listLength; i++) {
     AddContainerEmpty.innerHTML += ` <div class="subTaskList">
-    <div class="subListHeader" data-sub-list-header id="${"form" + i}">
+    <div class="subListHeader" data-sub-list-header id="${"form" + i}" style="background-color:#424249;">
         <form action="" data-new-sub-header-form onsubmit="childHeaderFormNew(event)" class="headerForm">
-            <input class="subListHeaderText" type="text" placeholder="To-do list.." data-new-sub-header id="${
+            <input class="subListHeaderText" type="text" placeholder="Type list name" data-new-sub-header id="${
               "head" + i
             }">
         </form>
@@ -54,7 +54,7 @@ function plussTaskListRender() {
     </ul>
     <div class="subTaskFormStyle">
         <form action="" data-new-sub-form onsubmit="newChildFormOnsubmit(event)" id="createTaskForm">
-            <input type="text" class="subTaskInput" placeholder="new task.." data-new-sub-input id="${
+            <input type="text" class="subTaskInput" placeholder="New task.." data-new-sub-input id="${
               "task" + i
             }">
             <button class="subTaskButton" id="middleButton">Add</button>
