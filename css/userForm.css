@@ -9,7 +9,7 @@
   height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/tabs-background.png);
+    url(/images/shark.jpg);
   position: absolute;
   background-position: center;
   background-size: cover;
@@ -257,3 +257,15 @@ a {
 a:hover {
   color: #ff5e2c;
 }
+
+#bugGuy{
+    position: absolute;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    height: 500px;
+    bottom: 0px;
+    
+}
+
+
+
