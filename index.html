@@ -151,7 +151,10 @@
         </div> 
         <p id="username">username</p>
         <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
-        
+        <!-- Log out btn, calls logOut function in js -->
+        <div id="logOut">
+        <button type="button" id="logOutBtn">Log out</button>
+        </div>
         <!-- Notification (Reminder) -->
         <div class="notifyContainer" id="nContainer">
         <a href="#" class="notify reminder">
@@ -168,69 +171,6 @@
           <span id="deadl" class="notifyNum">2</span>
         </a>
       </div>
-            <!-- log in/ register button on top -->
-            <div class="formBox" id="formBox">
-              <div class="btnBox">
-                <div id="btnUser"></div>
-                <button type="button" class="toggleBtn" onclick="login()">
-                  Login
-                </button>
-                <button type="button" class="toggleBtn" onclick="register()">
-                  Register
-                </button>
-              </div>
-              <!-- user img - avatar -->
-              <img class="avatar" src="images/profile-pic.svg" />
-      
-              <!-- Log in side -->
-              <form id="login" class="inputGroup" onsubmit="javascript:loginBar()">
-                <div class="inputDiv user">
-                  <div class="i">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <div>
-                    <h5>Username</h5>
-                    <input class="input" type="text" />
-                  </div>
-                </div>
-                <div class="inputDiv pass">
-                  <div class="i">
-                    <i class="fas fa-lock"></i>
-                  </div>
-                  <div>
-                    <h5>Password</h5>
-                    <input class="input" type="password" />
-                  </div>
-                </div>
-                <a id="forgotPass" href="#">Forgot Password?</a>
-                <input type="submit" class="btnUser" value="Login" />
-              </form>
-              
-              <!-- Register side -->
-              <form id="register" class="inputGroup">
-                <div class="inputDiv user">
-                  <div class="i">
-                    <i class="fas fa-user"></i>
-                  </div>
-                  <div>
-                    <h5>Username</h5>
-                    <input class="input" type="text" />
-                  </div>
-                </div>
-                <div class="inputDiv pass">
-                  <div class="i">
-                    <i class="fas fa-lock"></i>
-                  </div>
-                  <div>
-                    <h5>Password</h5>
-                    <input class="input" type="password" />
-                  </div>
-                </div>
-                <a id="forgotPass" href="#">I agree to the terms & conditions</a>
-                <input type="submit" class="btnUser" value="Register" />
-              </form>
-            </div>
-          
 
         <!-- Footer with links  -->
         <div id="footerRightBar">
