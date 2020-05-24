@@ -11,8 +11,9 @@ function openMenu(event, editId) {
   console.log("open");
   popup[0].innerHTML = "";
   let popupContent = document.createElement('div');
+    //<div id="changeTaskName"></div>
   popupContent.innerHTML = 
-  ` <div id="changeTaskName"></div>
+    ` 
     <div id="editTaskListContainer"></div>
 
     <div id="selectStatus">
@@ -32,10 +33,11 @@ function openMenu(event, editId) {
         </div>
       </div>
     </div>
-
+    
+    <div class="deadlineInputContainer"><p id="deadlineTxt">Set a deadline for the to do list</p><i class="fas fa-hourglass-half" id="hourGlass"></i><input type="text" class="deadlineInput" id="dayInput" placeholder="DD"><input type="text" class="deadlineInput" id="monthInput" placeholder="MM"><input type="text" class="deadlineInput" id="yearInput" placeholder="YY"><button class="addButton"></button></div>
     <div class="memberInputContainer"></div>
     <p id="backBtn" title="close" onclick="closeMenu()"></p>
-    <p class="currrentTaskCount">To-do-list ${parseInt(editId) + 1}</p>
+    <p class="currentTaskCount">To do list ${parseInt(editId) + 1}</p>
   `
     
   popup[0].appendChild(popupContent);
