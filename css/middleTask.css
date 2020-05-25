@@ -22,9 +22,15 @@
 }
 
 #currentTask {
+  background-color: none;
+  border: none;
+  width: 500px;
+  height: 40px;
   color: #444444;
+  font-size: 32px;
   font-weight: normal;
-  margin-right: 150px;
+  margin-right: 185px;
+  text-align: center;
 }
 
 .subTaskContainer {
