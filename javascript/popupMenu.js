@@ -1,5 +1,6 @@
 let popup = document.getElementsByClassName("popUpContainer");
 
+
 changeColorheader();
 changeListStatus();
 
@@ -13,11 +14,12 @@ function openMenu(event, editId) {
   let popupContent = document.createElement('div');
   popupContent.innerHTML = 
     ` 
+    <div id="listName"></div>
     <div id="editTaskListContainer"></div>
 
     <div id="selectStatus">
       <div> 
-        <p id="selectTxt">Select status on assignment</p>
+        <p id="selectTxt">Select status on list</p>
         <div id="${editId}"class="blackStatus" onclick="changeColor(event, this.id)" title="To do">
             <p class="statusP">To do</p>
         </div>
@@ -33,7 +35,7 @@ function openMenu(event, editId) {
       </div>
     </div>
     
-    <div class="deadlineInputContainer"><p id="deadlineTxt">Set a deadline for the to do list</p>
+    <div class="deadlineInputContainer"><p id="deadlineTxt">Set a deadline for the list</p>
         <input type="number" class="deadlineInput" id="dayInput" placeholder="DD" min="1" max="31" title="Day">
         <input type="number" class="deadlineInput" id="monthInput" placeholder="MM" min="1" max="12" title="Month">
         <input type="number" class="deadlineInput" id="yearInput" placeholder="YY" min="2020" title="Year">
@@ -49,6 +51,7 @@ function openMenu(event, editId) {
   styleDragabbleHeader();
   renderSingleTask();
   renderSingleHeader();
+  
 }
 
 //Funksjon for at style draggebleHeader når openMenu() blir kjørt
@@ -225,25 +228,23 @@ function editSingleTask(event, editId){
   changeListStatus();
 }
 
+
+
 function renderSingleHeader(){
   const selectedList = lists.find((list) => list.id === selectedListId);
   let listLength = selectedList.tasksSub.subTasksList.length;
-  taskHeader = document.getElementById("changeTaskName");
-  clearElement(taskHeader);
+  let listName = document.getElementById("listName");
+  clearElement(listName);
+    
   for(i = 0; i < listLength; i++){
     let currentId = parseInt(popup[0].id);
       if(currentId === i){
         divElement = document.createElement('div');
         divElement.innerHTML = 
         `
-          <p class="currentTaskStyle">List name</p>
-          <div class="headerDeleteSingle"></div>
-          <form>
-            <input id="taskNameInput" type="text" placeholder="${selectedList.tasksSub.subTasksHeader[i]}" value="${selectedList.tasksSub.subTasksHeader[i]}" onClick="this.setSelectionRange(0, this.value.length)"></input>
-            <button type="onclick" class="singleFormButton"></button>
-          </form>
+          <p class="currentSingleHeader">${selectedList.tasksSub.subTasksHeader[i]}</p>
         `
-        taskHeader.appendChild(divElement);
+        listName.appendChild(divElement);
       }
   }
 }
