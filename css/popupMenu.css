@@ -266,7 +266,7 @@
   position: absolute;
   margin-left: 15px;
   margin-top: 7.5px;
-  color: #424249;
+  color: #ffffff;
   font-weight: normal;
   font-size: 18px;
 }
@@ -336,6 +336,7 @@
   border-style: none;
   margin-top: 38px;
   color: #444444;
+  z-index: 6;
 }
 
 .singleTaskBorderStyle {
