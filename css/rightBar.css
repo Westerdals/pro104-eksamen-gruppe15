@@ -71,6 +71,7 @@
   background-size: cover;
   background-position: center;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 #footerRightBar {

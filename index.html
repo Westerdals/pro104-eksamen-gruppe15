@@ -46,10 +46,10 @@
     <div id="leftContainer">
             <!-- header til venstre konteiner -->
             <div id="leftBarHeader">
-                <h1 id="leftBarLogo"></h1>
+                <h1 id="leftBarLogo" title="Tabs logo"></h1>
             </div>
-            <div id="projectsBox">
-                <h3 id="projectsText"></h3>
+            <div id="projectsBox" >
+                <h3 id="projectsText" ></h3>
             </div>
       
          <div id="formContainer">
@@ -58,7 +58,7 @@
                 <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
                 <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input/>
                 <!-- knapp som kan brukes for å submite -->
-                <button class="btn create" id="leftbutton">Add</button>
+                <button class="btn create" id="leftbutton" title="Add new project">Add</button>
             </form>
         </div>
             
@@ -77,12 +77,12 @@
             <div id="calendarContainer">
                
                 <div id="calendarArrowButtonContainer">
-                  <button id="openCalenderButton" onclick="openCalender(event)"></button>
-                  <button id="closeCalenderButton" onclick="closeCalender(event)"></button>
+                  <button id="openCalenderButton" onclick="openCalender(event)" title="Open calendar"></button>
+                  <button id="closeCalenderButton" onclick="closeCalender(event)" title="Close calendar"></button>
                 </div>
-                <div class="month">
+                <div class="month" title="Calendar">
                         <!-- Onclick event for previous month -->
-                    <div class="prev" onclick="moveDate('prev')">
+                    <div class="prev" onclick="moveDate('prev')" title="Previous month">
                         <!-- ASCII '<' symbol -->
                         <span>&#10094</span>
                     </div>
@@ -92,7 +92,7 @@
         
                     </div>
                         <!-- Onclick event for next month-->
-                    <div class="next" onclick="moveDate('next')">
+                    <div class="next" onclick="moveDate('next')" title="Next month">
                         <!-- ASCII '>' symbol -->
                     <span>&#10095</span>
                     </div>
@@ -121,8 +121,8 @@
             <input id="currentTask" type="text" middle-list-title></input>
         </form>
           <div id="plussSubTaskList">
-            <button id="openLeftBar" onclick="openLeftBarF(event)"></button>
-            <button id="closeLeftBar" onclick="closeLeftBarF(event)"></button>
+            <button id="openLeftBar" onclick="openLeftBarF(event)" title="Open sidebar"></button>
+            <button id="closeLeftBar" onclick="closeLeftBarF(event)" title="Close sidebar"></button>
             <button onclick="plussTaskList(event)" id="buttonSubTaskList">
               Add List
             </button>
@@ -140,7 +140,7 @@
       </div>
         <!-- Popup menu, for changing things for tasks/subtasks -->
         <div id="popUpContainer">
-            <div id="draggableHeader">
+            <div id="draggableHeader" title="Draggable">
             <!-- Styling generated in JS -->
             </div>
             <div class="popUpContainer">
@@ -150,16 +150,16 @@
       <!-- konteiner som holder på baren til høyre, Profil-baren -->
       <div id="rightContainer">
         <div id="rightBarHeader">
-          <div id="profilePicture"></div>
+          <div id="profilePicture" title="Edit"></div>
         </div> 
-        <p id="username">username</p>
+        <p id="username" title="Username">username</p>
         <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
         <!-- Log out btn, calls logOut function in js -->
         <div id="logOut">
-        <button type="button" id="logOutBtn">Log out</button>
+        <button type="button" id="logOutBtn" title="Log out">Log out</button>
         </div>
         <!-- Notification (Reminder) -->
-        <div class="notifyContainer" id="nContainer">
+        <div class="notifyContainer" id="nContainer" title="Reminder">
         <a href="#" class="notify reminder">
           <i class="fas fa-bell notifyIcons"></i>
           <span>Reminder</span>
