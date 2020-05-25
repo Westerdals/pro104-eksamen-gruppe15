@@ -51,8 +51,6 @@ const passwordLogin = document.getElementById("passwordLogin");
 // Checks if the password and username is correct
 function loginFormSubmit(event){
   event.preventDefault();
-  let testUsername = "macke";
-  let testPassword = "123";
   let name = usernameLogin.value;
   let pass = passwordLogin.value;
   memberLength = members.length;
@@ -85,6 +83,7 @@ function createFormSubmit(event){
     const member = createMember(name, pass);
     members.push(member);
     saveMember();
+    login();
   } else{
     alert("Not matching password!")
   }
