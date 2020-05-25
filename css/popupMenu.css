@@ -6,7 +6,7 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   background-color: #f2f2f2;
-  box-shadow: 0px 5px 26px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px 5px 26px 0px rgba(0, 0, 0, 0.35);
   right: 0;
   bottom: 0;
   display: none;
@@ -66,11 +66,11 @@
   right: 0;
   margin-right: 6px;
   margin-top: 15px;
-  box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 12px -3px rgba(0, 0, 0, 0.5);
   border-radius: 0px 5px 0px 0px;
 }
 
-.blackStatus{
+.blackStatus {
   border: 2px solid #424249;
   width: 225px;
   height: 40px;
@@ -85,7 +85,7 @@
   background-color: #808080;
 }
 
-.yellowStatus{
+.yellowStatus {
   border: 2px solid #424249;
   width: 225px;
   height: 40px;
@@ -97,10 +97,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F2AF5C;
+  background-color: #f2af5c;
 }
 
-.blueStatus{
+.blueStatus {
   border: 2px solid #424249;
   width: 225px;
   height: 40px;
@@ -112,10 +112,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #57C6F2;
+  background-color: #57c6f2;
 }
 
-.greenStatus{
+.greenStatus {
   border: 2px solid #424249;
   width: 225px;
   height: 40px;
@@ -127,19 +127,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #24BF86;
+  background-color: #24bf86;
 }
 
-.statusP{
+.statusP {
   color: #ffffff;
   text-align: center;
   display: flex;
-  align-items: center;  
+  align-items: center;
   font-weight: normal;
-  font-size: 17px; 
+  font-size: 17px;
 }
 
-.currentTaskCount{
+.currentTaskCount {
   position: absolute;
   text-align: center;
   margin-right: 20px;
@@ -159,7 +159,7 @@
   margin-top: 15px;
   background-color: #f2f2f2;
   border-radius: 5px 0px 0px 0px;
-  box-shadow: inset 0px 0px 17px -3px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 0px 17px -3px rgba(0, 0, 0, 0.3);
 }
 
 #taskNameInput {
@@ -176,27 +176,27 @@
   color: #f2f2f2;
 }
 
-.singleFormButton{
+.singleFormButton {
   position: absolute;
   width: 28px;
   height: 28px;
   margin-left: 315px;
   margin-top: 3.5px;
-  border:0;
-  background:transparent;
+  border: 0;
+  background: transparent;
   background-image: url(/icons/pen-icon-gray-02.png);
   background-size: cover;
   background-position: center;
   position: absolute;
   cursor: pointer;
-  border:none;
+  border: none;
 }
 
-.singleFormButton:hover{
+.singleFormButton:hover {
   background-image: url(/icons/pen-icon-darkgray-01.png);
 }
 
-.headerDeleteSingle{
+.headerDeleteSingle {
   position: absolute;
   width: 28px;
   height: 28px;
@@ -209,11 +209,11 @@
   cursor: pointer;
 }
 
-.headerDeleteSingle:hover{
+.headerDeleteSingle:hover {
   background-image: url(/icons/x-icon-darkgray-02.png);
 }
 
-.currentTaskStyle{
+.currentTaskStyle {
   position: absolute;
   color: #444444;
   margin-left: 27px;
@@ -222,7 +222,7 @@
   font-size: 18px;
 }
 
-#editTaskListContainer{
+#editTaskListContainer {
   position: absolute;
   width: 400px;
   height: 615px;
@@ -234,10 +234,10 @@
   align-items: center;
   background-color: white;
   border-radius: 5px 0px 0px 5px;
-  box-shadow: inset 0px 0px 17px -3px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 17px -3px rgba(0, 0, 0, 0.5);
 }
 
-.singleTaskCount{
+.singleTaskCount {
   position: absolute;
   margin-left: 15px;
   margin-top: 7.5px;
@@ -246,29 +246,27 @@
   font-size: 18px;
 }
 
-.singleEdit{
+.singleEdit {
   position: absolute;
   width: 28px;
   height: 28px;
   margin-top: 5px;
   margin-left: -70px;
-  border:0;
-  background:transparent;
+  border: 0;
+  background: transparent;
   background-image: url(/icons/pen.png);
   background-size: cover;
   background-position: center;
   position: absolute;
   cursor: pointer;
-  border:none;
+  border: none;
 }
-
 
 .singleEdit:hover {
   background-image: url(/icons/pen-icon-gray-02.png);
 }
 
-
-.singleDelete{
+.singleDelete {
   position: absolute;
   width: 28px;
   height: 28px;
@@ -285,14 +283,14 @@
   background-image: url(/icons/x-icon-gray-02.png);
 }
 
-.singleStatus{
+.singleStatus {
   position: absolute;
   width: 28px;
   height: 28px;
   margin-top: 5px;
   margin-left: 265px;
-  border:0;
-  background:transparent;
+  border: 0;
+  background: transparent;
   background-image: url(/icons/check-mark.png);
   background-size: cover;
   background-position: center;
@@ -301,11 +299,11 @@
   border: none;
 }
 
-.singleStatus:hover{
+.singleStatus:hover {
   background-image: url(/icons/check-icon-gray-01.png);
 }
 
-.singleInputStyle{
+.singleInputStyle {
   padding-left: 6px;
   height: 35px;
   font-size: 12px;
@@ -315,7 +313,7 @@
   color: #444444;
 }
 
-.singleTaskBorderStyle{
+.singleTaskBorderStyle {
   width: 370px;
   height: 75px;
   background-color: #444444;
@@ -325,7 +323,7 @@
   margin-top: 10px;
 }
 
-.memberInputContainer{
+.memberInputContainer {
   position: absolute;
   background-color: #f2f2f2;
   width: 283px;
@@ -334,11 +332,11 @@
   right: 0;
   margin-right: 6px;
   margin-bottom: 50px;
-  box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 12px -3px rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 5px 0px;
 }
 
-.deadlineInputContainer{
+.deadlineInputContainer {
   position: absolute;
   background-color: #f2f2f2;
   width: 283px;
@@ -347,35 +345,34 @@
   right: 0;
   margin-right: 6px;
   margin-bottom: 50px;
-  box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.5);
+  box-shadow: inset 0px 0px 12px -3px rgba(0, 0, 0, 0.5);
 }
 
-.deadlineInput{
-    position: absolute;
-    left: 35px;
-    top: 43px;
-    height: 30px;
-    border-radius: 5px;
-    border: solid 1.5px #808080;
-    padding-left: 10px;
-    
+.deadlineInput {
+  position: absolute;
+  left: 35px;
+  top: 43px;
+  height: 30px;
+  border-radius: 5px;
+  border: solid 1.5px #808080;
+  padding-left: 10px;
 }
 
-#dayInput{
-    width: 35px;
+#dayInput {
+  width: 35px;
 }
 
-#monthInput{
-    left: 87px;
-    width: 35px;
+#monthInput {
+  left: 87px;
+  width: 35px;
 }
 
-#yearInput{
-    left: 139px;
-    width: 50px;
+#yearInput {
+  left: 139px;
+  width: 50px;
 }
 
-#deadlineTxt{
+#deadlineTxt {
   text-align: center;
   font-size: 15px;
   margin-top: 16px;
@@ -383,7 +380,7 @@
   margin-left: -2px;
 }
 
-.addButton{
+.addButton {
   position: absolute;
   right: 35px;
   bottom: 20px;
@@ -399,22 +396,10 @@
   transition: 0.1s;
 }
 
-.addButton:hover{
+.addButton:hover {
   background-color: #aaaaaa;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#draggableHeader {
+  cursor: move;
+}
