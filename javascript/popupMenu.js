@@ -18,29 +18,29 @@ function openMenu(event, editId) {
     <div id="selectStatus">
       <div> 
         <p id="selectTxt">Select status on assignment</p>
-        <div id="${editId}"class="blackStatus" onclick="changeColor(event, this.id)">
+        <div id="${editId}"class="blackStatus" onclick="changeColor(event, this.id)" title="To do">
             <p class="statusP">To do</p>
         </div>
-        <div id="${editId}" class="yellowStatus" onclick="changeColor2(event, this.id)">
-            <p class="statusP">Doing</p>
+        <div id="${editId}" class="yellowStatus" onclick="changeColor2(event, this.id)" title="In progress">
+            <p class="statusP">In progress</p>
         </div>
-        <div id="${editId}" class="blueStatus" onclick="changeColor3(event, this.id)">
+        <div id="${editId}" class="blueStatus" onclick="changeColor3(event, this.id)" title="Waiting for feedback">
             <p class="statusP">Waiting for feedback</p>
         </div>
-        <div id="${editId}" class="greenStatus" onclick="changeColor4(event, this.id)">
+        <div id="${editId}" class="greenStatus" onclick="changeColor4(event, this.id)" title="Done">
             <p class="statusP">Done</p>
         </div>
       </div>
     </div>
     
     <div class="deadlineInputContainer"><p id="deadlineTxt">Set a deadline for the to do list</p>
-        <input type="number" class="deadlineInput" id="dayInput" placeholder="DD" min="1" max="31">
-        <input type="number" class="deadlineInput" id="monthInput" placeholder="MM" min="1" max="12">
-        <input type="number" class="deadlineInput" id="yearInput" placeholder="YY" min="2020">
-        <button class="addButton">+</button>
+        <input type="number" class="deadlineInput" id="dayInput" placeholder="DD" min="1" max="31" title="Day">
+        <input type="number" class="deadlineInput" id="monthInput" placeholder="MM" min="1" max="12" title="Month">
+        <input type="number" class="deadlineInput" id="yearInput" placeholder="YY" min="2020" title="Year">
+        <button class="addButton" title="Add deadline">+</button>
     </div>
     <div class="memberInputContainer"></div>
-    <p id="backBtn" title="close" onclick="closeMenu()"></p>
+    <p id="backBtn" title="Close" onclick="closeMenu()"></p>
     <p class="currentTaskCount">To do list ${parseInt(editId) + 1}</p>
   `
     
@@ -93,7 +93,7 @@ function changeColor2(event, currentTask) {
   currentTaskNumber = document.getElementById(currentTask).id;
   //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
-  selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#f4b707");
+  selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#F2AF5C");
   console.log(currentTaskNumber);
   save();
   changeColorheader();
@@ -106,7 +106,7 @@ function changeColor3(event, currentTask) {
   currentTaskNumber = document.getElementById(currentTask).id;
   //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
-  selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#4184c6");
+  selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#57C6F2");
   console.log(currentTaskNumber);
   save();
   changeColorheader();
@@ -119,7 +119,7 @@ function changeColor4(event, currentTask) {
   currentTaskNumber = document.getElementById(currentTask).id;
   //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
-  selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#69D126");
+  selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#24BF86");
   console.log(currentTaskNumber);
   save();
   changeColorheader();
@@ -153,13 +153,13 @@ function renderSingleTask(){
         divElement.innerHTML = 
         `
         <div class="singleTaskBorderStyle">
-        <div class="singleStatus" id="${t}" onclick="editSingleStatus(event, this.id)" title="done"></div>
-        <div class="singleDelete" id="${t}" onclick="deleteSingleTask(event, this.id)" title="delete"></div>
+        <div class="singleStatus" id="${t}" onclick="editSingleStatus(event, this.id)" title="Done"></div>
+        <div class="singleDelete" id="${t}" onclick="deleteSingleTask(event, this.id)" title="Delete"></div>
         <p class="singleTaskCount">${"Task " + (t + 1)}</p>
           <form action="" id=${"singleForm" + t} class="singleForm" onsubmit="editSingleTask(event, this.id)">
             <input type="text" placeholder="${list}" id="${"singleInput" + t}" 
-            value="${list}" class="singleInputStyle" style="width: 364px; "></input>
-            <button class="singleEdit" title="edit"></button>
+            value="${list}" class="singleInputStyle" style="width: 364px; " title="Edit task"></input>
+            <button class="singleEdit" title="Undo"></button>
           </form>
         </div>
         <br>
