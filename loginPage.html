@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      href="/images/Tabs-small-logo.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <title>Tabs login page</title>
     <!-- importerte fonter -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
@@ -29,16 +35,21 @@
             Register
           </button>
         </div>
-        
+
         <!-- Log in side -->
-        <form id="login" class="inputGroup" onsubmit="loginFormSubmit(event)" id="loginForm">
+        <form
+          id="login"
+          class="inputGroup"
+          onsubmit="loginFormSubmit(event)"
+          id="loginForm"
+        >
           <div class="inputDiv user">
             <div class="i">
               <i class="fas fa-user"></i>
             </div>
             <div>
               <h5>Username</h5>
-              <input class="input" type="text" required id="usernameLogin"/>
+              <input class="input" type="text" required id="usernameLogin" />
             </div>
           </div>
           <div class="inputDiv pass">
@@ -47,22 +58,31 @@
             </div>
             <div>
               <h5>Password</h5>
-              <input class="input" type="password" required id="passwordLogin"/>
+              <input
+                class="input"
+                type="password"
+                required
+                id="passwordLogin"
+              />
             </div>
           </div>
           <a id="forgotPass" class="smallText" href="#">Forgot Password?</a>
-          <input type="submit" class="btnUser" value="Login"/>
+          <input type="submit" class="btnUser" value="Login" />
         </form>
-        
+
         <!-- Register side -->
-        <form id="register" class="inputGroup" onsubmit="createFormSubmit(event)">
+        <form
+          id="register"
+          class="inputGroup"
+          onsubmit="createFormSubmit(event)"
+        >
           <div class="inputDiv user">
             <div class="i">
               <i class="fas fa-user"></i>
             </div>
             <div>
               <h5>Username</h5>
-              <input class="input" type="text" required id="usernameCreate"/>
+              <input class="input" type="text" required id="usernameCreate" />
             </div>
           </div>
           <div class="inputDiv pass">
@@ -71,7 +91,12 @@
             </div>
             <div>
               <h5>Password</h5>
-              <input class="input" type="password" required id="passwordCreate"/>
+              <input
+                class="input"
+                type="password"
+                required
+                id="passwordCreate"
+              />
             </div>
           </div>
 
@@ -81,7 +106,12 @@
             </div>
             <div>
               <h5 id="confirmH5">Confirm Password</h5>
-              <input class="input" type="password" required id="passwordCreate2"/>
+              <input
+                class="input"
+                type="password"
+                required
+                id="passwordCreate2"
+              />
             </div>
           </div>
 
@@ -89,8 +119,8 @@
           <input type="submit" class="btnUser" value="Register" />
         </form>
       </div>
-        <!-- Bengt -->
-        <img src="images/bugGuy.png" id="bugGuy">
+      <!-- Bengt -->
+      <img src="images/bugGuy.png" id="bugGuy" />
     </div>
   </body>
 </html>
