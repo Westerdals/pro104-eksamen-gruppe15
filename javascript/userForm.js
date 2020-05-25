@@ -112,3 +112,23 @@ function saveMember() {
 //Show name of user in rightBar.
 usernameText = document.getElementById("username");
 username.innerHTML = users[0].name;
+
+const buttonAddMember = document.getElementById("buttonAddMember");
+const buttonAddMemberHide = document.getElementById("buttonAddMemberHide");
+const memberContainer = document.getElementById("memberContainer");
+
+function addMember(event){
+  event.preventDefault();
+  console.log("open addMember");
+  memberContainer.style.display = "block";
+  buttonAddMember.style.display = "none";
+  buttonAddMemberHide.style.display = "block";
+}
+
+function addMemberHide(event){
+  event.preventDefault();
+  console.log("open addMember");
+  memberContainer.style.display = "none";
+  buttonAddMember.style.display = "block";
+  buttonAddMemberHide.style.display = "none";
+}

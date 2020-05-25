@@ -81,17 +81,20 @@
 }
 
 #buttonSubTaskList {
+  position: absolute;
   margin-top: 2px;
   width: 100px;
-  height: 50px;
+  height: 45px;
   font-size: 1em;
   font-weight: bolder;
   border: none;
   background-color: #bcbcbc;
   border-radius: 5px;
   color: #f2f2f2;
-  margin-left: -50px;
   transition: 0.1s;
+  left: 0;
+  bottom: 0;
+  margin-left: 75px;
 }
 
 #buttonSubTaskList:hover {
@@ -214,4 +217,118 @@ ul > .subLi {
 
 .subTaskButton:hover {
   background-color: #ff5e2c;
+}
+
+#buttonAddMember{
+  position: absolute;
+  margin-top: 2px;
+  width: 125px;
+  height: 45px;
+  font-size: 1em;
+  font-weight: bolder;
+  border: none;
+  background-color: #bcbcbc;
+  border-radius: 5px;
+  color: #f2f2f2;
+  margin-left: 107.5px;
+  transition: 0.1s;
+}
+
+#buttonAddMember:hover{
+  background-color: #ff5e2c;
+}
+
+#buttonAddMemberHide{
+  position: absolute;
+  margin-top: 2px;
+  width: 125px;
+  height: 45px;
+  font-size: 1em;
+  font-weight: bolder;
+  border: none;
+  background-color: #bcbcbc;
+  border-radius: 5px;
+  color: #f2f2f2;
+  margin-left: 107.5px;
+  transition: 0.1s;
+  display: none;
+}
+
+#buttonAddMemberHide:hover{
+  background-color: #ff5e2c;
+}
+
+#memberContainer{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 0;
+  top: 0;
+  margin-top: 65px;
+  margin-left: 65px;
+  box-shadow: inset 0px 0px 12px -3px rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  display: none;
+  overflow: scroll;
+  border-radius: 5px;
+}
+
+#memberListDropdow{
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 380px;
+  height: relative;
+}
+
+.memberBoxList{
+  width: 380px;
+  height: 70px;
+  background-color: indianred;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.memberAvatar{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 60px;
+  height: 60px;
+  background-image: url(/images/UserLogo-01.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.memberUsername{
+  position: absolute;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 22.5px;
+  font-weight: normal;
+  color: #f2f2f2;
+}
+
+.addThisMember{
+  position: absolute;
+  margin-top: 2px;
+  width: 90px;
+  height: 35px;
+  font-size: 1em;
+  font-weight: normal;
+  border: none;
+  background-color: #808080;
+  border-radius: 5px;
+  color: #f2f2f2;
+  margin-top: 16px;
+  margin-left: 265px;
+  transition: 0.1s;
+}
+
+.AddTextThisMember{
+  position: absolute;
+  margin-left: 28px;
+  margin-top: 7.5px;
 }

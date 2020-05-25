@@ -1,8 +1,11 @@
 var d = new Date(); // Creates new date
 
 function renderDate() {
+  // d.setDate(1); //
+  d.setDate(1);
   var day = d.getDay(); // Get's today's day (mon, tue, wed)
   var endDate = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate(); //End  date for the months
+  console.log(endDate);
   var prevDates = new Date(d.getFullYear(), d.getMonth(), 0).getDate();
   var today = new Date(); // Creates new date
 
@@ -23,7 +26,8 @@ function renderDate() {
   ];
 
   // Gets the html from the html document
-  document.getElementById("month").innerHTML = months[d.getMonth()];
+  document.getElementById("month").innerHTML =
+    months[d.getMonth()] + " " + d.getFullYear();
 
   var cells = "";
 

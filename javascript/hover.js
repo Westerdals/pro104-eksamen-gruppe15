@@ -165,6 +165,6 @@ function calenderMax() {
   calenderMonth[0].style.top = "0";
   calanderWeekends[0].style.display = "flex";
   calenderDays[0].style.display = "flex";
-  calenderContainerAll.style.height = "427px";
+  calenderContainerAll.style.height = "450px";
   monthText.style.marginTop = "-127px";
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link
       rel="icon"
-      href="/images/Tabs-small-logo.png"
+      href="/images/Orange-tabs-01.png"
       sizes="16x16"
       type="image/png"
     />
@@ -89,7 +89,6 @@
                     <div>
                         <!-- The month name will appear here (ex: May) -->
                         <h2 id="month"></h2>
-        
                     </div>
                         <!-- Onclick event for next month-->
                     <div class="next" onclick="moveDate('next')" title="Next month">
@@ -126,6 +125,21 @@
             <button onclick="plussTaskList(event)" id="buttonSubTaskList">
               Add List
             </button>
+            <button onclick="addMember(event)" id="buttonAddMember">Add member</button>
+            <button onclick="addMemberHide(event)" id="buttonAddMemberHide">Hide member</button>
+            <div id="memberContainer">
+              <div id="memberListDropdow">
+
+                <!-- Generated in JS -->
+                
+                <div class="memberBoxList">
+                  <div class="memberAvatar"></div>
+                    <p class="memberUsername">Macke</p>
+                  <div class="addThisMember" onclick="addThisMember(event, this.id)"><p class="AddTextThisMember">Add</p></div>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </div>
 
