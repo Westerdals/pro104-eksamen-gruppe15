@@ -126,6 +126,21 @@
             <button onclick="plussTaskList(event)" id="buttonSubTaskList">
               Add List
             </button>
+            <button onclick="addMember(event)" id="buttonAddMember">Add member</button>
+            <button onclick="addMemberHide(event)" id="buttonAddMemberHide">Hide member</button>
+            <div id="memberContainer">
+              <div id="memberListDropdow">
+
+                <!-- Generated in JS -->
+                
+                <div class="memberBoxList">
+                  <div class="memberAvatar"></div>
+                    <p class="memberUsername">Macke</p>
+                  <div class="addThisMember" onclick="addThisMember(event, this.id)"><p class="AddTextThisMember">Add</p></div>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </div>
 
