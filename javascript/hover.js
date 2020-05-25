@@ -40,7 +40,7 @@ function leftContainerHover() {
   leftBarLogo.style.transitionDuration = "0.0s";
   leftBarLogo.style.transform = "rotateY(0deg)";
 
-  leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-02.png)";
+  leftBarLogo.style.backgroundImage = "url(/images/orange-tabs-logo-square-02.png)";
   leftBarLogo.style.width = "160px";
   leftBarLogo.style.height = "160px";
   leftList.style.display = "";
@@ -56,7 +56,7 @@ function leftContainerLeave() {
   leftBarLogo.style.transitionDuration = "0.5s";
   leftBarLogo.style.transform = "rotateY(360deg)";
 
-  leftBarLogo.style.backgroundImage = "url(/images/Orange-tabs-01.png)";
+  leftBarLogo.style.backgroundImage = "url(/images/orange-tabs-logo-square-01.png)";
   leftBarLogo.style.width = "50px";
   leftBarLogo.style.height = "50px";
   leftList.style.display = "none";
