@@ -1,60 +1,52 @@
-#middleContainer{
+#middleContainer {
   position: absolute;
   margin-left: 310px;
   width: inherit;
   height: 100%;
   background-color: #f2f2f2;
-  overflow-y: scroll;
+  overflow-x: scroll;
   transition: 0.3s;
   display: inline-block;
 }
 
-#middleHeader{
-  position: sticky;
-  top: 0;
+#middleHeader {
+  position: absolute;
   width: 100%;
   height: 100px;
   background-color: #ffffff;
-  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.30);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
 }
 
-#currentTask{
-  background-color: none;
-  border: none;
-  width: 500px;
-  height: 40px;
+#currentTask {
   color: #444444;
-  font-size: 32px;
   font-weight: normal;
-  margin-right: 185px;
-  text-align: center;
+  margin-right: 150px;
 }
 
-.subTaskContainer{
-  margin-top: 50px;
+.subTaskContainer {
+  margin-top: 150px;
   width: 100%;
   height: 100%;
   text-align: center;
-  padding-left:20px;
+  padding-left: 20px;
   padding-top: 10px;
 }
 
-.subTaskList{
+.subTaskList {
   float: left;
   width: 21.5%;
   height: fit-content;
-  box-shadow: inset 0px -30px 41px -23px rgba(0,0,0,0.23);
+  box-shadow: inset 0px -30px 41px -23px rgba(0, 0, 0, 0.23);
   border-radius: 5px;
   margin: 1%;
   margin-bottom: 2%;
 }
 
-.subListHeader{
+.subListHeader {
   width: 100%;
   height: 50px;
   background-color: #424249;
@@ -66,12 +58,12 @@
   border-top-right-radius: 5px;
 }
 
-.subTask{
+.subTask {
   font-size: 18px;
   color: #f2f2f2;
 }
 
-#plussSubTaskList{
+#plussSubTaskList {
   position: absolute;
   left: 0;
   width: 300px;
@@ -82,7 +74,7 @@
   justify-content: center;
 }
 
-#buttonSubTaskList{
+#buttonSubTaskList {
   margin-top: 2px;
   width: 100px;
   height: 50px;
@@ -96,12 +88,12 @@
   transition: 0.1s;
 }
 
-#buttonSubTaskList:hover{
-  background-color: #FF5E2C;
+#buttonSubTaskList:hover {
+  background-color: #ff5e2c;
   color: #f2f2f2;
 }
 
-#AddContainerEmpty{
+#AddContainerEmpty {
   width: 95%;
   padding-right: 5%;
   float: left;
@@ -110,7 +102,7 @@
   padding-right: 0px;
 }
 
-.subTaskInput{
+.subTaskInput {
   position: absolute;
   width: 200px;
   padding: 9px 20px;
@@ -125,7 +117,7 @@
   border: 3px solid #2bb524;
 }
 
-.subTaskFormStyle{
+.subTaskFormStyle {
   position: relative;
   width: 100%;
   height: 40px;
@@ -136,11 +128,11 @@
   border-bottom-right-radius: 5px;
 }
 
-.createTaskForm{
+.createTaskForm {
   width: inherit;
 }
 
-.subLi{
+.subLi {
   text-align: left;
   background: #eaeaea;
   padding: 12.5px;
@@ -149,20 +141,20 @@
   text-decoration-color: #000000;
 }
 
-ul > .subLi{
+ul > .subLi {
   padding-bottom: 12.5px;
 }
 
-#openLeftBar{
-  position: absolute;  
+#openLeftBar {
+  position: absolute;
   width: 35px;
   height: 35px;
   margin-top: 9px;
   margin-left: 20px;
   left: 0;
   top: 0;
-  border:0;
-  background:transparent;
+  border: 0;
+  background: transparent;
   background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-01.png);
   background-size: cover;
   background-position: center;
@@ -172,20 +164,20 @@ ul > .subLi{
   display: none;
 }
 
-#openLeftBar:hover{
+#openLeftBar:hover {
   background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-02.png);
 }
 
-#closeLeftBar{
-  position: absolute;  
+#closeLeftBar {
+  position: absolute;
   width: 35px;
   height: 35px;
   margin-top: 9px;
   margin-left: 20px;
   left: 0;
   top: 0;
-  border:0;
-  background:transparent;
+  border: 0;
+  background: transparent;
   background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-05.png);
   background-size: cover;
   background-position: center;
@@ -194,11 +186,11 @@ ul > .subLi{
   transition: 0.3s;
 }
 
-#closeLeftBar:hover{
+#closeLeftBar:hover {
   background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-06.png);
 }
 
-.subTaskButton{
+.subTaskButton {
   position: absolute;
   background-color: #aaaaaa;
   border: none;
@@ -214,6 +206,6 @@ ul > .subLi{
   transition: 0.1s;
 }
 
-.subTaskButton:hover{
+.subTaskButton:hover {
   background-color: #ff5e2c;
 }
