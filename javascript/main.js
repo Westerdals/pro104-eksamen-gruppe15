@@ -62,8 +62,8 @@ function createList(name) {
     let subTasksStatus = [["#424249"]];
     let subTasksLiStatus = [[]];
     let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subTasksLiStatus, subMembers: [] };
-    let user = { name: ["macke"], password: [123], image: ["https://images-na.ssl-images-amazon.com/images/I/610Pm-JuLYL._AC_SL1500_.jpg"] };
-    let members = {name: ["macke"], image: ["https://images-na.ssl-images-amazon.com/images/I/610Pm-JuLYL._AC_SL1500_.jpg"] };
+    let user = { name: [], image: [] };
+    let members = {name: [], image: [] };
     return { id: Date.now().toString(), name: name, members: members, user: user, tasksSub: tasksSub};
 }
 

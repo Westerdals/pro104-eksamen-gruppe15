@@ -47,6 +47,11 @@ const usernameLogin = document.getElementById("usernameLogin");
 // password input
 const passwordLogin = document.getElementById("passwordLogin");
 
+const LOCAL_STORAGE_MEMBER_KEY = 'member.list';
+const LOCAL_STORAGE_USER_KEY = 'user.list';
+let members = JSON.parse(localStorage.getItem(LOCAL_STORAGE_MEMBER_KEY)) || [];
+let users = JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER_KEY)) || []; 
+
 // Login
 // Checks if the password and username is correct
 function loginFormSubmit(event){
@@ -54,23 +59,25 @@ function loginFormSubmit(event){
   let name = usernameLogin.value;
   let pass = passwordLogin.value;
   memberLength = members.length;
+  console.log("stage1");
   console.log(memberLength);
   for(i = 0; i < memberLength; i++){
+    console.log("stage2");
     if (name === members[i].name && pass === members[i].password){
-      console.log("you logged inn");
+      const userS = setUser(name, pass);
+      users.pop();
+      users.push(userS);
+      saveMember();
       window.location.href = 'index.html';
-    }
+    } 
   }
 }
 
 
-// Register
+// Register                                                                                                                                                                                                 
 const usernameCreate = document.getElementById("usernameCreate");
 const passwordCreate = document.getElementById("passwordCreate");
 const passwordCreate2 = document.getElementById("passwordCreate2");
-
-const LOCAL_STORAGE_MEMBER_KEY = 'user.list';
-let members = JSON.parse(localStorage.getItem(LOCAL_STORAGE_MEMBER_KEY)) || [];
 
 function createFormSubmit(event){
   event.preventDefault();
@@ -90,10 +97,18 @@ function createFormSubmit(event){
 }
 
 function createMember(name, password) {
-  return { name: name, password: password, image: []}
+  return { name: name, password: password, image: []};
+}
+
+function setUser(name, password) {
+  return {name: name, password: password, image: []};
 }
 
 function saveMember() {
   localStorage.setItem(LOCAL_STORAGE_MEMBER_KEY, JSON.stringify(members));
+  localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(users));
 }
 
+//Show name of user in rightBar.
+usernameText = document.getElementById("username");
+username.innerHTML = users[0].name;
