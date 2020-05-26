@@ -5,7 +5,6 @@ function renderDate() {
   d.setDate(1);
   var thisDay = d.getDay(); // Get's today's day (mon, tue, wed)
   var endDate = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate(); //End  date for the months
-  console.log(endDate);
   var prevDates = new Date(d.getFullYear(), d.getMonth(), 0).getDate();
   var today = new Date(); // Creates new date
 

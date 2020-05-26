@@ -11,7 +11,6 @@ const memberIconContainer = document.getElementById("memberIconContainer");
 // Opens the member list in the project header. 
 function addMember(event){
   event.preventDefault();
-  console.log("open addMember");
   memberContainer.style.display = "block";
   buttonAddMember.style.display = "none";
   buttonAddMemberHide.style.display = "block";
@@ -20,10 +19,37 @@ function addMember(event){
 // Closes the member list in the project header.
 function addMemberHide(event){
   event.preventDefault();
-  console.log("open addMember");
   memberContainer.style.display = "none";
   buttonAddMember.style.display = "block";
   buttonAddMemberHide.style.display = "none";
+}
+
+
+// Adds all members to the tasks array from the login array, repeats every array except the display object, since we down want this value to be deleted. 
+function addAllMembers(){
+    const selectedList = lists.find((list) => list.id === selectedListId);
+    let count = members.length;
+
+    for(i = 0; i < count; i++){
+        selectedList.members.name = [];
+        selectedList.members.image = [];
+        save();
+    }
+
+    for(i = 0; i < count; i++){
+        selectedList.members.name.push(members[i].name);
+        selectedList.members.image.push(members[i].image);
+        save();
+    }
+
+    // Sets display none in the function renderProjectMembers, 
+    //the if statement is to prevent the added members on projects to disapear when you create a new user. 
+    for(i = 0; i < count; i++){
+        if(selectedList.members.display.length < selectedList.members.name.length){
+            selectedList.members.display.push("none");
+            save();
+        }
+    }
 }
 
 renderMemberList();
@@ -40,7 +66,7 @@ function renderMemberList() {
     <div class="memberBoxList">
       <div class="memberAvatar" style="background-image: url(${members[i].image});"></div>
       <p class="memberUsername">${currentName}</p>
-      <div class="addThisMember" onclick="addThisMember(event, this.id)" id="${i}"><p class="AddTextThisMember">Add</p></div>
+      <div class="addThisMember" id="${i}" onclick="addThisMember(event, this.id)"><p class="AddTextThisMember">Add</p></div>
     </div>
     `
     memberListDropdown.appendChild(memberDiv);
@@ -73,10 +99,7 @@ function newUserLink(event){
     event.preventDefault();
     let newImageInput = document.getElementById("newImageInput");
     let urlValue = newImageInput.value;
-    console.log("skurt");
-    console.log(urlValue);
     let memberCount = members.length;
-    console.log(memberCount);
     for(i = 0; i < memberCount; i++){
         if (members[i].name === users[0].name){
             members[i].image.splice(0, 1, urlValue);
@@ -105,39 +128,11 @@ function addThisMember(event, currentId){
         if(i === currentMember){
         selectedList.members.display.splice(i, 1, "block");
         save();
+        renderProjectMembers();
         }
     }
-
+    addAllMembers();
     renderProjectMembers();
-}
-
-
-addAllMembers();
-// Adds all members to the tasks array from the login array, repeats every array except the display object, since we down want this value to be deleted. 
-function addAllMembers(){
-    const selectedList = lists.find((list) => list.id === selectedListId);
-    let count = members.length;
-
-    for(i = 0; i < count; i++){
-        selectedList.members.name = [];
-        selectedList.members.image = [];
-        save();
-    }
-
-    for(i = 0; i < count; i++){
-        selectedList.members.name.push(members[i].name);
-        selectedList.members.image.push(members[i].image);
-        save();
-    }
-
-    // Sets display none in the function renderProjectMembers, 
-    //the if statement is to prevent the added members on projects to disapear when you create a new user. 
-    for(i = 0; i < count; i++){
-        if(selectedList.members.display.length < selectedList.members.name.length){
-            selectedList.members.display.push("none");
-            save();
-        }
-    }
 }
 
 // Renders added members for projects
@@ -156,7 +151,26 @@ function renderProjectMembers(){
             <div class="ProjectMembers" id="${"memberImage" + i}" style="background-image: url(${currentImage}); display: ${currentStyle};" title="${currentName}"></div>
         `
         let styleMember = document.getElementById("memberImage" + i);
-        console.log(styleMember);
         memberIconContainer.appendChild(createDiv);
     }
+}
+
+function renderSubTaskMemberAddList(){
+    let selectSubMemberContainer = document.getElementById("selectSubMemberContainer");
+    clearElement(selectSubMemberContainer);
+    const selectedList = lists.find((list) => list.id === selectedListId);
+    memberCount = members.length;
+    for(i = 0; i < memberCount; i++){
+        let memberDiv = document.createElement('div');
+        let currentName = members[i].name;
+        memberDiv.innerHTML = 
+    `
+    <div class="subProfileAddContainer">
+        <div class="subProfilePictureAdd" style="background-image: url(${members[i].image});"></div>
+        <p class="subTaskTextAdd">${currentName}</p>
+        <button class="addSubMemberButton" id="${i}" onclick="addMemberToSubList(event, this.id)">+</button>
+    </div>
+    `
+    selectSubMemberContainer.appendChild(memberDiv);
+  }
 }

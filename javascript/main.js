@@ -31,6 +31,8 @@ listsContainer.addEventListener('click', e => {
         saveAndRender();
         //renderChildheader();
         renderSubMenu();
+
+        addAllMembers();
     }
 })
 
@@ -68,7 +70,8 @@ function createList(name) {
     let subTasksHeader = [[]];
     let subTasksStatus = [["#808080"]];
     let subTasksLiStatus = [[]];
-    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subTasksLiStatus, subMembers: [] };
+    let subMembers = { name: [], image: [], display: []};
+    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subTasksLiStatus, subMembers: subMembers };
     let user = { name: [], image: [] };
     let members = {name: [], image: [], display: []};
     return { id: Date.now().toString(), name: name, members: members, user: user, tasksSub: tasksSub};

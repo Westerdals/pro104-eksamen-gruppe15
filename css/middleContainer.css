@@ -34,6 +34,7 @@
   font-weight: normal;
   margin-right: 185px;
   text-align: center;
+  transition: 0.3s;
 }
 
 /* Container for the subtasks */
@@ -305,17 +306,19 @@ ul > .subLi {
   height: 60px;
   background-image: url(/images/userLogo.png);
   background-position: center;
-  background-size: contain;
-  border-radius: 100%;
+  background-size: cover;
+  border-radius: 5px;
 }
 
 .memberUsername {
   position: absolute;
   font-size: 18px;
-  margin-left: 80px;
+  margin-left: 90px;
   margin-top: 22.5px;
   font-weight: normal;
   color: #444444;
+  font-size: 20px;
+  font-weight: normal;
 }
 
 .addThisMember {

@@ -78,10 +78,7 @@ function loginFormSubmit(event) {
   let name = usernameLogin.value;
   let pass = passwordLogin.value;
   memberLength = members.length;
-  console.log("stage1");
-  console.log(memberLength);
   for (i = 0; i < memberLength; i++) {
-    console.log("stage2");
     if (name === members[i].name && pass === members[i].password) {
       const userS = setUser(name, pass);
       users.pop();
@@ -100,11 +97,9 @@ const passwordCreate2 = document.getElementById("passwordCreate2");
 // Creates a new member in the members array, then calls login() to be take bak to the login page. 
 function createFormSubmit(event) {
   event.preventDefault();
-  console.log("stage1");
   name = usernameCreate.value;
   pass = passwordCreate.value;
   pass2 = passwordCreate2.value;
-  console.log(name);
   if (pass === pass2) {
     const member = createMember(name, pass);
     members.push(member);

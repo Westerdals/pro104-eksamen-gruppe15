@@ -41,7 +41,16 @@ function openMenu(event, editId) {
         <input type="number" class="deadlineInput" id="yearInput" placeholder="YY" min="2020" title="Year">
         <button class="addButton" title="Add deadline">+</button>
     </div>
-    <div class="memberInputContainer"></div>
+    <div class="memberInputContainer">
+      <button id="memberSubTaskOpen" onclick="showSubMemberList(event)">Add Member</button>
+      <button id="memberSubTaskClose" onclick="hideSubMemberList(event)">Hide Member</button> 
+      <div id="selectSubMemberContainer">
+
+      </div>
+      <div id="renderSubMemberContainer">
+
+      </div>
+    </div>
     <p id="backBtn" title="Close" onclick="closeMenu()"></p>
     <p class="currentTaskCount">To do list ${parseInt(editId) + 1}</p>
   `
@@ -51,7 +60,27 @@ function openMenu(event, editId) {
   styleDragabbleHeader();
   renderSingleTask();
   renderSingleHeader();
-  
+}
+
+function showSubMemberList(event){
+  let selectSubMemberContainer = document.getElementById("selectSubMemberContainer");
+  let memberSubTaskOpen = document.getElementById("memberSubTaskOpen");
+  let memberSubTaskClose = document.getElementById("memberSubTaskClose");
+  event.preventDefault();
+  selectSubMemberContainer.style.display = "block";
+  memberSubTaskOpen.style.display = "none";
+  memberSubTaskClose.style.display = "block";
+  renderSubTaskMemberAddList();
+}
+
+function hideSubMemberList(event){
+  let selectSubMemberContainer = document.getElementById("selectSubMemberContainer");
+  let memberSubTaskOpen = document.getElementById("memberSubTaskOpen");
+  let memberSubTaskClose = document.getElementById("memberSubTaskClose");
+  event.preventDefault();
+  selectSubMemberContainer.style.display = "none";
+  memberSubTaskClose.style.display = "none";
+  memberSubTaskOpen.style.display = "block";
 }
 
 //Funksjon for at style draggebleHeader når openMenu() blir kjørt
@@ -73,7 +102,6 @@ function closeMenu() {
   popup[0].style.display = "none";
   document.getElementById("draggableHeader").style.display = "none";
   document.getElementById("popUpContainer").style.display = "none";
-  console.log("close");
 }
 
 function changeColor(event, currentTask) {
@@ -84,7 +112,6 @@ function changeColor(event, currentTask) {
   //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#808080");
-  console.log(currentTaskNumber);
   save();
   changeColorheader();
 }
@@ -97,7 +124,6 @@ function changeColor2(event, currentTask) {
   //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#F2AF5C");
-  console.log(currentTaskNumber);
   save();
   changeColorheader();
 }
@@ -110,7 +136,6 @@ function changeColor3(event, currentTask) {
   //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#57C6F2");
-  console.log(currentTaskNumber);
   save();
   changeColorheader();
 }
@@ -123,7 +148,6 @@ function changeColor4(event, currentTask) {
   //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
   selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#24BF86");
-  console.log(currentTaskNumber);
   save();
   changeColorheader();
 }
@@ -137,7 +161,6 @@ function changeColorheader(){
     currentForm = document.getElementById("form" + i);
     currentColor = selectedList.tasksSub.subTasksStatus[i];
     currentForm.style.backgroundColor = currentColor;
-    console.log(currentColor);
   }
 }
 
@@ -146,7 +169,6 @@ function renderSingleTask(){
   let singleEditContainer = document.getElementById("editTaskListContainer");
   clearElement(singleEditContainer);
   let listLength = selectedList.tasksSub.subTasksList.length;
-  console.log(popup[0].id);
   for(i = 0; i < listLength; i++){
     let currentId = parseInt(popup[0].id);
     if(currentId === i){
@@ -162,7 +184,7 @@ function renderSingleTask(){
           <form action="" id=${"singleForm" + t} class="singleForm" onsubmit="editSingleTask(event, this.id)">
             <input type="text" placeholder="${list}" id="${"singleInput" + t}" 
             value="${list}" class="singleInputStyle" style="width: 364px; " title="Edit task"></input>
-            <button class="singleEdit" title="Undo"></button>
+            <button class="singleEdit" title="Edit/Undo"></button>
           </form>
         </div>
         <br>
@@ -178,16 +200,13 @@ function renderSingleTask(){
 function deleteSingleTask(event, deleteId) {
   event.preventDefault();
   const selectedList = lists.find((list) => list.id === selectedListId);
-  console.log("deleteSingle");
   let listLength = selectedList.tasksSub.subTasksList.length; 
   for(i = 0; i < listLength; i++){
     let currentId = parseInt(popup[0].id);
     if(currentId === i){
         t=0;
-        console.log("stage3");
       selectedList.tasksSub.subTasksList[i].forEach((list) => {
         if(parseInt(deleteId) === t){
-          console.log("stage4");
           selectedList.tasksSub.subTasksList[i].splice(t, 1);
           selectedList.tasksSub.subTasksLiStatus[i].splice(t, 1);
           save();
@@ -196,7 +215,6 @@ function deleteSingleTask(event, deleteId) {
       })
     }
   }
-  console.log("stage5");
   subTaskRender();
   renderSingleTask();
   changeListStatus();
@@ -205,7 +223,6 @@ function deleteSingleTask(event, deleteId) {
 function editSingleTask(event, editId){
   event.preventDefault();
   const selectedList = lists.find((list) => list.id === selectedListId);
-  console.log("stage1");
   let listLength = selectedList.tasksSub.subTasksList.length;
   for(i = 0; i < listLength; i++){
     let currentId = parseInt(popup[0].id);
@@ -222,7 +239,6 @@ function editSingleTask(event, editId){
       })
     }
   }
-  console.log("stage5");
   subTaskRender();
   renderSingleTask();
   changeListStatus();
@@ -271,10 +287,8 @@ function editSingleStatus(event, editId){
     let currentId = parseInt(popup[0].id);
     if(currentId === i){
         t=0;
-        console.log("stage3");
       selectedList.tasksSub.subTasksLiStatus[i].forEach((list) => {
         if(parseInt(editId) === t){
-          console.log("stage4");
           selectedList.tasksSub.subTasksLiStatus[i].splice(t, 1, "line-through");
           save();
         }
@@ -284,27 +298,3 @@ function editSingleStatus(event, editId){
   }
   changeListStatus();
 }
-    // currentForm = document.getElementById("form" + i);
-    // currentColor = selectedList.tasksSub.subTasksStatus[i];
-    // currentForm.style.backgroundColor = currentColor;
-    // console.log(currentColor);
-
-
-
-    // event.preventDefault();
-    // const selectedList = lists.find((list) => list.id === selectedListId);
-    // console.log("Yellow");
-    // currentTaskNumber = document.getElementById(currentTask).id;
-    // //selectedList.tasksSub.subTasksStatus[currentTaskNumber].splice(0, 1, "#f4b707");
-    // selectedList.tasksSub.subTasksStatus[currentTaskNumber].pop();
-    // selectedList.tasksSub.subTasksStatus[currentTaskNumber].push("#f4b707");
-    // console.log(currentTaskNumber);
-    // save();
-    // changeColorheader();
-
-
-
-
-    // text-decoration-line:line-through;
-
-    // style.textDecorationLine = "line-through";

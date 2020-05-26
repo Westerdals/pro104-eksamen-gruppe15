@@ -141,7 +141,6 @@ const monthText = document.getElementById("month");
 
 function closeCalender(event) {
   event.preventDefault();
-  console.log("testtesttest");
   calenderMin();
   closeCalenderButton.style.display = "none";
   openCalenderButton.style.display = "block";

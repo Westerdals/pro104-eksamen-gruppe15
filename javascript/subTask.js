@@ -36,20 +36,15 @@ function plussTaskListRender() {
   const selectedList = lists.find((list) => list.id === selectedListId);
 
   listLength = selectedList.tasksSub.subTasksList.length;
-  console.log(listLength);
   //TODO lage en clear for loop som i subTaskRender()
   clearElement(AddContainerEmpty);
   for (i = 0; i < listLength; i++) {
     AddContainerEmpty.innerHTML += ` <div class="subTaskList">
     <div class="subListHeader" data-sub-list-header id="${"form" + i}" style="background-color:#424249;">
         <form action="" data-new-sub-header-form onsubmit="childHeaderFormNew(event)" class="headerForm">
-            <input class="subListHeaderText" type="text" placeholder="Type list name" data-new-sub-header id="${
-              "head" + i
-            }" onblur="childHeaderFormNew(event)">
+            <input class="subListHeaderText" type="text" placeholder="Type list name" data-new-sub-header id="${"head" + i}" onblur="childHeaderFormNew(event)">
         </form>
-        <div class="deleteButton" title="Delete" onclick="editSubTask(event, this.id)" id="${
-          "delete" + i
-        }"></div>
+        <div class="deleteButton" title="Delete" onclick="editSubTask(event, this.id)" id="${"delete" + i}"></div>
         <div class="editButton" title="Edit" onclick="openMenu(event, this.id)" id="${i}"></div>
     </div> 
     <ul class="subUl" sub-data-lists id="${"ul" + i}">
@@ -116,7 +111,6 @@ function childHeaderFormNew(event){
 
   let listLength = selectedList.tasksSub.subTasksHeader.length;
 
-  console.log(listLength);
   for (i = 0; i < listLength; i++) {
     let currentHeaderInput = document.getElementById("head" + i);
     let subListHeader = currentHeaderInput.value;
@@ -126,10 +120,8 @@ function childHeaderFormNew(event){
       if (selectedList.tasksSub.subTasksHeader[i].length > 0) {
         selectedList.tasksSub.subTasksHeader[i].pop();
         selectedList.tasksSub.subTasksHeader[i].push(subListHeader);
-        console.log("subListHeader-NOT-EMPTY");
         save();
       } else {
-        console.log("subListHeader-EMPTY");
         selectedList.tasksSub.subTasksHeader[i].push(subListHeader);
         selectedList.tasksSub.subTasksList[i].pop();
         save();
@@ -171,6 +163,7 @@ function plussTaskList(event) {
   selectedList.tasksSub.subTasksHeader.push(newArrayH);
   selectedList.tasksSub.subTasksStatus.push(newArrayC);
   selectedList.tasksSub.subTasksLiStatus.push(newArrayL);
+  
   save();
 
   renderSubMenu();
