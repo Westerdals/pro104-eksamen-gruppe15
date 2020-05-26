@@ -44,7 +44,7 @@ function plussTaskListRender() {
         <form action="" data-new-sub-header-form onsubmit="childHeaderFormNew(event)" class="headerForm">
             <input class="subListHeaderText" type="text" placeholder="Type list name" data-new-sub-header id="${
               "head" + i
-            }">
+            }" onblur="childHeaderFormNew(event)">
         </form>
         <div class="deleteButton" title="Delete" onclick="editSubTask(event, this.id)" id="${
           "delete" + i
@@ -109,7 +109,7 @@ function subTaskRender() {
 }
 
 // Submit event for header(overskrift) til sub-task meny
-function childHeaderFormNew(event) {
+function childHeaderFormNew(event){
   event.preventDefault();
   const selectedList = lists.find((list) => list.id === selectedListId);
 
