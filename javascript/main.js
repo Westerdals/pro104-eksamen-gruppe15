@@ -34,6 +34,7 @@ listsContainer.addEventListener('click', e => {
     }
 })
 
+// Input event for projects, creates a new index in the lists array as the object in createList() function.
 newListForm.addEventListener('submit', e => {
     e.preventDefault();
     const listName = newListInput.value;
@@ -45,6 +46,7 @@ newListForm.addEventListener('submit', e => {
     saveAndRender();
 })
 
+// Renders the  project name in the middle header.
 function currentTaskname(){
     let currentTask = document.getElementById("currentTask");
     lists.forEach(list => {
@@ -55,8 +57,13 @@ function currentTaskname(){
     renderSubMenu();
 }
 
+// This is the object that the lists array in local storage generates every time a new project is created.
+// I use Data.now().toString() to always create a uniqe id for the projects. 
+// tasksSub is for all the sub-tasks
+// Members are for members that are added from the members local-storage-array, it is used for projects.
+// User takes the value from the users local-storage-arrray.
+// subMembers is used to add members to task-lists.
 function createList(name) {
-    // id blir generert med date så de alltid får en unik id
     let subTasksList = [[]];
     let subTasksHeader = [[]];
     let subTasksStatus = [["#808080"]];
@@ -67,20 +74,20 @@ function createList(name) {
     return { id: Date.now().toString(), name: name, members: members, user: user, tasksSub: tasksSub};
 }
 
+// Functions that render and save lists, put into one, så its easier to call all the functions. 
 function saveAndRender() {
-    //alle funksjoner som genererer og lagrer verdier
     save();
     render();
     subTaskRender();
 }
 
-// Funksjonen save lagrer verdier i localstorage, så man kan bruke denne når man skal legge inn en ny verdi
+// Calls save every time we want to set a item in local storage. (members/users has its own.)
 function save() {
     localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(lists));
     localStorage.setItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY, selectedListId);
 }
 
-
+// Clears the ul that the li-projects are inn, then puts them back in the taskRender() function below.
 function render() {
     clearElement(listsContainer);
     taskRender();
@@ -112,7 +119,7 @@ function changeProjectName(event){
     }
 }
 
-// Funksjon som rendrer (genererer en liste for hver task i tasks, og viser listen med navn <li> tasks.name </li>)
+// Renders every list in the tasks-array, this represents the projects.
 function taskRender() {
     lists.forEach(list => {
         const listElement = document.createElement('li');
@@ -127,14 +134,12 @@ function taskRender() {
     })
 }
 
-// Funskjon som fjerner alle firstChild i et html element
-// TODO: lag en ny funksjon som fjerner mer en bare first child
+// Removes all children from a element, while this has first child -> remove child.
 function clearElement(element) {
     while(element.firstChild) {
         element.removeChild(element.firstChild);
     }
 }
 
-
-// rendrer tasks når man refresher siden
+// Renders projects when we refresh  the page
 render();
