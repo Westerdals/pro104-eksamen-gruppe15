@@ -28,6 +28,7 @@ function renderSubMenu() {
   subTaskRender();
   changeColorheader();
   changeListStatus();
+  renderProjectMembers();
 }
 
 function plussTaskListRender() {
@@ -162,7 +163,7 @@ function plussTaskList(event) {
 
   const newArray = [];
   const newArrayH = [""];
-  const newArrayC = [["#424249"]];
+  const newArrayC = [["#808080"]];
   const newArrayL = [];
 
   selectedList.tasksSub.subTasksList.push(newArray);

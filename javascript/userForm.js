@@ -52,6 +52,20 @@ const LOCAL_STORAGE_USER_KEY = 'user.list';
 let members = JSON.parse(localStorage.getItem(LOCAL_STORAGE_MEMBER_KEY)) || [];
 let users = JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER_KEY)) || []; 
 
+/*
+gruppe15();
+function gruppe15(){
+  let count = members.length;
+  for(i = 0; i < count; i++){
+    if(members[0].name != "solsnov"){
+      const idun = createMember("solsnov", "bengterbest", "https://www.google.com/search?q=hamburger&tbm=isch&hl=sv&hl=sv&tbs=ic%3Atrans%2Cisz%3Ai&ved=0CAIQpwVqFwoTCPj-yuzUz-kCFQAAAAAdAAAAABAC&biw=1903&bih=937#imgrc=6X8BQNbfp2KYgM");
+      members.push(idun);
+      saveMember();
+    }
+  }
+}
+*/
+
 // Login
 // Checks if the password and username is correct
 function loginFormSubmit(event){
@@ -97,38 +111,15 @@ function createFormSubmit(event){
 }
 
 function createMember(name, password) {
-  return { name: name, password: password, image: []};
+  return { name: name, password: password, image: ["/images/UserLogo-01.png"]};
 }
 
 function setUser(name, password) {
-  return {name: name, password: password, image: []};
+  return {name: name, password: password, image: [""]};
 }
+
 
 function saveMember() {
   localStorage.setItem(LOCAL_STORAGE_MEMBER_KEY, JSON.stringify(members));
   localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(users));
-}
-
-//Show name of user in rightBar.
-usernameText = document.getElementById("username");
-username.innerHTML = users[0].name;
-
-const buttonAddMember = document.getElementById("buttonAddMember");
-const buttonAddMemberHide = document.getElementById("buttonAddMemberHide");
-const memberContainer = document.getElementById("memberContainer");
-
-function addMember(event){
-  event.preventDefault();
-  console.log("open addMember");
-  memberContainer.style.display = "block";
-  buttonAddMember.style.display = "none";
-  buttonAddMemberHide.style.display = "block";
-}
-
-function addMemberHide(event){
-  event.preventDefault();
-  console.log("open addMember");
-  memberContainer.style.display = "none";
-  buttonAddMember.style.display = "block";
-  buttonAddMemberHide.style.display = "none";
 }

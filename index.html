@@ -35,6 +35,7 @@
     <script defer src="/javascript/calendar.js"></script>
     <script defer src="/javascript/popupMenu.js"></script>
     <script defer src="/javascript/userForm.js"></script>
+    <script defer src="/javascript/members.js"></script>
 
      <!-- Link to the icons next to username/password. Kaja's user on font awesome -->
     <script defer src="https://kit.fontawesome.com/0d3080e10d.js"></script>
@@ -117,7 +118,7 @@
         <div id="middleHeader">
           <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
           <form id="currentProjectForm" onsubmit="changeProjectName(event)" title="Edit project name">
-            <input id="currentTask" type="text" middle-list-title></input>
+            <input id="currentTask" type="text" middle-list-title>
         </form>
           <div id="plussSubTaskList">
             <button id="openLeftBar" onclick="openLeftBarF(event)" title="Open sidebar"></button>
@@ -128,15 +129,11 @@
             <button onclick="addMember(event)" id="buttonAddMember">Add member</button>
             <button onclick="addMemberHide(event)" id="buttonAddMemberHide">Hide member</button>
             <div id="memberContainer">
-              <div id="memberListDropdow">
-
+              <div id="memberListDropdown">
+                
                 <!-- Generated in JS -->
                 
-                <div class="memberBoxList">
-                  <div class="memberAvatar"></div>
-                    <p class="memberUsername">Macke</p>
-                  <div class="addThisMember" onclick="addThisMember(event, this.id)"><p class="AddTextThisMember">Add</p></div>
-                </div>
+                <!-- Member list -->
                 
               </div>
             </div>
@@ -145,6 +142,9 @@
 
         <!-- konteiner som blir brukt til å holde på alle sub-list elementene til hoved listene -->
         <div class="subTaskContainer" id="subTaskContainer">
+          <div id="memberIconContainer">
+            <!-- Generated in JS -->
+          </div>
           <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
 
           <div id="AddContainerEmpty">
@@ -164,22 +164,26 @@
       <!-- konteiner som holder på baren til høyre, Profil-baren -->
       <div id="rightContainer">
         <div id="rightBarHeader">
-          <div id="profilePicture" title="Edit"></div>
+          <button id="profilePicture" title="Edit" onclick="newUserImage(event)">
+          <div id="changeImageFormContainer">
+            <form onsubmit="newUserLink(event)">
+              <input id="newImageInput" class="newProfilePictureInput" type="text" placeholder="image url..">
+            </form> 
+          </div>
         </div> 
         <p id="username" title="Username">username</p>
-        <!-- ved hjelp av grid lages bildene automatisk etterhverandre -->
-        <!-- Log out btn, calls logOut function in js -->
-        <div id="logOut">
-        <button type="button" id="logOutBtn" title="Log out">Log out</button>
-        </div>
         <!-- Notification (Reminder) -->
         <div class="notifyContainer" id="nContainer" title="Reminder">
-        <a href="#" class="notify reminder">
-          <i class="fas fa-bell notifyIcons"></i>
-          <span>Reminder</span>
-          <span id="remin" class="notifyNum">2</span>
-        </a>
-      </div>
+          <a href="#" class="notify reminder">
+            <i class="fas fa-bell notifyIcons"></i>
+              <span>Reminder</span>
+              <span id="remin" class="notifyNum">2</span>
+          </a>
+        </div>
+        <!-- Log out btn, calls logOut function in js -->
+        <div id="logOut">
+        <button type="button" id="logOutBtn" title="Log out" onclick="loginPage(event)">Log out</button>
+        </div>
 
         <!-- Footer with links  -->
         <div id="footerRightBar">

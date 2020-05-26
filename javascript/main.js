@@ -59,11 +59,11 @@ function createList(name) {
     // id blir generert med date så de alltid får en unik id
     let subTasksList = [[]];
     let subTasksHeader = [[]];
-    let subTasksStatus = [["#424249"]];
+    let subTasksStatus = [["#808080"]];
     let subTasksLiStatus = [[]];
     let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subTasksLiStatus, subMembers: [] };
     let user = { name: [], image: [] };
-    let members = {name: [], image: [] };
+    let members = {name: [], image: [], display: []};
     return { id: Date.now().toString(), name: name, members: members, user: user, tasksSub: tasksSub};
 }
 

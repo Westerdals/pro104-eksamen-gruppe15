@@ -94,6 +94,7 @@ rightContainer.addEventListener("mouseover", (e) => {
 rightContainer.addEventListener("mouseleave", (e) => {
   e.preventDefault();
   rightContainerLeave();
+  changeImageFormContainer.style.display = "none";
 });
 
 function rightContainerHover() {
