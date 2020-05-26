@@ -15,7 +15,7 @@ Denne web applikasjonen er et hjelpemiddel for planlegging av prosjekter mellom 
 
 ## Hvordan bruke nettsiden
 
-Det er ganske enkelt å bruke nettsiden. Det første du gjør er å lage deg en bruker. Her har du oversikt over dine prosjekter. Når du skal lage et prosjekt går du i venstre sidebar som er åpen som default. I boksen hvor det står "new project" skriver du inn prosjektnavnet. Så trykker du på prosjektet og en to-do liste vil automatisk komme opp. 
+Det er ganske enkelt å bruke nettsiden.Loginpage er den første siden man kommer til, derretter oppretter man bruker og logger inn. Her har du oversikt over dine prosjekter. Når du skal lage et prosjekt går du i venstre sidebar som er åpen som default. I boksen hvor det står "new project" skriver du inn prosjektnavnet. Så trykker du på prosjektet og en to-do liste vil automatisk komme opp. 
 
 Dersom du vil opprette flere lister trykker du enten på «Add list» knappen og om du vil legge til medlemmer i prosjektet trykker du på "add member". Deretter er det bare å skrive navnet du vil ha på listen din og fylle inn punkter som skal gjøres på bunnen av listen. 
 Du har mulighet tå å trykke på en knapp, hvor du vil få opp en popup meny (penn og papir ikonet), og der kan du endre status på to-do listene dine (To do, in progress, waiting for feedback og done), krysset av om en av oppgavene er ferdig (check ikon), legge til medlemmer og sette deadline. Øverste mørkegrå headeren i popup vinduet er også draggable, så du kan plassere den hvor du føler for.
