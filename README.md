@@ -25,12 +25,12 @@ Venstre side innehodler også en kalender. Nederst på høyresside ligger lenker
 
 ## Logg inn 
 
- 
-| User | Username  | Password |
-| ------------- | ------------- |
-|  Kaja  | holtethebolt  |ireallydonotcare |
-| Idun  | solsnov |bengterbest |
+ | User | Username  | Password |
+| ------------- | ------------- |------------- |
+|  Kaja  | holtethebolt  | ireallydonotcare |
+| Idun  | solsnov | bengterbest |
 | Katarina | catlady95 | bruteforcethis |
+
 
 
 
