@@ -1,4 +1,6 @@
+
 // LeftBar
+// Open and closes leftbar onclick.
 const leftContainer = document.getElementById("leftContainer");
 const leftBarLogo = document.getElementById("leftBarLogo");
 const leftList = document.getElementById("leftList");
@@ -77,7 +79,8 @@ function middleBarLeave() {
   middleContainer.style.transition = "0.5s";
 }
 
-// Right Container Hover
+// Right Container Hover.
+
 const rightContainer = document.getElementById("rightContainer");
 const profilePicture = document.getElementById("profilePicture");
 const username = document.getElementById("username");
@@ -94,7 +97,7 @@ rightContainer.addEventListener("mouseover", (e) => {
 rightContainer.addEventListener("mouseleave", (e) => {
   e.preventDefault();
   rightContainerLeave();
-  changeImageFormContainer.style.display = "none"; //Max, hva gjør denne? trenger vi den.
+  changeImageFormContainer.style.display = "none"; 
 });
 
 function rightContainerHover() {
@@ -127,7 +130,7 @@ function rightContainerLeave() {
   logBtn.style.display = "none";
 }
 
-// Open Calender
+// Opens the calendar onclick, and  hides the calendar onclick. 
 
 const calenderContainerAll = document.getElementById("calendarContainer");
 

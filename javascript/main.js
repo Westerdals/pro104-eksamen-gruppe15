@@ -1,35 +1,28 @@
-// main: Grunnlaget for videre utbygging 
+// Core code: A steppingstone for a new beginning. 
 
-// Viktigste kode: 
-// Funksjonen som lager arrayet i local storage: function createList(name)
-// Her kan man legge til flere arrays i tasks (LOCAL_STORAGE_LIST_KEY)
-
-// Kontainer 
 const listsContainer = document.querySelector('[data-lists]');
 const newListForm = document.querySelector('[data-new-list-form]');
 const newListInput = document.querySelector('[data-new-list-input]');
 
 const LOCAL_STORAGE_LIST_KEY = 'task.lists';
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId';
-// Hoved localStorage arrayet, det blir generert under i koden, og strings blir pushet andre steder i koden
+// Main localStorage array, that gets genereated down in this code.
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 // selectedListId endrer seg i forhold til hvilken oppgave som har blitt trykket på i lists
-// Blir brukt til å vite hvilken task man er på i tasks, så man kan gjøre endringer på riktig sted med å sammenligne id
+// SelectListId changes depeding on what project we have selected, it is used to identify what project we are on in the code. 
 let selectedListId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY);
 
 const middleListTitle = document.querySelector('[middle-list-title]');
 
-// Click event som endrer selected list, og gjør det mulig å få tak i den verdien
-// Todo endre sånn at selected list ikke kan være ander liste elementer en main-task listen
+// Click event that changes selected list, and makes it possible to get the value globaly in the code. 
+// This helps push sub-task/member related string to the correct arrays.
 listsContainer.addEventListener('click', e => {
-    // Sjekker om tagname til det man har trykket på er li
     if(e.target.tagName.toLowerCase() === 'li') {
-        // ender local storage selected list til verdien av targeted list (listId)
+        //Endrer local storage selected list id to the correct value.
         selectedListId = e.target.dataset.listId;
-        // Funskjoner for å lagre og rendre
+        // Calls render and save functions
         currentTaskname();
         saveAndRender();
-        //renderChildheader();
         renderSubMenu();
 
         addAllMembers();
@@ -71,7 +64,8 @@ function createList(name) {
     let subTasksStatus = [["#808080"]];
     let subTasksLiStatus = [[]];
     let subMembers = { name: [], image: [], display: []};
-    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subTasksLiStatus, subMembers: subMembers };
+    let subDeadline = { day: [[]], week: [[]], year: [[2020]]};
+    let tasksSub = { id: Date.now().toString() + 1, subTasksHeader, subTasksList, subTasksStatus, subTasksLiStatus, subMembers: subMembers, subDeadline: subDeadline };
     let user = { name: [], image: [] };
     let members = {name: [], image: [], display: []};
     return { id: Date.now().toString(), name: name, members: members, user: user, tasksSub: tasksSub};
@@ -102,6 +96,7 @@ function render() {
     }
 }
 
+// Function that lets you change the project name, passes a new value to the local storage.
 function changeProjectName(event){
     event.preventDefault();
     let currentTaskForm = document.getElementById("currentTask");

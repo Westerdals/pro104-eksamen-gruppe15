@@ -155,6 +155,7 @@ function renderProjectMembers(){
     }
 }
 
+// Renders all members from the members local storage array and shows them in the selectSubMemberContainer div. 
 function renderSubTaskMemberAddList(){
     let selectSubMemberContainer = document.getElementById("selectSubMemberContainer");
     clearElement(selectSubMemberContainer);

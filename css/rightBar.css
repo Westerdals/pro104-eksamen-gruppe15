@@ -4,13 +4,14 @@
 } */
 
 #rightContainer {
+  position: fixed;
   width: 70px;
   height: inherit;
   background-color: #f2f2f2;
   transition: 0.3s;
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
-  position: fixed;
   right: 0;
+  bottom: 0;
   z-index: 5;
 }
 
@@ -27,7 +28,7 @@
 }
 /* username style*/
 #username {
-  margin-top: 150px;
+  margin-top: 160px;
   text-align: center;
   font-size: 26px;
   color: #444444;
@@ -42,7 +43,7 @@
   background-color: #bcbcbc;
   border-radius: 5px;
   margin-left: 82px;
-  margin-top: 105px;
+  margin-top: 115px;
   text-align: center;
   padding: 2px;
 }
@@ -103,4 +104,69 @@
   margin-top: 106px;
   margin-left: -50px;
   display: none;
+}
+
+
+.notifyContainer {
+  width: 200px;
+  height: 20px;
+  margin-top: 35px;
+  position: absolute;
+  background: transparent;
+}
+
+#nContainer {
+  display: none;
+  transition: 0.3s;
+}
+
+/* REMINDER STYLE */
+
+.notify {
+  display: flex;
+  position: relative;
+  margin-left: 83px;
+  margin-top: 20px;
+  width: 80px;
+  height: 100%;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 2px;
+  border: none;
+  text-decoration: none;
+  background-color: #bcbcbc;
+  border-radius: 5px;
+  color: #f2f2f2;
+  transition: 0.1s;
+  padding: 13px 26px;
+  align-items: center;
+}
+
+.notify:hover {
+  background-color: #ff5e2c;
+  color: #f2f2f2;
+}
+
+.notify .notifyNum {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  position: absolute;
+  color: #f2f2f2;
+  border-radius: 50%;
+  background-color: #ff5e2c;
+}
+
+.notify > span {
+  text-align: center;
+}
+
+#remin {
+  margin-top: -17px;
+  transition: 0.3s;
+}
+
+.notifyIcons {
+  margin-left: -20px;
+  padding: 5px;
 }

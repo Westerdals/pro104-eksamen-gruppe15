@@ -23,6 +23,7 @@ const reg = document.getElementById("register");
 const togBtn = document.getElementById("btnUser");
 const editImg = document.getElementById("editImgBtn");
 
+// Function that takes you to the register page.
 function register() {
   log.style.display = "none";
   reg.style.display = "block";
@@ -30,6 +31,7 @@ function register() {
   editImg.style.display = "block";
 }
 
+// Function that takes you to the login page.
 function login() {
   log.style.display = "block";
   reg.style.display = "none";

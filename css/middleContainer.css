@@ -1,9 +1,9 @@
 /* Middle container size, styling */
 #middleContainer {
-  position: absolute;
+  position: relative;
   margin-left: 310px;
   width: inherit;
-  height: 100%;
+  height: inherit;
   background-color: #f2f2f2;
   overflow-x: scroll;
   transition: 0.3s;

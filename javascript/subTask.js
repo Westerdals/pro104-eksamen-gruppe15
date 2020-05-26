@@ -131,6 +131,7 @@ function childHeaderFormNew(event){
   renderChildheader();
 }
 
+// Renders the task-list header for every task-list. 
 function renderChildheader() {
   const selectedList = lists.find((list) => list.id === selectedListId);
 
@@ -148,6 +149,7 @@ function renderChildheader() {
   }
 }
 
+// Creates a new task-list, and pushes the default values into the local storage array. 
 function plussTaskList(event) {
   event.preventDefault();
   const selectedList = lists.find((list) => list.id === selectedListId);
@@ -159,10 +161,19 @@ function plussTaskList(event) {
   const newArrayC = [["#808080"]];
   const newArrayL = [];
 
+  //DEADLINE VALUE
+  const day = [];
+  const week = [];
+  const year = [2020];
+
   selectedList.tasksSub.subTasksList.push(newArray);
   selectedList.tasksSub.subTasksHeader.push(newArrayH);
   selectedList.tasksSub.subTasksStatus.push(newArrayC);
   selectedList.tasksSub.subTasksLiStatus.push(newArrayL);
+  // Deadline
+  selectedList.tasksSub.subDeadline.day.push(day);
+  selectedList.tasksSub.subDeadline.week.push(week);
+  selectedList.tasksSub.subDeadline.year.push(year);
   
   save();
 
