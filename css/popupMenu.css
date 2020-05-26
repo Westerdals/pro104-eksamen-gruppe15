@@ -41,12 +41,12 @@
   border-radius: 20px;
   text-align: center;
   cursor: pointer;
-  background-image: url(/icons/kryss-ikon-white.png);
+  background-image: url(/icons/leftbarCloseWhite.png);
   background-size: cover;
 }
 
 #backBtn:hover {
-  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-05.png);
+  background-image: url(/icons/leftbarCloseGrey.png);
 }
 
 #selectTxt {
@@ -183,7 +183,7 @@
   margin-top: 3.5px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/pen-icon-gray-02.png);
+  background-image: url(/icons/penGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -192,7 +192,7 @@
 }
 
 .singleFormButton:hover {
-  background-image: url(/icons/pen-icon-darkgray-01.png);
+  background-image: url(/icons/penDarkgrey.png);
 }
 
 .headerDeleteSingle {
@@ -201,7 +201,7 @@
   height: 28px;
   margin-left: 350px;
   margin-top: 3.5px;
-  background-image: url(/icons/x-icon-gray-02.png);
+  background-image: url(/icons/xIconGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -209,7 +209,7 @@
 }
 
 .headerDeleteSingle:hover {
-  background-image: url(/icons/x-icon-darkgray-02.png);
+  background-image: url(/icons/xIconDarkgrey.png);
 }
 
 .currentTaskStyle {
@@ -220,7 +220,6 @@
   font-weight: normal;
   font-size: 18px;
 }
-
 
 #editTaskListContainer {
   position: absolute;
@@ -248,25 +247,23 @@
   overflow-y: scroll;
   align-items: center;
   border-radius: 5px 5px 0px 0px;
-  
 }
 
-.currentSingleHeader{
+.currentSingleHeader {
   position: absolute;
-  top:0;
+  top: 0;
   margin-left: 120px;
   margin-top: 12px;
   color: #424249;
   font-weight: normal;
   font-size: 18px;
-  
 }
 
 .singleTaskCount {
   position: absolute;
   margin-left: 15px;
   margin-top: 7.5px;
-  color: #424249;
+  color: #ffffff;
   font-weight: normal;
   font-size: 18px;
 }
@@ -279,7 +276,7 @@
   margin-left: -70px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/pen.png);
+  background-image: url(/icons/penWhite.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -288,7 +285,7 @@
 }
 
 .singleEdit:hover {
-  background-image: url(/icons/pen-icon-gray-02.png);
+  background-image: url(/icons/penGrey.png);
 }
 
 .singleDelete {
@@ -297,7 +294,7 @@
   height: 28px;
   margin-left: 335px;
   margin-top: 5px;
-  background-image: url(/icons/x-mark.png);
+  background-image: url(/icons/xIconWhite.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -305,7 +302,7 @@
 }
 
 .singleDelete:hover {
-  background-image: url(/icons/x-icon-gray-02.png);
+  background-image: url(/icons/xIconGrey.png
 }
 
 .singleStatus {
@@ -316,18 +313,16 @@
   margin-left: 265px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/check-mark.png);
+  background-image: url(/icons/checkIconWhite.png);
   background-size: cover;
   background-position: center;
   position: absolute;
   cursor: pointer;
   border: none;
 }
-
 .singleStatus:hover {
-  background-image: url(/icons/check-icon-gray-01.png);
+  background-image: url(/icons/checkIconGrey.png);
 }
-
 .singleInputStyle {
   padding-left: 6px;
   height: 35px;
@@ -336,8 +331,8 @@
   border-style: none;
   margin-top: 38px;
   color: #444444;
+  z-index: 6;
 }
-
 .singleTaskBorderStyle {
   width: 370px;
   height: 75px;
@@ -347,7 +342,6 @@
   margin-left: 14px;
   margin-top: 10px;
 }
-
 .memberInputContainer {
   position: absolute;
   background-color: #f2f2f2;
@@ -360,7 +354,6 @@
   box-shadow: inset 0px 0px 12px -3px rgba(0, 0, 0, 0.5);
   border-radius: 0px 0px 5px 0px;
 }
-
 .deadlineInputContainer {
   position: absolute;
   background-color: #f2f2f2;
@@ -372,7 +365,6 @@
   margin-bottom: 50px;
   box-shadow: inset 0px 0px 12px -3px rgba(0, 0, 0, 0.5);
 }
-
 .deadlineInput {
   position: absolute;
   left: 35px;
@@ -382,21 +374,17 @@
   border: solid 1.5px #808080;
   padding-left: 10px;
 }
-
 #dayInput {
   width: 35px;
 }
-
 #monthInput {
   left: 87px;
   width: 35px;
 }
-
 #yearInput {
   left: 139px;
   width: 50px;
 }
-
 #deadlineTxt {
   text-align: center;
   font-size: 15px;
@@ -404,7 +392,6 @@
   margin-bottom: 13.5px;
   margin-left: -2px;
 }
-
 .addButton {
   position: absolute;
   right: 35px;
@@ -420,11 +407,9 @@
   border-radius: 2px;
   transition: 0.1s;
 }
-
 .addButton:hover {
   background-color: #aaaaaa;
 }
-
 #draggableHeader {
   cursor: move;
 }

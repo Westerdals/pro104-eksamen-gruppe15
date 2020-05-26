@@ -47,88 +47,77 @@ const usernameLogin = document.getElementById("usernameLogin");
 // password input
 const passwordLogin = document.getElementById("passwordLogin");
 
-const LOCAL_STORAGE_MEMBER_KEY = 'member.list';
-const LOCAL_STORAGE_USER_KEY = 'user.list';
+const LOCAL_STORAGE_MEMBER_KEY = "member.list";
+const LOCAL_STORAGE_USER_KEY = "user.list";
 let members = JSON.parse(localStorage.getItem(LOCAL_STORAGE_MEMBER_KEY)) || [];
-let users = JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER_KEY)) || []; 
+let users = JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER_KEY)) || [];
+
+/*
+gruppe15();
+function gruppe15(){
+  let count = members.length;
+  for(i = 0; i < count; i++){
+    if(members[0].name != "solsnov"){
+      const idun = createMember("solsnov", "bengterbest", "https://www.google.com/search?q=hamburger&tbm=isch&hl=sv&hl=sv&tbs=ic%3Atrans%2Cisz%3Ai&ved=0CAIQpwVqFwoTCPj-yuzUz-kCFQAAAAAdAAAAABAC&biw=1903&bih=937#imgrc=6X8BQNbfp2KYgM");
+      members.push(idun);
+      saveMember();
+    }
+  }
+}
+*/
 
 // Login
 // Checks if the password and username is correct
-function loginFormSubmit(event){
+function loginFormSubmit(event) {
   event.preventDefault();
   let name = usernameLogin.value;
   let pass = passwordLogin.value;
   memberLength = members.length;
   console.log("stage1");
   console.log(memberLength);
-  for(i = 0; i < memberLength; i++){
+  for (i = 0; i < memberLength; i++) {
     console.log("stage2");
-    if (name === members[i].name && pass === members[i].password){
+    if (name === members[i].name && pass === members[i].password) {
       const userS = setUser(name, pass);
       users.pop();
       users.push(userS);
       saveMember();
-      window.location.href = 'index.html';
-    } 
+      window.location.href = "index.html";
+    }
   }
 }
 
-
-// Register                                                                                                                                                                                                 
+// Register
 const usernameCreate = document.getElementById("usernameCreate");
 const passwordCreate = document.getElementById("passwordCreate");
 const passwordCreate2 = document.getElementById("passwordCreate2");
 
-function createFormSubmit(event){
+function createFormSubmit(event) {
   event.preventDefault();
   console.log("stage1");
   name = usernameCreate.value;
   pass = passwordCreate.value;
   pass2 = passwordCreate2.value;
   console.log(name);
-  if (pass === pass2){
+  if (pass === pass2) {
     const member = createMember(name, pass);
     members.push(member);
     saveMember();
     login();
-  } else{
-    alert("Not matching password!")
+  } else {
+    alert("Not matching password!");
   }
 }
 
 function createMember(name, password) {
-  return { name: name, password: password, image: []};
+  return { name: name, password: password, image: ["/images/userLogo.png"] };
 }
 
 function setUser(name, password) {
-  return {name: name, password: password, image: []};
+  return { name: name, password: password, image: [""] };
 }
 
 function saveMember() {
   localStorage.setItem(LOCAL_STORAGE_MEMBER_KEY, JSON.stringify(members));
   localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(users));
-}
-
-//Show name of user in rightBar.
-usernameText = document.getElementById("username");
-username.innerHTML = users[0].name;
-
-const buttonAddMember = document.getElementById("buttonAddMember");
-const buttonAddMemberHide = document.getElementById("buttonAddMemberHide");
-const memberContainer = document.getElementById("memberContainer");
-
-function addMember(event){
-  event.preventDefault();
-  console.log("open addMember");
-  memberContainer.style.display = "block";
-  buttonAddMember.style.display = "none";
-  buttonAddMemberHide.style.display = "block";
-}
-
-function addMemberHide(event){
-  event.preventDefault();
-  console.log("open addMember");
-  memberContainer.style.display = "none";
-  buttonAddMember.style.display = "block";
-  buttonAddMemberHide.style.display = "none";
 }

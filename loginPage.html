@@ -3,28 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Browser icon left side by title -->
     <link
       rel="icon"
-      href="/images/Orange-tabs-01.png"
+      href="/images/tabsLogoSmall.png"
       sizes="16x16"
       type="image/png"
     />
+    <!-- Title, same as index.html -->
     <title>Tabs</title>
-    <!-- importerte fonter -->
+
+    <!-- Importerted fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="css/userForm.css" />
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <script defer src="/javascript/userForm.js"></script>
+
+    <!-- CSS links -->
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
+
+    <!-- JavaScript links defer (loads script in "background")-->
+    <script defer src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script defer src="/javascript/login.js"></script>
   </head>
   <body>
+    <!-- Main container  -->
     <div class="logContainer">
       <!-- Log/Register in container  -->
       <div class="formBox" id="formBox">
         <!-- logo image -->
         <div class="avatar"></div>
+
         <!-- log in/ register button on top -->
         <div class="btnBox">
           <div id="btnUser"></div>
@@ -119,8 +128,6 @@
           <input type="submit" class="btnUser" value="Register" />
         </form>
       </div>
-      <!-- Bengt -->
-      <img src="images/bugGuy.png" id="bugGuy" />
     </div>
   </body>
 </html>

@@ -1,3 +1,4 @@
+/* Calendar container styling, size */
 #calendarContainer {
   display: inline-block;
   width: 100%;
@@ -10,9 +11,10 @@
   transition: 0.3s;
 }
 
+/* Month class, container for month name/year and prev/next btn */
 .month {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Makes space between May 2020 and next/prev btns */
   width: 100%;
   height: 70px;
   background-color: #ff5e2c;
@@ -23,6 +25,7 @@
   padding: 10px -1px;
 }
 
+/* Name of the month and year style */
 #month {
   position: absolute;
   font-size: 20px;
@@ -34,6 +37,7 @@
   transition: 0.3s;
 }
 
+/* Names of the week (mon, tue) style */
 .weekends {
   display: flex;
   background-color: #f2f2f2;
@@ -41,6 +45,7 @@
   padding: 10px 0;
 }
 
+/* days generated with js, styling */
 .days {
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +83,7 @@
   color: rgb(168, 168, 168);
 }
 
-/* Previous and next 'button' style*/
+/* Previous and next 'button' style + hover effect */
 .prev,
 .next {
   display: flex;
@@ -98,6 +103,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Btn placements */
 .prev {
   right: 0;
   margin-left: 6px;
@@ -108,6 +114,8 @@
   right: 0;
   margin-right: 6px;
 }
+
+/* Open/Close calendar styling  */
 
 #calendarArrowButtonContainer {
   width: 300px;
@@ -126,7 +134,7 @@
   margin-top: -35px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/calender-ikon-opp-ned-05.png);
+  background-image: url(/icons/calendarOpenGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -136,7 +144,7 @@
 }
 
 #openCalenderButton:hover {
-  background-image: url(/icons/calender-ikon-opp-ned-06.png);
+  background-image: url(/icons/calendarOpenDarkgrey.png);
   opacity: 1;
 }
 
@@ -150,7 +158,7 @@
   margin-top: -198px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/calender-ikon-opp-ned-07.png);
+  background-image: url(/icons/calendarCloseGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -160,6 +168,6 @@
 }
 
 #closeCalenderButton:hover {
-  background-image: url(/icons/calender-ikon-opp-ned-08.png);
+  background-image: url(/icons/calendarCloseDarkgrey.png);
   opacity: 1;
 }

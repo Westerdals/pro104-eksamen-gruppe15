@@ -3,7 +3,7 @@ var d = new Date(); // Creates new date
 function renderDate() {
   // d.setDate(1); //
   d.setDate(1);
-  var day = d.getDay(); // Get's today's day (mon, tue, wed)
+  var thisDay = d.getDay(); // Get's today's day (mon, tue, wed)
   var endDate = new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate(); //End  date for the months
   console.log(endDate);
   var prevDates = new Date(d.getFullYear(), d.getMonth(), 0).getDate();
@@ -32,7 +32,7 @@ function renderDate() {
   var cells = "";
 
   // Makes last months days show before the first date of this month
-  for (x = day; x > 0; x--) {
+  for (x = thisDay; x > 0; x--) {
     cells += "<div class='prevDate'>" + (prevDates - x + 1) + "</div>";
   }
 
