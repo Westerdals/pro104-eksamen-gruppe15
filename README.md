@@ -1,7 +1,7 @@
 
 
 
-# Tabs 
+## Tabs 
 
 
 
@@ -51,7 +51,7 @@ det er ikke meningen å gi ut dette i noe annet en studieoppgave.
 
 
 
-## kreditt
+## Kreditt
 
 kreditt til en fin gruppe som har stått på dag og natt for å fullføre dette prosjektet. 
 
