@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Browser icon left side by title -->
+    <link
+      rel="icon"
+      href="/images/tabsLogoSmall.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <!-- title  -->
+    <title>Tabs</title>
+
+    <!-- CSS-links -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/leftBar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/middleContainer.css" />
+    <link rel="stylesheet" type="text/css" href="/css/rightBar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/subTask.css" />
+    <link rel="stylesheet" type="text/css" href="/css/popUpMenu.css" />
+    <link rel="stylesheet" type="text/css" href="/css/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+
+    <!-- Importerted fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- JavaScript links, defer (loads script in "background")-->
+    <script defer src="/javascript/main.js"></script>
+    <script defer src="/javascript/draggable.js"></script>
+    <script defer src="/javascript/hover.js"></script>
+    <script defer src="/javascript/subTask.js"></script>
+    <script defer src="/javascript/editSubTask.js"></script>
+    <script defer src="/javascript/calendar.js"></script>
+    <script defer src="/javascript/popUpMenu.js"></script>
+    <script defer src="/javascript/login.js"></script>
+    <script defer src="/javascript/members.js"></script>
+
+     <!-- Link to the icons next to username/password. Kaja's user on font awesome -->
+    <script defer src="https://kit.fontawesome.com/0d3080e10d.js"></script>
+  </head>
+  <!-- renderDate() renders the calendar dates when page loads -->
+  <body onLoad="renderDate()">
+
+    <!-- The main container, everything goes in here -->
+<div id="mainContainer">
+
+        <!-- Container, contains the left sidebar (logo, calendar ++) -->
+    <div id="leftContainer">
+
+            <!-- Header to the ledt container, contains the logo -->
+            <div id="leftBarHeader">
+                <h1 id="leftBarLogo" title="Tabs logo"></h1>
+            </div>
+            <div id="projectsBox" >
+                <h3 id="projectsText" ></h3>
+            </div>
+      
+         <div id="formContainer">
+          <!-- data-new-list-form, for the onsubmit event -->
+            <form action="" data-new-list-form>
+                <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
+                <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input/>
+                <!-- knapp som kan brukes for å submite -->
+                <button class="btn create" id="leftbutton" title="Add new project">Add</button>
+            </form>
+        </div>
+            
+    <div id="leftListLimitContainer">
+            <!-- Container for the ul -->
+            <div id="leftList">
+                <!-- Ul for the lists (li), the (li) is generated in js -->
+            <ul class="taskList" data-lists>
+                <!-- Where projects gets added -->
+            </ul>
+        </div>
+    </div>
+        <!-- Container for the input field, adds lists in (data-lists, class="taskList") -->
+        <br>
+            <div id="calendarContainer">
+               
+                <div id="calendarArrowButtonContainer">
+                  <button id="openCalenderButton" onclick="openCalender(event)" title="Open calendar"></button>
+                  <button id="closeCalenderButton" onclick="closeCalender(event)" title="Close calendar"></button>
+                </div>
+                <div class="month" title="Calendar">
+                        <!-- Onclick event for previous month -->
+                    <div class="prev" onclick="moveDate('prev')" title="Previous month">
+                        <!-- ASCII '<' symbol -->
+                        <span>&#10094</span>
+                    </div>
+                    <div>
+                        <!-- The month name will appear here (ex: May) -->
+                        <h2 id="month"></h2>
+                    </div>
+                        <!-- Onclick event for next month-->
+                    <div class="next" onclick="moveDate('next')" title="Next month">
+                        <!-- ASCII '>' symbol -->
+                    <span>&#10095</span>
+                    </div>
+                </div>
+                <!-- Week names that shows up in calendar, starts on Sun (English version) -->
+                <div class="weekends">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days">
+                    <!-- The divs gets made in the js file -->
+                    </div>
+            </div>
+
+    </div>
+      <!-- Container that contains everything in the middle. ex: sub-lists to main-list -->
+      <div id="middleContainer" middle-container>
+        <!-- Header for the middleContainer -->
+        <div id="middleHeader">
+          <!-- middle-list-title, adds in the value (name of the list) of the list that's clicked on -->
+          <form id="currentProjectForm" onsubmit="changeProjectName(event)" title="Edit project name">
+            <input id="currentTask" type="text" middle-list-title>
+        </form>
+          <div id="plussSubTaskList">
+            <button id="openLeftBar" onclick="openLeftBarF(event)" title="Open sidebar"></button>
+            <button id="closeLeftBar" onclick="closeLeftBarF(event)" title="Close sidebar"></button>
+            <button onclick="plussTaskList(event)" id="buttonSubTaskList">
+              Add List
+            </button>
+            <button onclick="addMember(event)" id="buttonAddMember">Add member</button>
+            <button onclick="addMemberHide(event)" id="buttonAddMemberHide">Hide member</button>
+            <div id="memberContainer">
+              <div id="memberListDropdown">
+                
+                <!-- Generated in JS -->
+                
+                <!-- Member list -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container used to contain all sub-list elements for the main lists -->
+        <div class="subTaskContainer" id="subTaskContainer">
+          <div id="memberIconContainer">
+            <!-- Generated in JS -->
+          </div>
+          <!-- TODO: this html part is generated in js, and it should be possible to create more than one of it -->
+
+          <div id="AddContainerEmpty">
+            <!-- Here ends the generated sub-task boxes up -->
+          </div>
+        </div>
+      </div>
+        <!-- Popup menu, for changing things for tasks/subtasks -->
+        <div id="popUpContainer">
+            <div id="draggableHeader" title="Draggable">
+            <!-- Styling generated in JS -->
+            </div>
+            <div class="popUpContainer">
+            <!-- Generated in JS -->
+            </div>
+        </div>
+      <!-- Container that contains the right bar (user image, name ++) -->
+      <div id="rightContainer">
+        <div id="rightBarHeader">
+
+          <!-- Profil picture, you can change it with an image url -->
+          <button id="profilePicture" title="Edit" onclick="newUserImage(event)">
+          <div id="changeImageFormContainer">
+            <form onsubmit="newUserLink(event)">
+              <input id="newImageInput" class="newProfilePictureInput" type="text" placeholder="image url..">
+            </form> 
+          </div>
+        </div> 
+        <!-- Username, switches out with the name user creates -->
+        <p id="username" title="Username">username</p>
+
+        <!-- Notification (Reminder), does not have a function yet, but is planned for further development -->
+        <div class="notifyContainer" id="nContainer" title="Reminder">
+          <a href="#" class="notify reminder">
+            <i class="fas fa-bell notifyIcons"></i>
+              <span>Reminder</span>
+        <!-- This shows an example for what a notification looks like when you have 2 pending notifications -->
+              <span id="remin" class="notifyNum">2</span>
+          </a>
+        </div>
+        <!-- Log out btn, calls logOut function in js -->
+        <div id="logOut">
+        <button type="button" id="logOutBtn" title="Log out" onclick="loginPage(event)">Log out</button>
+        </div>
+        
+        <!-- Footer with links, target="_blank" makes the link open in new tab or window -->
+        <div id="footerRightBar">
+          <div id="w3schools" class="linkIcon" title="w3schools">
+            <a href="https://www.w3schools.com/" type="w3schools website" target="_blank">
+              <img class ="linkIcon" src="/images/w3schoolsIcon.png"></a>
+          </div>
+          <div id="canvas" class ="linkIcon" title="Canvas">
+            <a href="https://idp.feide.no/simplesaml/module.php/feide/login.php?asLen=181&AuthState=_b9d22d8453f52bebe52d178facb0f20ed6847cb5d2%3Ahttps%3A%2F%2Fidp.feide.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fkristiania.instructure.com%252Fsaml2%26cookieTime%3D1590143575" 
+            type="canvas login" target="_blank">
+            <img class ="linkIcon" src="/images/canvasIcon.png"></a>
+          </div>
+          <div id="github" class="linkIcon" title="Github">
+            <a href="https://github.com/" type="githubwebsite" target="_blank">
+              <img class ="linkIcon" src="/images/githubIcon.png"></a>
+          </div>
+          <div id="youtube" class="linkIcon" title="Youtube">
+            <a href="https://www.youtube.com/" type="youtube website" target="_blank">
+              <img class ="linkIcon" src="/images/youtubeIcon.png"></a>
+          </div>
+          <div id="chatBoot" class="linkIcon" title="chatBoot">
+            <img class ="linkIcon" src="/images/chatBootIcon.png">
+          </div>
+          <div id="stackOverflow" class="linkIcon" title="stackOverflow">
+            <a href="https://stackoverflow.com/" type="stackoweflow website" target="_blank">
+            <img class ="linkIcon" src="/images/stackoverflowIcon.png">
+            </a>
+          </div> 
+          </div>
+        </div>
+  </div>
+      
+  </body>
+</html>

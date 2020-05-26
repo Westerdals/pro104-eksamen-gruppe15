@@ -114,7 +114,7 @@ function newUserLink(event){
 
 function loginPage(event){
     event.preventDefault();
-    window.location.href = 'loginPage.html';
+    window.location.href = 'index.html';
 }
 
 // Gives selectedList.members.display the value of block, so it can be passed on in the renderProjectMembers() function. 

@@ -86,7 +86,7 @@ function loginFormSubmit(event) {
       users.pop();
       users.push(userS);
       saveMember();
-      window.location.href = "index.html";
+      window.location.href = "tabs.html";
     }
   }
 }
