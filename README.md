@@ -15,7 +15,7 @@ Denne web applikasjonen er et hjelpemiddel for planlegging av prosjekter mellom 
 
 ## Hvordan bruke nettsiden
 
-Det er ganske enkelt å bruke nettsiden. Du har mulighet til å lage bruker som nevnt over, og logge inn. Der har du oversikt over dine prosjekter. Når du skal lage et prosjekt går du i venstre sidebar som er åpen som default. I boksen hvor det står "new project" skriver du inn prosjektnavnet. Så trykker du på prosjektet og en to-do liste vil automatisk komme opp. 
+Det er ganske enkelt å bruke nettsiden. Det første du gjør er å lage deg en bruker. Her har du oversikt over dine prosjekter. Når du skal lage et prosjekt går du i venstre sidebar som er åpen som default. I boksen hvor det står "new project" skriver du inn prosjektnavnet. Så trykker du på prosjektet og en to-do liste vil automatisk komme opp. 
 
 Dersom du vil opprette flere lister trykker du enten på «Add list» knappen og om du vil legge til medlemmer i prosjektet trykker du på "add member". Deretter er det bare å skrive navnet du vil ha på listen din og fylle inn punkter som skal gjøres på bunnen av listen. 
 Du har mulighet tå å trykke på en knapp, hvor du vil få opp en popup meny (penn og papir ikonet), og der kan du endre status på to-do listene dine (To do, in progress, waiting for feedback og done), krysset av om en av oppgavene er ferdig (check ikon), legge til medlemmer og sette deadline. Øverste mørkegrå headeren i popup vinduet er også draggable, så du kan plassere den hvor du føler for.
@@ -23,9 +23,7 @@ Du har mulighet tå å trykke på en knapp, hvor du vil få opp en popup meny (p
 Om du vil ha oversikt over hvilken dato/dag det er, ligger det en kalender i venstre sidebar nedenfor prosjektene som du kan maximere/minimere med pilen. 
 I høyre sidebar ligger ditt username og bilde, en logg ut knapp og en notifikasjons knapp (reminder), nederst i baren ligger lenker som kan være til hjelp for it studenter.
 
-## Logg inn 
 
-Oprett bruker
 
 
 ## Ikon 
