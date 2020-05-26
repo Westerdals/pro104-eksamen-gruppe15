@@ -1,12 +1,12 @@
 
 
 
-"# pro104-eksamen-gruppe15" 
+# "pro104-eksamen-gruppe15" 
 
 
 
 
-##beskrivelse
+## beskrivelse
 
 Denne web applikasjonen er et hjelpemiddel for plannlegging av prosjekter mellom personer. Applikasjonen har funksjoner som gjør det enkelt å ha kontroll og oversikt over oppgaver som gjøres i et prosjekt. 
 Man har mulighet for å se hvem som jobber med hva, sette deadlines og fordele oppgaver. 
@@ -14,16 +14,27 @@ Man har mulighet for å se hvem som jobber med hva, sette deadlines og fordele o
 
 
 
-##hvordan bruke
+## hvordan bruke
 
 Det er ganske enkelt å bruke nettsiden. Visst du ser på høyre side, er der en logg inn funksjon. Her kan du opprette eller logge inn for å få tilgang til filene dine.
 Når du skal lage et prosjekt går du i venstre sidebar. I boksen hvor det står "new project" skriver du inn prosjektnavnet. Så trykker du på prosjektet og en "tasklist" vil komme opp. Deretter er det bare å skrive navnet du vil ha på tasklist og fylle inn punkter som skal gjøres. 
 Dersom du vil legge til medlemmer eller opprette flere tasklist trykker du enten på "add member" eller "addlist". 
 Venstre side innehodler også en kalender. Nederst på høyresside ligger lenker som kan være til hjelp for it studenter.
 
-##logg inn 
-bruker navn
-passord
+## logg inn 
+
+ bruker navn og passord
+ Kaja;
+Username: holtethebolt
+Password: ireallydonotcare
+
+Idun;
+username: solsnov
+password: bengterbest
+
+Katarina;
+username: catlady95
+password: bruteforcethis
 
 ##ikon 
 x betyr at du lukker en funksjon.
@@ -32,17 +43,17 @@ På pennen sjekker du status på oppgaven.
 hamburger ikonet, eller ikonet med tre vannrette linjer, brukes som en meny knapp, hvor du kan åpne opp igjen venstre sidebar, om du har valgt å lukke denne 
 
 
-##roadmap 
+## roadmap 
 
 det er ikke meningen å gi ut dette i noe annet en studieoppgave. 
 
 
 
-##kreditt
+## kreditt
 
 kreditt til en fin gruppe som har stått på dag og natt for å fullføre dette prosjektet. 
 
-##skapere
+## skapere
 
 Stian B Andersen
 Kaja Holte Navjord
