@@ -26,25 +26,11 @@ Venstre side innehodler også en kalender. Nederst på høyresside ligger lenker
 ## Logg inn 
 
  
-Kaja
-Username: holtethebolt
-Password: ireallydonotcare
-
-Idun
-username: solsnov
-password: bengterbest
-
-Katarina;
-username: catlady95
-password: bruteforcethis
-
-
-   name             username        password
-| -------------| :------------ |:----------------- :|
-|              |               |                    |
-| Kaja         | holtethebolt  | ireallydonotcare   |
-| Idun         | solsnov       | bengterbest        |
-| Katharina    | catlady95     |  bruteforcethis    |
+| User | Username  | Password |
+| ------------- | ------------- |
+|  Kaja  | holtethebolt  |ireallydonotcare |
+| Idun  | solsnov |bengterbest |
+| Katarina | catlady95 | bruteforcethis |
 
 
 
