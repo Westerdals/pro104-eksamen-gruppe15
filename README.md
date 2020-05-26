@@ -38,7 +38,10 @@ Katarina;
 username: catlady95
 password: bruteforcethis
 
-## ikon 
+
+
+
+## Ikon 
 x betyr at du lukker en funksjon.
 pil tegnet blir brukt for å dra ned eller opp et element. 
 På pennen sjekker du status på oppgaven. 
