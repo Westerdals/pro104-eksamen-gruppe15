@@ -45,7 +45,7 @@
   margin-top: 15px;
   box-shadow: inset 0px 0px 17px -3px rgba(0, 0, 0, 0.5);
 }
-
+/* leftlist, the border around where the project are listet*/
 #leftList {
   position: relative;
   margin-top: 10px;
@@ -54,6 +54,7 @@
   padding-bottom: 350px;
 }
 
+/* innside her the project cmes up*/
 .taskList {
   padding: 20px;
   list-style: none;
@@ -91,7 +92,7 @@ li:hover {
   background: #e5e5e5;
   font-size: 1.3em;
 }
-
+/* conteiner, around the projectbox*/
 #formContainer {
   position: relative;
   width: 100%;
@@ -146,7 +147,7 @@ li:hover {
   position: relative;
   text-align: center;
 }
-
+/*text style*/
 #projectsText {
   color: black;
   font-size: 25px;

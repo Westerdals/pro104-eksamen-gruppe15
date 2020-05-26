@@ -147,7 +147,7 @@
   background-image: url(/icons/calendarOpenDarkgrey.png);
   opacity: 1;
 }
-
+ /* closing calender */
 #closeCalenderButton {
   position: absolute;
   width: 35px;

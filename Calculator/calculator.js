@@ -1,5 +1,5 @@
 
-
+// storing information//
 class Calculator {
   constructor(lastTextElement, currentTextelement) {
     this.lastTextElement = lastTextElement,
@@ -7,8 +7,9 @@ class Calculator {
     this.reset()
   }
 
-    
-     delete() {
+    //functions//
+     
+    delete() {
     this.currentAction = this.currentAction.toString().slice(0, -1)
   } 
     
@@ -99,6 +100,12 @@ const acButton = document.querySelector('[data-reset]')
 const lastTextElement = document.querySelector('[data-last]')
 
 const calculator = new Calculator(currentTextelement, lastTextElement)
+
+
+
+
+
+//click events//
 
 numberGenerator.forEach(button => {
   button.addEventListener('click', () => {
