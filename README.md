@@ -32,7 +32,7 @@ Oprett bruker
 X betyr at du lukker en funksjon.
 Pil tegnene blir brukt for å dra ned eller opp et element. 
 På check ikonet redigerer du oppgaven slik at den blir markert ferdig (strek over teksten).
-På undo ikonet redigerer du oppgaven tilbake til ikke ferdig. 
+På edit ikonet lagrer du input teksten,  den tar også vekk check funksjonen om du har "checket" den, når du skal redigere den.
 Hamburger ikonet, eller ikonet med tre vannrette linjer, brukes som en meny knapp, hvor du kan åpne opp igjen venstre sidebar, om du har valgt å lukke denne. 
 
 
