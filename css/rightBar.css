@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
 }
-
+/* username style*/
 #username {
   margin-top: 150px;
   text-align: center;
@@ -89,7 +89,7 @@
   transition: 0.3s;
   display: none;
 }
-
+/*styling linked icons*/
 .linkIcon {
   width: 40px;
   height: 40px;
