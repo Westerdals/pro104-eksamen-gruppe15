@@ -25,12 +25,12 @@ Venstre side innehodler også en kalender. Nederst på høyresside ligger lenker
 
 ## Logg inn 
 
- bruker navn og passord
- Kaja;
+ 
+Kaja
 Username: holtethebolt
 Password: ireallydonotcare
 
-Idun;
+Idun
 username: solsnov
 password: bengterbest
 
