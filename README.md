@@ -1,7 +1,7 @@
 
 
 
-## Tabs 
+# Tabs 
 
 
 
@@ -32,31 +32,26 @@ Venstre side innehodler også en kalender. Nederst på høyresside ligger lenker
 | Katarina | catlady95 | bruteforcethis |
 
 
-
-
-
-
-
 ## Ikon 
-x betyr at du lukker en funksjon.
-pil tegnet blir brukt for å dra ned eller opp et element. 
+X betyr at du lukker en funksjon.
+Pil tegnene blir brukt for å dra ned eller opp et element. 
 På pennen sjekker du status på oppgaven. 
-hamburger ikonet, eller ikonet med tre vannrette linjer, brukes som en meny knapp, hvor du kan åpne opp igjen venstre sidebar, om du har valgt å lukke denne 
+Hamburger ikonet, eller ikonet med tre vannrette linjer, brukes som en meny knapp, hvor du kan åpne opp igjen venstre sidebar, om du har valgt å lukke denne. 
 
 
 ## Roadmap 
 
-det er ikke meningen å gi ut dette i noe annet en studieoppgave. 
+Det er ikke meningen å gi ut dette i noe annet en studieoppgave. 
 
 
 
 ## Kreditt
 
-kreditt til en fin gruppe som har stått på dag og natt for å fullføre dette prosjektet. 
+Kreditt til en fin gruppe som har stått på dag og natt for å fullføre dette prosjektet. 
 
 ## Skapere
 
-Stian B Andersen
+Stian B. Andersen
 
 Kaja Holte Navjord
 
