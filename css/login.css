@@ -83,19 +83,6 @@
   margin-top: 20px;
 }
 
-#editImgBtn {
-  font-size: 13px;
-  color: #424249;
-  margin-left: 226px;
-  margin-top: 70px;
-  z-index: 3;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  position: absolute;
-  display: none;
-}
-
 /* Login/regsiter container/form */
 .inputGroup {
   top: 245px;

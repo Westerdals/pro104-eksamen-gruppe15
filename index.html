@@ -2,15 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> ?? -->
+    <!-- Browser icon left side by title -->
     <link
       rel="icon"
       href="/images/tabsLogoSmall.png"
       sizes="16x16"
       type="image/png"
     />
-    <!-- tittel -->
+    <!-- title  -->
     <title>Tabs</title>
-    <!-- CSS-linker -->
+
+    <!-- CSS-links -->
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/css/leftBar.css" />
     <link rel="stylesheet" type="text/css" href="/css/middleContainer.css" />
@@ -20,12 +23,12 @@
     <link rel="stylesheet" type="text/css" href="/css/calendar.css" />
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
 
-    <!-- importerte fonter -->
+    <!-- Importerted fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Raleway:wght@500&display=swap"
       rel="stylesheet"
     />
-    <!-- JS-linker -->
+    <!-- JavaScript links, defer (loads script in "background")-->
     <script defer src="/javascript/main.js"></script>
     <script defer src="/javascript/draggable.js"></script>
     <script defer src="/javascript/hover.js"></script>
@@ -39,12 +42,16 @@
      <!-- Link to the icons next to username/password. Kaja's user on font awesome -->
     <script defer src="https://kit.fontawesome.com/0d3080e10d.js"></script>
   </head>
+  <!-- renderDate() renders the calendar dates when page loads -->
   <body onLoad="renderDate()">
-    <!-- konteiner som holder på alt -->
+
+    <!-- The main container, everything goes in here -->
 <div id="mainContainer">
-        <!-- konteiner som holder på hoved-listene, listen ligger til venstre -->
+
+        <!-- Container, contains the left sidebar (logo, calendar ++) -->
     <div id="leftContainer">
-            <!-- header til venstre konteiner -->
+
+            <!-- Header to the ledt container, contains the logo -->
             <div id="leftBarHeader">
                 <h1 id="leftBarLogo" title="Tabs logo"></h1>
             </div>
@@ -53,7 +60,7 @@
             </div>
       
          <div id="formContainer">
-          <!-- data-new-list-form er for onsubmit event -->
+          <!-- data-new-list-form, for the onsubmit event -->
             <form action="" data-new-list-form>
                 <!-- data-new-list-input er for å få verdien som er skrevet inn under onsubmit eventet -->
                 <input type="text" class="new list" id="leftInput" placeholder="New project" data-new-list-input/>
@@ -63,16 +70,15 @@
         </div>
             
     <div id="leftListLimitContainer">
-            <!-- konteiner til ul -->
+            <!-- Container for the ul -->
             <div id="leftList">
-                <!-- Ul til listene (li) som blir generert -->
+                <!-- Ul for the lists (li), the (li) is generated in js -->
             <ul class="taskList" data-lists>
-                <!--Hvor prosjekter blir lagt inn-->
+                <!-- Where projects gets added -->
             </ul>
         </div>
     </div>
-        <!-- kontainer til input feltet som legger til lister i (data-lists, class="taskList") -->
-        
+        <!-- Container for the input field, adds lists in (data-lists, class="taskList") -->
         <br>
             <div id="calendarContainer">
                
@@ -96,6 +102,7 @@
                     <span>&#10095</span>
                     </div>
                 </div>
+                <!-- Week names that shows up in calendar, starts on Sun (English version) -->
                 <div class="weekends">
                     <div>Sun</div>
                     <div>Mon</div>
@@ -111,11 +118,11 @@
             </div>
 
     </div>
-      <!-- kontainer som holder på alt i midten, f.eks. sub-lists til main-list -->
+      <!-- Container that contains everything in the middle. ex: sub-lists to main-list -->
       <div id="middleContainer" middle-container>
-        <!-- header til middleContainer -->
+        <!-- Header for the middleContainer -->
         <div id="middleHeader">
-          <!-- middle-list-title blir brukt til å legge inn verdien til listen som har blitt trykket på, (navnet til listen) -->
+          <!-- middle-list-title, adds in the value (name of the list) of the list that's clicked on -->
           <form id="currentProjectForm" onsubmit="changeProjectName(event)" title="Edit project name">
             <input id="currentTask" type="text" middle-list-title>
         </form>
@@ -139,15 +146,15 @@
           </div>
         </div>
 
-        <!-- konteiner som blir brukt til å holde på alle sub-list elementene til hoved listene -->
+        <!-- Container used to contain all sub-list elements for the main lists -->
         <div class="subTaskContainer" id="subTaskContainer">
           <div id="memberIconContainer">
             <!-- Generated in JS -->
           </div>
-          <!-- TODO: denne html delen skal bli generert i js, og det skal være mulig å skape flere en en av den -->
+          <!-- TODO: this html part is generated in js, and it should be possible to create more than one of it -->
 
           <div id="AddContainerEmpty">
-            <!-- Her går de genererte sub-task boksene -->
+            <!-- Here ends the generated sub-task boxes up -->
           </div>
         </div>
       </div>
@@ -160,9 +167,11 @@
             <!-- Generated in JS -->
             </div>
         </div>
-      <!-- konteiner som holder på baren til høyre, Profil-baren -->
+      <!-- Container that contains the right bar (user image, name ++) -->
       <div id="rightContainer">
         <div id="rightBarHeader">
+
+          <!-- Profil picture, you can change it with an image url -->
           <button id="profilePicture" title="Edit" onclick="newUserImage(event)">
           <div id="changeImageFormContainer">
             <form onsubmit="newUserLink(event)">
@@ -170,13 +179,15 @@
             </form> 
           </div>
         </div> 
+        <!-- Username, switches out with the name user creates -->
         <p id="username" title="Username">username</p>
 
-        <!-- Notification (Reminder) -->
+        <!-- Notification (Reminder), does not have a function yet, but is planned for further development -->
         <div class="notifyContainer" id="nContainer" title="Reminder">
           <a href="#" class="notify reminder">
             <i class="fas fa-bell notifyIcons"></i>
               <span>Reminder</span>
+        <!-- This shows an example for what a notification looks like when you have 2 pending notifications -->
               <span id="remin" class="notifyNum">2</span>
           </a>
         </div>
@@ -185,7 +196,7 @@
         <button type="button" id="logOutBtn" title="Log out" onclick="loginPage(event)">Log out</button>
         </div>
 
-        <!-- Footer with links  -->
+        <!-- Footer with links, target="_blank" makes the link open in new tab or window -->
         <div id="footerRightBar">
           <div id="w3schools" class="linkIcon" title="w3schools">
             <a href="https://www.w3schools.com/" type="w3schools website" target="_blank">
