@@ -1,3 +1,4 @@
+//  Animations and events for login screen
 const inputs = document.querySelectorAll(".input");
 
 function focusFunc() {
@@ -47,11 +48,13 @@ const usernameLogin = document.getElementById("usernameLogin");
 // password input
 const passwordLogin = document.getElementById("passwordLogin");
 
+// Local storage keys for members and user
 const LOCAL_STORAGE_MEMBER_KEY = "member.list";
 const LOCAL_STORAGE_USER_KEY = "user.list";
 let members = JSON.parse(localStorage.getItem(LOCAL_STORAGE_MEMBER_KEY)) || [];
 let users = JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER_KEY)) || [];
 
+// Our users on the  site
 /*
 gruppe15();
 function gruppe15(){
@@ -67,7 +70,9 @@ function gruppe15(){
 */
 
 // Login
-// Checks if the password and username is correct
+// Checks if the password and username is correct.
+// Pops user, changes the user data from the previous user.
+// Takes the user info from the members array, it can only be set if the name and password is equal to a member.
 function loginFormSubmit(event) {
   event.preventDefault();
   let name = usernameLogin.value;
@@ -87,11 +92,12 @@ function loginFormSubmit(event) {
   }
 }
 
-// Register
+// Register.
 const usernameCreate = document.getElementById("usernameCreate");
 const passwordCreate = document.getElementById("passwordCreate");
 const passwordCreate2 = document.getElementById("passwordCreate2");
 
+// Creates a new member in the members array, then calls login() to be take bak to the login page. 
 function createFormSubmit(event) {
   event.preventDefault();
   console.log("stage1");
@@ -108,15 +114,15 @@ function createFormSubmit(event) {
     alert("Not matching password!");
   }
 }
-
+// Object for members.
 function createMember(name, password) {
   return { name: name, password: password, image: ["/images/userLogo.png"] };
 }
-
+// Object for users.
 function setUser(name, password) {
   return { name: name, password: password, image: [""] };
 }
-
+// Saves new members/users changes.
 function saveMember() {
   localStorage.setItem(LOCAL_STORAGE_MEMBER_KEY, JSON.stringify(members));
   localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(users));

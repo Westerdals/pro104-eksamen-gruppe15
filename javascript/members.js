@@ -8,6 +8,7 @@ const memberContainer = document.getElementById("memberContainer");
 const memberListDropdown = document.getElementById("memberListDropdown");
 const memberIconContainer = document.getElementById("memberIconContainer");
 
+// Opens the member list in the project header. 
 function addMember(event){
   event.preventDefault();
   console.log("open addMember");
@@ -16,6 +17,7 @@ function addMember(event){
   buttonAddMemberHide.style.display = "block";
 }
 
+// Closes the member list in the project header.
 function addMemberHide(event){
   event.preventDefault();
   console.log("open addMember");
@@ -23,6 +25,7 @@ function addMemberHide(event){
   buttonAddMember.style.display = "block";
   buttonAddMemberHide.style.display = "none";
 }
+
 renderMemberList();
 // Renders all members in the members array with template literals. 
 function renderMemberList() {

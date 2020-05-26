@@ -21,8 +21,8 @@ const AddContainerEmpty = document.getElementById("AddContainerEmpty");
 
 renderSubMenu();
 
+// Renders all task-list changes, so when we make a new change it updates automatically without having to refresh the page. 
 function renderSubMenu() {
-  //RENDER
   plussTaskListRender();
   renderChildheader();
   subTaskRender();
@@ -31,6 +31,7 @@ function renderSubMenu() {
   renderProjectMembers();
 }
 
+// Renders out a task-list
 function plussTaskListRender() {
   const selectedList = lists.find((list) => list.id === selectedListId);
 
