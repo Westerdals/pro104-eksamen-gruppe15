@@ -126,7 +126,7 @@
   margin-top: -35px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/calender-ikon-opp-ned-05.png);
+  background-image: url(/icons/calendarOpenGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -136,7 +136,7 @@
 }
 
 #openCalenderButton:hover {
-  background-image: url(/icons/calender-ikon-opp-ned-06.png);
+  background-image: url(/icons/calendarOpenDarkgrey.png);
   opacity: 1;
 }
 
@@ -150,7 +150,7 @@
   margin-top: -198px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/calender-ikon-opp-ned-07.png);
+  background-image: url(/icons/calendarCloseGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -160,6 +160,6 @@
 }
 
 #closeCalenderButton:hover {
-  background-image: url(/icons/calender-ikon-opp-ned-08.png);
+  background-image: url(/icons/calendarCloseDarkgrey.png);
   opacity: 1;
 }

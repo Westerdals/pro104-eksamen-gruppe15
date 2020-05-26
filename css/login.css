@@ -9,7 +9,7 @@
   height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/background5.jpg);
+    url(/images/loginBackground.jpg);
   position: absolute;
   background-position: center;
   background-size: cover;
@@ -76,7 +76,7 @@
   width: 190px;
   height: 100px;
   position: absolute;
-  background-image: url(/images/orange-tabs-logo-square-02.png);
+  background-image: url(/images/tabsLogo.png);
   background-position: center;
   background-size: cover;
   right: 26%;
@@ -218,14 +218,14 @@
   height: 15px;
 }
 
-#confirmH5{
+#confirmH5 {
   margin-left: 35px;
   white-space: nowrap;
 }
 
-h5{
+h5 {
   font-weight: normal;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /* Username and Password text */
@@ -270,22 +270,11 @@ a:hover {
   color: #ff5e2c;
 }
 
-#bugGuy{
-    position: absolute;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    height: 300px;
-    bottom: 0px;
-}
-
-.smallText{
+.smallText {
   margin-top: 12.5px;
 }
 
-a{
-  font-family: 'Raleway', sans-serif;
+a {
+  font-family: "Raleway", sans-serif;
   font-size: 13px;
 }
-
-
-

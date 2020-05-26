@@ -164,7 +164,7 @@ ul > .subLi {
   top: 0;
   border: 0;
   background: transparent;
-  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-01.png);
+  background-image: url(/icons/leftbarOpenGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -174,7 +174,7 @@ ul > .subLi {
 }
 
 #openLeftBar:hover {
-  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-02.png);
+  background-image: url(/icons/leftbarOpenDarkgrey.png);
 }
 
 #closeLeftBar {
@@ -187,7 +187,7 @@ ul > .subLi {
   top: 0;
   border: 0;
   background: transparent;
-  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-05.png);
+  background-image: url(/icons/leftbarCloseGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -196,7 +196,7 @@ ul > .subLi {
 }
 
 #closeLeftBar:hover {
-  background-image: url(/icons/krabbefot-kryss-ikoner-leftbar-06.png);
+  background-image: url(/icons/leftbarCloseDarkgrey.png);
 }
 
 .subTaskButton {
@@ -219,7 +219,7 @@ ul > .subLi {
   background-color: #ff5e2c;
 }
 
-#buttonAddMember{
+#buttonAddMember {
   position: absolute;
   margin-top: 2px;
   width: 125px;
@@ -234,11 +234,11 @@ ul > .subLi {
   transition: 0.1s;
 }
 
-#buttonAddMember:hover{
+#buttonAddMember:hover {
   background-color: #ff5e2c;
 }
 
-#buttonAddMemberHide{
+#buttonAddMemberHide {
   position: absolute;
   margin-top: 2px;
   width: 125px;
@@ -254,11 +254,11 @@ ul > .subLi {
   display: none;
 }
 
-#buttonAddMemberHide:hover{
+#buttonAddMemberHide:hover {
   background-color: #ff5e2c;
 }
 
-#memberContainer{
+#memberContainer {
   position: absolute;
   width: 400px;
   height: 400px;
@@ -274,7 +274,7 @@ ul > .subLi {
   border-radius: 5px;
 }
 
-#memberListDropdow{
+#memberListDropdow {
   position: relative;
   margin-top: 10px;
   margin-left: 10px;
@@ -282,7 +282,7 @@ ul > .subLi {
   height: relative;
 }
 
-.memberBoxList{
+.memberBoxList {
   width: 380px;
   height: 70px;
   box-shadow: inset 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
@@ -291,19 +291,19 @@ ul > .subLi {
   border-radius: 5px;
 }
 
-.memberAvatar{
+.memberAvatar {
   position: absolute;
   margin-left: 5px;
   margin-top: 5px;
   width: 60px;
   height: 60px;
-  background-image: url(/images/UserLogo-01.png);
+  background-image: url(/images/userLogo.png);
   background-position: center;
   background-size: contain;
   border-radius: 100%;
 }
 
-.memberUsername{
+.memberUsername {
   position: absolute;
   font-size: 18px;
   margin-left: 80px;
@@ -312,7 +312,7 @@ ul > .subLi {
   color: #444444;
 }
 
-.addThisMember{
+.addThisMember {
   position: absolute;
   margin-top: 2px;
   width: 90px;
@@ -328,17 +328,17 @@ ul > .subLi {
   transition: 0.1s;
 }
 
-.addThisMember:hover{
+.addThisMember:hover {
   background-color: #ff5e2c;
 }
 
-.AddTextThisMember{
+.AddTextThisMember {
   position: absolute;
   margin-left: 28px;
   margin-top: 7.5px;
 }
 
-#memberIconContainer{
+#memberIconContainer {
   position: absolute;
   width: 60px;
   top: 0;
@@ -354,13 +354,13 @@ ul > .subLi {
   border-radius: 5px;
 }
 
-.ProjectMembers{
+.ProjectMembers {
   position: relative;
   float: left;
   width: 45px;
   height: 45px;
   margin: 3px;
-  background-image: url(/images/UserLogo-01.png);
+  background-image: url(/images/userLogo.png);
   background-position: center;
   background-size: cover;
   transform: rotate(90deg);
