@@ -9,7 +9,7 @@
   height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/loginBackground.jpg);
+    url(../images/loginBackground.jpg);
   position: absolute;
   background-position: center;
   background-size: cover;
@@ -76,7 +76,7 @@
   width: 190px;
   height: 100px;
   position: absolute;
-  background-image: url(/images/tabsLogo.png);
+  background-image: url(../images/tabsLogo.png);
   background-position: center;
   background-size: cover;
   right: 26%;

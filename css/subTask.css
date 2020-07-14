@@ -14,13 +14,13 @@
   width: 25px;
   height: 25px;
   margin-top: 12px;
-  background-image: url(/icons/paperWhiteEdit.png);
+  background-image: url(../icons/paperWhiteEdit.png);
   background-size: contain;
   background-position: center;
 }
 
 .editButton:hover {
-  background-image: url(/icons/paperGrayEdit.png);
+  background-image: url(../icons/paperGrayEdit.png);
 }
 
 .deleteButton {
@@ -30,13 +30,13 @@
   margin-right: 5px;
   margin-top: 12px;
   float: right;
-  background-image: url(/icons/xWhite.png);
+  background-image: url(../icons/xWhite.png);
   background-size: cover;
   background-position: center;
 }
 
 .deleteButton:hover {
-  background-image: url(/icons/xGray.png);
+  background-image: url(../icons/xGray.png);
 }
 
 .subListHeader {

@@ -41,12 +41,12 @@
   border-radius: 20px;
   text-align: center;
   cursor: pointer;
-  background-image: url(/icons/leftbarCloseWhite.png);
+  background-image: url(../icons/leftbarCloseWhite.png);
   background-size: cover;
 }
 
 #backBtn:hover {
-  background-image: url(/icons/leftbarCloseGrey.png);
+  background-image: url(../icons/leftbarCloseGrey.png);
 }
 
 #selectTxt {
@@ -183,7 +183,7 @@
   margin-top: 3.5px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/paperWhiteEdit.png);
+  background-image: url(../icons/paperWhiteEdit.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -192,7 +192,7 @@
 }
 
 .singleFormButton:hover {
-  background-image: url(/icons/penGrayEdit.png);
+  background-image: url(../icons/penGrayEdit.png);
 }
 
 .headerDeleteSingle {
@@ -201,7 +201,7 @@
   height: 28px;
   margin-left: 350px;
   margin-top: 3.5px;
-  background-image: url(/icons/xIconGrey.png);
+  background-image: url(../icons/xIconGrey.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -209,7 +209,7 @@
 }
 
 .headerDeleteSingle:hover {
-  background-image: url(/icons/xIconDarkgrey.png);
+  background-image: url(../icons/xIconDarkgrey.png);
 }
 
 .currentTaskStyle {
@@ -276,7 +276,7 @@
   margin-left: -70px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/penWhite.png);
+  background-image: url(../icons/penWhite.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -285,7 +285,7 @@
 }
 
 .singleEdit:hover {
-  background-image: url(/icons/penGrey.png);
+  background-image: url(../icons/penGrey.png);
 }
 
 .singleDelete {
@@ -294,7 +294,7 @@
   height: 28px;
   margin-left: 335px;
   margin-top: 5px;
-  background-image: url(/icons/xIconWhite.png);
+  background-image: url(../icons/xIconWhite.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -302,7 +302,7 @@
 }
 
 .singleDelete:hover {
-  background-image: url(/icons/xIconGrey.png);
+  background-image: url(../icons/xIconGrey.png);
 }
 
 .singleStatus {
@@ -313,7 +313,7 @@
   margin-left: 265px;
   border: 0;
   background: transparent;
-  background-image: url(/icons/checkIconWhite.png);
+  background-image: url(../icons/checkIconWhite.png);
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -321,7 +321,7 @@
   border: none;
 }
 .singleStatus:hover {
-  background-image: url(/icons/checkIconGrey.png);
+  background-image: url(../icons/checkIconGrey.png);
 }
 .singleInputStyle {
   padding-left: 6px;
@@ -487,7 +487,7 @@
   width: 40px;
   height: 40px;
   margin-left: 2px;
-  background-image: url(/images/userLogo.png);
+  background-image: url(../images/userLogo.png);
   background-position: center;
   background-size: cover;
   border-radius: 5px;

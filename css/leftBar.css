@@ -28,7 +28,7 @@
 
 /* Logo size and img(switches with js, when closed) */
 #leftBarLogo {
-  background-image: url(/images/tabsLogo.png);
+  background-image: url(../images/tabsLogo.png);
   width: 150px;
   height: 100px;
   background-size: cover;
